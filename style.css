@@ -5,13 +5,13 @@
 
 @font-face {
   font-family: "BetinaScriptRus";
-  src: url("betina-script-rus-bold.otf"); }
+  src: url("fonts/betina-script-rus-bold.otf"); }
 @font-face {
   font-family: "icomoon-free";
-  src: url("IcoMoon-Free.ttf"); }
+  src: url("fonts/IcoMoon-Free.ttf"); }
 @font-face {
   font-family: "fa-solid-900";
-  src: url("fa-solid-900.ttf"); }
+  src: url("fonts/fa-solid-900.ttf"); }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -148,7 +148,7 @@ header .header__logo {
   width: 20vw;
   height: 7.15vw; }
 header .header__back-red {
-  background-image: url(../img/bg-red.jpg);
+  background-image: url(img/bg-red.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%; }
@@ -191,15 +191,15 @@ header .header__text:before {
   background-repeat: no-repeat;
   margin-left: -2.5vw; }
 header .town-icon:before {
-  background-image: url("../img/header__town-icon.svg");
+  background-image: url("img/header__town-icon.svg");
   background-size: 1vw;
   position: absolute; }
 header .time-icon:before {
-  background-image: url("../img/header__time-icon.svg");
+  background-image: url("img/header__time-icon.svg");
   background-size: 1vw;
   position: absolute; }
 header .address:before {
-  background-image: url("../img/header__address-icon.svg");
+  background-image: url("img/header__address-icon.svg");
   background-size: 1vw;
   position: absolute; }
 header .header__town-time {
@@ -391,7 +391,7 @@ header .slide-item__info {
   margin-top: 2.6vw;
   color: #FFCCCC; }
 header .slide1 {
-  background-image: url(../img/frame.png);
+  background-image: url(img/frame.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 42vw; }
@@ -402,7 +402,7 @@ header .slide1 .slide-item__img {
   width: 45vw;
   height: 32vw;
   padding-right: 3.59vw;
-  background-image: url(../img/cook_pizza.png);
+  background-image: url(img/cook_pizza.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 37.8vw; }
@@ -410,7 +410,7 @@ header .slide2 .slide-item__img {
   width: 45vw;
   height: 32vw;
   padding-right: 3.59vw;
-  background-image: url(../img/birthday.png);
+  background-image: url(img/birthday.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 42vw; }
@@ -450,7 +450,7 @@ header .owl-theme .owl-dots .owl-dot.active span, header .owl-theme .owl-dots .o
   border: 0.08vw solid #FFCCCC; }
 
 main .content {
-  background-image: url(../img/background-image.jpg);
+  background-image: url(img/background-image.jpg);
   background-position: center top;
   padding-bottom: 7.80vw; }
   main .content .main__title {
@@ -620,21 +620,21 @@ main .content {
   main .content .about__photo.photo1 {
     width: 100%;
     height: 36.5vw;
-    background-image: url(../img/about__photo1.jpg);
+    background-image: url(img/about__photo1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
   main .content .about__photo.photo2 {
     width: 47%;
     height: 36.5vw;
-    background-image: url(../img/about__photo2.jpg);
+    background-image: url(img/about__photo2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
   main .content .about__photo.photo3 {
     width: 47%;
     height: 36.5vw;
-    background-image: url(../img/about__photo3.jpg);
+    background-image: url(img/about__photo3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -696,7 +696,7 @@ main .content {
     border-radius: 3vw;
     width: 50%;
     height: 65vw;
-    background-image: url(../img/delivery__photo-back.jpg);
+    background-image: url(img/delivery__photo-back.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -1643,7 +1643,7 @@ footer .footer__address {
   line-height: 3vw;
   color: #FFFFFF; }
 footer .footer__address:before {
-  background-image: url("../img/footer__address.svg");
+  background-image: url("img/footer__address.svg");
   background-size: 0.8vw;
   position: absolute;
   content: "";
@@ -1659,7 +1659,7 @@ footer .footer__phone {
   footer .footer__phone a {
     color: #fff; }
 footer .footer__phone:before {
-  background-image: url("../img/footer__phone.svg");
+  background-image: url("img/footer__phone.svg");
   background-size: 0.8vw;
   position: absolute;
   content: "";
@@ -1817,7 +1817,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
       margin-top: 1vw;
       padding-right: 0;
       margin-right: -3vw;
-      background-image: url(../img/birthday.png);
+      background-image: url(img/birthday.png);
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 45vw; }

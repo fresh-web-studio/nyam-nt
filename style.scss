@@ -44,17 +44,17 @@ $gray-dark: #707070;
 
 @font-face {
   font-family: "BetinaScriptRus";
-  src: url("betina-script-rus-bold.otf");
+  src: url("fonts/betina-script-rus-bold.otf");
 }
 
 @font-face {
   font-family: "icomoon-free";
-  src: url("IcoMoon-Free.ttf");
+  src: url("fonts/IcoMoon-Free.ttf");
 }
 
 @font-face {
   font-family: "fa-solid-900";
-  src: url("fa-solid-900.ttf");
+  src: url("fonts/fa-solid-900.ttf");
 }
 
 html, body, div, span, applet, object, iframe,
@@ -222,7 +222,7 @@ header {
   }
 
   .header__back-red {
-    background-image: url(../img/bg-red.jpg);
+    background-image: url(img/bg-red.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: $wight-percent;
@@ -288,19 +288,19 @@ header {
   }
 
   .town-icon:before {
-    background-image: url('../img/header__town-icon.svg');
+    background-image: url('img/header__town-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
 
   .time-icon:before {
-    background-image: url('../img/header__time-icon.svg');
+    background-image: url('img/header__time-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
 
   .address:before {
-    background-image: url('../img/header__address-icon.svg');
+    background-image: url('img/header__address-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
@@ -553,7 +553,7 @@ header {
   }
 
   .slide1 {
-    background-image: url(../img/frame.png);
+    background-image: url(img/frame.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 42vw;
@@ -568,7 +568,7 @@ header {
     width: 45vw;
     height: 32vw;
     padding-right: 3.59vw;
-    background-image: url(../img/cook_pizza.png);
+    background-image: url(img/cook_pizza.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 37.8vw;
@@ -578,7 +578,7 @@ header {
     width: 45vw;
     height: 32vw;
     padding-right: 3.59vw;
-    background-image: url(../img/birthday.png);
+    background-image: url(img/birthday.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 42vw;
@@ -634,7 +634,7 @@ header {
 
 main {
   .content {
-    background-image: url(../img/background-image.jpg);
+    background-image: url(img/background-image.jpg);
     background-position: center top;
     padding-bottom: 7.80vw;
 
@@ -851,7 +851,7 @@ main {
     .about__photo.photo1 {
       width: $wight-percent;
       height: 36.5vw;
-      background-image: url(../img/about__photo1.jpg);
+      background-image: url(img/about__photo1.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -860,7 +860,7 @@ main {
     .about__photo.photo2 {
       width: 47%;
       height: 36.5vw;
-      background-image: url(../img/about__photo2.jpg);
+      background-image: url(img/about__photo2.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -869,7 +869,7 @@ main {
     .about__photo.photo3 {
       width: 47%;
       height: 36.5vw;
-      background-image: url(../img/about__photo3.jpg);
+      background-image: url(img/about__photo3.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -943,7 +943,7 @@ main {
       border-radius: 3vw;
       width: 50%;
       height: 65vw;
-      background-image: url(../img/delivery__photo-back.jpg);
+      background-image: url(img/delivery__photo-back.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2174,7 +2174,7 @@ footer {
   }
 
   .footer__address:before {
-    background-image: url('../img/footer__address.svg');
+    background-image: url('img/footer__address.svg');
     background-size: $p10;
     position: absolute;
     content: "";
@@ -2196,7 +2196,7 @@ footer {
   }
 
   .footer__phone:before {
-    background-image: url('../img/footer__phone.svg');
+    background-image: url('img/footer__phone.svg');
     background-size: $p10;
     position: absolute;
     content: "";
@@ -2458,7 +2458,7 @@ footer {
       margin-top: 1vw;
       padding-right: 0;
       margin-right: -3vw;
-      background-image: url(../img/birthday.png);
+      background-image: url(img/birthday.png);
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 45vw;
