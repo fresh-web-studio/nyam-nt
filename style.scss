@@ -222,7 +222,7 @@ header {
   }
 
   .header__back-red {
-    background-image: url(img/bg-red.jpg);
+    background-image: url(images/bg-red.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: $wight-percent;
@@ -288,19 +288,19 @@ header {
   }
 
   .town-icon:before {
-    background-image: url('img/header__town-icon.svg');
+    background-image: url('images/header__town-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
 
   .time-icon:before {
-    background-image: url('img/header__time-icon.svg');
+    background-image: url('images/header__time-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
 
   .address:before {
-    background-image: url('img/header__address-icon.svg');
+    background-image: url('images/header__address-icon.svg');
     background-size: 1vw;
     position: absolute;
   }
@@ -553,7 +553,7 @@ header {
   }
 
   .slide1 {
-    background-image: url(img/frame.png);
+    background-image: url(images/frame.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 42vw;
@@ -578,7 +578,7 @@ header {
     width: 45vw;
     height: 32vw;
     padding-right: 3.59vw;
-    background-image: url(img/birthday.png);
+    background-image: url(images/birthday.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 42vw;
@@ -634,7 +634,7 @@ header {
 
 main {
   .content {
-    background-image: url(img/background-image.jpg);
+    background-image: url(images/background-image.jpg);
     background-position: center top;
     padding-bottom: 7.80vw;
 
@@ -2174,7 +2174,7 @@ footer {
   }
 
   .footer__address:before {
-    background-image: url('img/footer__address.svg');
+    background-image: url('images/footer__address.svg');
     background-size: $p10;
     position: absolute;
     content: "";
@@ -2196,7 +2196,7 @@ footer {
   }
 
   .footer__phone:before {
-    background-image: url('img/footer__phone.svg');
+    background-image: url('images/footer__phone.svg');
     background-size: $p10;
     position: absolute;
     content: "";
@@ -2458,7 +2458,7 @@ footer {
       margin-top: 1vw;
       padding-right: 0;
       margin-right: -3vw;
-      background-image: url(img/birthday.png);
+      background-image: url(images/birthday.png);
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 45vw;
