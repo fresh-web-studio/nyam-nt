@@ -123,6 +123,12 @@
 }
 
 @media all and (max-width: 415px) {
+  header {
+    position: relative;
+  }
+  .main_multimenu {
+    padding-left: 0;
+  }
 
   .main_menu .nav-list {
     margin: 0;
