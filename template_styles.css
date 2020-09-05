@@ -2096,7 +2096,8 @@ footer .footer__social img, footer .slide-item__social .hover img {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-flow: row; }
+    flex-flow: row;
+    justify-content: flex-end; }
   footer .footer__social img {
     margin-top: 0.8vw;
     width: 10vw; }
