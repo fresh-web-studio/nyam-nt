@@ -151,31 +151,6 @@ header .header__back-red {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%; }
-header .menu {
-  float: right; }
-  header .menu .menu-list {
-    list-style-type: none;
-    float: left; }
-    header .menu .menu-list a.menu-link {
-      font-size: 14px;
-      color: #8c8c8c;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 10px 13px; }
-    header .menu .menu-list a.menu-link:hover {
-      color: #212121;
-      font-weight: 700;
-      line-height: 1.4;
-      border-bottom: 3px solid #212121; }
-    header .menu .menu-list a.menu-link-active {
-      color: #212121;
-      font-weight: 700;
-      line-height: 1.4;
-      border-bottom: 3px solid #212121; }
-header #menu-toggle {
-  display: none; }
-header .menu-btn {
-  display: none; }
 header .header__login {
   text-align: right; }
 header .header__text {
@@ -237,8 +212,6 @@ header .main_menu__quantity {
   font-size: 1.4vw; }
 header .main_menu__price {
   font-size: 1.8vw; }
-header .main_menu a {
-  color: #fff; }
 header .main_menu__cart {
   padding-right: 1.6vw; }
 header .main_menu__cart a {
@@ -1609,237 +1582,87 @@ footer .footer__social img, footer .slide-item__social .hover img {
   display: block; }
 
 @media all and (max-width: 415px) {
-  header {
-    /* hide the checkbox */
-    /* styling the button */
-    /* add the burger */
-    /* container menu */ }
-    header .header__top {
-      height: 18.7vw;
-      z-index: 5;
-      position: relative;
-      background-color: #fff; }
-    header .header__link-logo {
-      margin-left: 20.22vw;
-      margin-top: 1vw; }
-    header .header__logo {
-      width: 38.92vw;
-      height: 14vw; }
-    header .header__town-time, header .header__address-phone, header span.login-greg-none, header .reg, header .main_menu__price {
+  header .header__top {
+    height: 18.7vw;
+    z-index: 5;
+    position: relative;
+    background-color: #fff; }
+  header .header__link-logo {
+    margin-left: 20.22vw;
+    margin-top: 1vw; }
+  header .header__logo {
+    width: 38.92vw;
+    height: 14vw; }
+  header .header__town-time, header .header__address-phone, header span.login-greg-none, header .reg, header .main_menu__price {
+    display: none; }
+  header .header__link.login:after {
+    width: 9.6vw;
+    height: 9.6vw;
+    font-size: 10.87vw;
+    top: 3.54vw;
+    right: 17.7vw;
+    position: relative;
+    color: #707070; }
+  header .main_menu__back {
+    position: relative;
+    top: -3.03vw;
+    right: 3.03vw;
+    width: 5.0vw;
+    height: 5.0vw;
+    box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34); }
+  header .main_menu__quantity {
+    font-size: 3.29vw;
+    color: #fff; }
+  header .main_menu__cart {
+    padding-right: 1.52vw;
+    right: 0;
+    top: 5.0vw;
+    position: absolute;
+    z-index: 5; }
+  header .main_menu__cart a:before {
+    width: 9.1vw;
+    margin-left: 0;
+    height: 9.1vw;
+    font-size: 9.1vw;
+    color: #707070; }
+  header .slide-wrapper {
+    height: 45vw; }
+    header .slide-wrapper .slide-item__text {
+      height: 40vw; }
+    header .slide-wrapper .slide1 .slide-item__img {
       display: none; }
-    header .header__link.login:after {
-      width: 9.6vw;
-      height: 9.6vw;
-      font-size: 10.87vw;
-      top: 3.54vw;
-      right: 17.7vw;
-      position: relative;
-      color: #707070; }
-    header .main_menu__back {
-      position: relative;
-      top: -3.03vw;
-      right: 3.03vw;
-      width: 5.0vw;
-      height: 5.0vw;
-      box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34); }
-    header .main_menu__quantity {
-      font-size: 3.29vw;
-      color: #fff; }
-    header .main_menu__cart {
-      padding-right: 1.52vw;
-      right: 0;
-      top: 5.0vw;
-      position: absolute;
-      z-index: 5; }
-    header .main_menu__cart a:before {
-      width: 9.1vw;
-      margin-left: 0;
-      height: 9.1vw;
-      font-size: 9.1vw;
-      color: #707070; }
-    header .main_menu .nav-list {
-      margin: 0;
-      padding: 2.64vw 5.0vw;
-      border-bottom: 0.08vw solid #707070; }
-    header .main_menu .nav-list:hover {
-      color: #fff; }
-    header .main_menu .nav-list:before {
-      color: #F90001;
-      font-family: fa-solid-900;
-      margin-top: 2vw;
-      position: absolute; }
-    header .main_menu .nav-list:hover:before {
-      color: #fff; }
-    header .main_menu .nav-list:nth-child(1):before {
-      content: "\f015"; }
-    header .main_menu .nav-list:nth-child(2):before {
-      content: "\f818"; }
-    header .main_menu .nav-list:nth-child(3):before {
-      content: "\f4d8"; }
-    header .main_menu .nav-list:nth-child(4):before {
-      content: "\f7b6"; }
-    header .main_menu .nav-list:nth-child(5):before {
-      content: "\f810"; }
-    header .main_menu .nav-list:nth-child(6):before {
-      content: "\f2bb"; }
-    header .main_menu .nav-list:nth-child(7):before {
-      content: "\f0d1"; }
-    header .main_menu .nav-list:nth-child(8):before {
-      content: "\f87b"; }
-    header .main_menu .nav-list:hover, header .main_menu .nav-list:active, header .main_menu .nav-list:hover:before {
-      background-color: #F90001;
-      color: #fff; }
-    header .main_menu .nav-list .root-item {
-      margin: 0 10vw;
-      font-size: 6.32vw;
-      width: 55vw;
-      display: block; }
-    header .main_menu .nav-list .root-item:hover {
-      background: none;
-      box-shadow: none;
-      border-radius: 0;
-      padding: 0;
-      margin: 0 8.84vw;
-      color: #fff;
-      width: 55vw;
-      display: block; }
-    header .main_menu a {
-      color: #D30102; }
-    header .main_menu a:hover {
-      color: #fff; }
-    header .slide-wrapper {
-      height: 45vw; }
-      header .slide-wrapper .slide-item__text {
-        height: 40vw; }
-      header .slide-wrapper .slide1 .slide-item__img {
-        display: none; }
-      header .slide-wrapper .owl-theme .owl-nav.disabled + .owl-dots {
-        margin-top: 2.53vw; }
-    header .slide1 {
-      background-position: 52vw 2vw;
-      background-size: 61vw; }
-    header .slide1 .slide-item__header {
-      width: 46vw;
-      margin-top: 8vw;
-      font-size: 6vw; }
-    header .slide1 .slide-item__span {
-      font-size: 6vw;
-      line-height: 6vw; }
-    header .slide1 .slide-item__info {
-      font-size: 2.4vw; }
-    header .slide2 .slide-item__header {
-      margin-top: 3vw; }
-    header .slide2 .slide-item__social {
-      display: none; }
-    header .slide2 .slide-item__img {
-      width: 50vw;
-      height: 39vw;
-      margin-top: 1vw;
-      padding-right: 0;
-      margin-right: -3vw;
-      background-image: url(images/birthday.png);
-      background-position: right bottom;
-      background-repeat: no-repeat;
-      background-size: 45vw; }
-    header .slide-item__span-add {
-      font-size: 3.6vw; }
-    header .menu .menu-list {
-      float: none; }
-      header .menu .menu-list a.menu-link {
-        font-size: 27px;
-        color: #8c8c8c;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 10px 13px;
-        line-height: 1.4; }
-      header .menu .menu-list a.menu-link:hover {
-        border-bottom: 0; }
-      header .menu .menu-list a.menu-link-active {
-        color: #212121;
-        font-weight: 700;
-        line-height: 1.4;
-        border-bottom: 0; }
-    header #menu-toggle {
-      opacity: 0; }
-    header .menu-btn {
-      display: -webkit-flex;
-      display: -webkit-box;
-      display: -moz-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
-      /* using flex to center content */
-      align-items: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      /* center the content of the button */
-      position: absolute;
-      top: 4.8vw;
-      left: 4.04vw;
-      width: 9.6vw;
-      height: 9.6vw;
-      cursor: pointer;
-      z-index: 6; }
-    header .menu-btn > span,
-    header .menu-btn > span::before,
-    header .menu-btn > span::after {
-      display: block;
-      position: absolute;
-      width: 9.6vw;
-      height: 0.9vw;
-      background-color: #000; }
-    header .menu-btn > span::before {
-      content: '';
-      top: -2.53vw; }
-    header .menu-btn > span::after {
-      content: '';
-      top: 2.53vw; }
-    header .top-menu {
-      display: block;
-      position: absolute;
-      visibility: hidden;
-      top: 19.21vw;
-      left: 0;
-      width: 100%;
-      margin: 0;
-      list-style: none;
-      background-color: #ffffff;
-      box-shadow: 0.08vw 0 1.52vw rgba(0, 0, 0, 0.2);
-      z-index: 4; }
-      header .top-menu .menu-item {
-        padding: 0;
-        line-height: 1.4; }
-      header .top-menu .menu-item.active {
-        background-color: #CFD8DC; }
-    header .menu-link {
-      display: block;
-      color: #383838;
-      font-weight: 100;
-      text-decoration: none; }
-    header .menu-link:hover {
-      background-color: #CFD8DC; }
-    header #menu-toggle:checked ~ .menu-btn > span {
-      transform: rotate(45deg); }
-    header #menu-toggle:checked ~ .menu-btn > span::before {
-      top: 0;
-      transform: rotate(0); }
-    header #menu-toggle:checked ~ .menu-btn > span::after {
-      top: 0;
-      transform: rotate(90deg); }
-    header #menu-toggle:checked ~ .top-menu {
-      visibility: visible;
-      left: 0;
-      width: 70vw;
-      box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7); }
-    header .menu-btn > span,
-    header .menu-btn > span::before,
-    header .menu-btn > span::after {
-      transition-duration: .4s; }
-    header .header__back-red {
-      background-size: 113vw; }
+    header .slide-wrapper .owl-theme .owl-nav.disabled + .owl-dots {
+      margin-top: 2.53vw; }
+  header .slide1 {
+    background-position: 52vw 2vw;
+    background-size: 61vw; }
+  header .slide1 .slide-item__header {
+    width: 46vw;
+    margin-top: 8vw;
+    font-size: 6vw; }
+  header .slide1 .slide-item__span {
+    font-size: 6vw;
+    line-height: 6vw; }
+  header .slide1 .slide-item__info {
+    font-size: 2.4vw; }
+  header .slide2 .slide-item__header {
+    margin-top: 3vw; }
+  header .slide2 .slide-item__social {
+    display: none; }
+  header .slide2 .slide-item__img {
+    width: 50vw;
+    height: 39vw;
+    margin-top: 1vw;
+    padding-right: 0;
+    margin-right: -3vw;
+    background-image: url(images/birthday.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 45vw; }
+  header .slide-item__span-add {
+    font-size: 3.6vw; }
+  header .header__back-red {
+    background-size: 113vw; }
 
   main .content .main__title {
     font-size: 6vw;

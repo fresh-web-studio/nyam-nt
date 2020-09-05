@@ -3,10 +3,10 @@
       <ul class="footer__menu"> 
       <?foreach($arResult as $arItem):?>
           <?if($arItem["SELECTED"]):?>
-               <li class="footer__menu-li"><a class="footer__menu-link selected" href="<?=$arItem["LINK"]?>">
+               <li><a class="footer__menu-link selected" href="<?=$arItem["LINK"]?>">
                <?=$arItem["TEXT"]?></a></li>
           <?else:?>
-               <li class="footer__menu-li"><a class="footer__menu-link" href="<?=$arItem["LINK"]?>">
+               <li><a class="footer__menu-link" href="<?=$arItem["LINK"]?>">
                <?=$arItem["TEXT"]?></a></li>
           <?endif?>
       <?endforeach?>
