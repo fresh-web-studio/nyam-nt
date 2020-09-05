@@ -1,0 +1,19 @@
+@import "../../../../SCSS.scss";
+
+.footer__menu {
+  list-style: none;
+}
+
+.footer__menu-link {
+  font-weight: 500;
+  font-size: 1.8vw;
+  line-height: 3.2vw;
+  color: #FFFFFF;
+}
+
+.footer__menu-link.selected {
+  color: $yellow;
+}
+.footer__menu-link:hover {
+  color: $yellow;
+}

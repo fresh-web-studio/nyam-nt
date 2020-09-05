@@ -1559,15 +1559,6 @@ footer .footer__footer-bottom a {
   margin-left: 2.73vw; }
 footer .footer__footer-bottom a:hover {
   color: #fff; }
-footer .footer__menu {
-  list-style: none; }
-footer .footer__menu-link {
-  font-weight: 500;
-  font-size: 1.8vw;
-  line-height: 3.2vw;
-  color: #FFFFFF; }
-footer .footer__menu-link:hover {
-  color: #E4E22C; }
 footer .footer__address {
   font-size: 1.48vw;
   line-height: 3vw;

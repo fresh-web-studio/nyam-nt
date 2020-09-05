@@ -1,0 +1,16 @@
+.footer__menu {
+  list-style: none; }
+
+.footer__menu-link {
+  font-weight: 500;
+  font-size: 1.8vw;
+  line-height: 3.2vw;
+  color: #FFFFFF; }
+
+.footer__menu-link.selected {
+  color: #E4E22C; }
+
+.footer__menu-link:hover {
+  color: #E4E22C; }
+
+/*# sourceMappingURL=style.css.map */

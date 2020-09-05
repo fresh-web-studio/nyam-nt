@@ -18,38 +18,48 @@
                 </div>
                 <div class="footer__column">
                     <div class="footer__menu-botton">
-                        <ul class="footer__menu">
-                            <li class="footer__menu-li">
-                                <a href="/" class="footer__menu-link">Главная</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="contacts.html" class="footer__menu-link">Контакты</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="delivery.html" class="footer__menu-link">Доставка</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="about.html" class="footer__menu-link">О нас</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "bottom",
+                            array(
+                                "ROOT_MENU_TYPE" => "bottom_left",
+                                "MAX_LEVEL" => "1",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "bottom",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "CHILD_MENU_TYPE" => "",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "N"
+                            ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="footer__column">
                     <div class="footer__menu-botton">
-                        <ul class="footer__menu">
-                            <li class="footer__menu-li">
-                                <a href="pizza.html" class="footer__menu-link">Пицца</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="salads.html" class="footer__menu-link">Салаты</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="drinks.html" class="footer__menu-link">Напитки</a>
-                            </li>
-                            <li class="footer__menu-li">
-                                <a href="dissert.html" class="footer__menu-link">Десерты</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "bottom",
+                            array(
+                                "ROOT_MENU_TYPE" => "bottom_right",
+                                "MAX_LEVEL" => "1",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "bottom",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "CHILD_MENU_TYPE" => "",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "N"
+                            ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="footer__column column-between">
