@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   font-family: roboto, sans-serif;
   box-sizing: border-box; }
@@ -1689,11 +1688,10 @@ footer .footer__social img, footer .slide-item__social .hover img {
 
 @media all and (max-width: 415px) {
   header {
-    /* скрываем чекбокс */
-    /* стилизуем кнопку */
-    /* добавляем "гамбургер" */
-    /* контейнер меню */
-    /* элементы меню */ }
+    /* hide the checkbox */
+    /* styling the button */
+    /* add the burger */
+    /* container menu */ }
     header .header__top {
       height: 18.7vw;
       z-index: 5;
@@ -1850,12 +1848,12 @@ footer .footer__social img, footer .slide-item__social .hover img {
       display: -ms-flex;
       display: -o-flex;
       display: flex;
-      /* используем flex для центрирования содержимого */
+      /* using flex to center content */
       align-items: center;
       -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
-      /* центрируем содержимое кнопки */
+      /* center the content of the button */
       position: absolute;
       top: 4.8vw;
       left: 4.04vw;

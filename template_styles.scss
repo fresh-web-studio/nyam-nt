@@ -2436,14 +2436,14 @@ footer {
       }
     }
 
-    // Бургер меню меню для мобильных
+    // Burger menu for mobile
 
-    /* скрываем чекбокс */
+    /* hide the checkbox */
     #menu-toggle {
       opacity: 0;
     }
 
-    /* стилизуем кнопку */
+    /* styling the button */
     .menu-btn {
       display: -webkit-flex;
       display: -webkit-box;
@@ -2453,12 +2453,12 @@ footer {
       display: -ms-flex;
       display: -o-flex;
       display: flex;
-      /* используем flex для центрирования содержимого */
+      /* using flex to center content */
       align-items: center;
       -webkit-box-align: center;
       -webkit-align-items: center;;
       -ms-flex-align: center;;
-      /* центрируем содержимое кнопки */
+      /* center the content of the button */
       position: absolute;
       top: 4.8vw;
       left: 4.04vw;
@@ -2468,7 +2468,7 @@ footer {
       z-index: 6;
     }
 
-    /* добавляем "гамбургер" */
+    /* add the burger */
     .menu-btn > span,
     .menu-btn > span::before,
     .menu-btn > span::after {
@@ -2489,7 +2489,7 @@ footer {
       top: 2.53vw;
     }
 
-    /* контейнер меню */
+    /* container menu */
     .top-menu {
       display: block;
       position: absolute;
@@ -2513,7 +2513,6 @@ footer {
       }
     }
 
-    /* элементы меню */
     .menu-link {
       display: block;
       color: #383838;
@@ -2747,9 +2746,9 @@ footer {
         padding: 0 3.6vw;
         margin-top: 6.12vw;
         font-size: 4.6vw;
-        -webkit-appearance: none; //убираем внутренную тень
-        -moz-appearance: none; //убираем внутренную тень
-        appearance: none; //убираем внутренную тень
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
       }
 
       .flex-tabs .login__label-row {
@@ -2799,7 +2798,7 @@ footer {
     -ms-flex-line-pack: stretch;
         color: #fff;
         cursor: pointer;
-        -webkit-appearance: none; // убираем градиент кнопки в ios
+        -webkit-appearance: none;
       }
 
       .bx-filter-param-text, .bx-authform-description-container, .order__pay {
