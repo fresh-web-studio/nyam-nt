@@ -11,9 +11,6 @@
   color: #FFFFFF;
 }
 
-.footer__menu-link.selected {
-  color: $yellow;
-}
-.footer__menu-link:hover {
+.footer__menu-link:hover, .footer__menu-link.selected {
   color: $yellow;
 }

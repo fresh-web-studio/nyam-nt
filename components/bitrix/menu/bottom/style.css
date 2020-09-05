@@ -7,10 +7,7 @@
   line-height: 3.2vw;
   color: #FFFFFF; }
 
-.footer__menu-link.selected {
-  color: #E4E22C; }
-
-.footer__menu-link:hover {
+.footer__menu-link:hover, .footer__menu-link.selected {
   color: #E4E22C; }
 
 /*# sourceMappingURL=style.css.map */

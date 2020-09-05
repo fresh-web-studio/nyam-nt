@@ -45,15 +45,7 @@
   font-size: 1.8vw;
 }
 
-.main_menu .nav-list .root-item:hover {
-  background: $red;
-  box-shadow: 0.31vw 0.31vw 0.8vw rgba(0, 0, 0, 0.11);
-  border-radius: 1.48vw;
-  padding: 0.8vw 1.3vw;
-  margin: 0;
-  color: $yellow;
-}
-.main_menu .nav-list .root-item.selected {
+.main_menu .nav-list .root-item:hover, .main_menu .nav-list .root-item.selected {
   background: $red;
   box-shadow: 0.31vw 0.31vw 0.8vw rgba(0, 0, 0, 0.11);
   border-radius: 1.48vw;
