@@ -19,24 +19,24 @@
                 <div class="footer__column">
                     <div class="footer__menu-botton">
                         <?$APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "bottom",
-                            array(
-                                "ROOT_MENU_TYPE" => "bottom_left",
-                                "MAX_LEVEL" => "1",
-                                "USE_EXT" => "N",
-                                "COMPONENT_TEMPLATE" => "bottom",
-                                "MENU_CACHE_TYPE" => "N",
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "MENU_CACHE_GET_VARS" => array(
-                                ),
-                                "CHILD_MENU_TYPE" => "",
-                                "DELAY" => "N",
-                                "ALLOW_MULTI_SELECT" => "N"
-                            ),
-                            false
-                        );?>
+	"bitrix:menu", 
+	"bottom", 
+	array(
+		"ROOT_MENU_TYPE" => "bottom_left",
+		"MAX_LEVEL" => "1",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"CHILD_MENU_TYPE" => "",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
                     </div>
                 </div>
                 <div class="footer__column">
@@ -98,14 +98,14 @@
                             <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg"/>
                             <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg"/>
                         </a>
-                        <a href="#" class="hover">
-                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__ok.svg"/>
-                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/ok-active.svg"/>
+                        <!--<a href="#" class="hover">
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__ok.svg"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg"/>
                         </a>
                         <a href="#" class="hover">
-                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__inst.svg"/>
-                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/inst-active.svg"/>
-                        </a>
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__inst.svg"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg"/>
+                        </a>-->
                     </div>
                 </div>
             </div>

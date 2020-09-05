@@ -116,7 +116,7 @@
   .main_menu .nav-list:before {
     color: #F90001;
     font-family: fa-solid-900;
-    margin-top: 2vw;
+    margin-top: 1.7vw;
     position: absolute; }
 
   .main_menu .nav-list:hover:before {

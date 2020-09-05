@@ -1988,7 +1988,7 @@ footer {
 
   .footer__footer-bottom a {
     color: $red;
-    margin-left: 2.73vw;
+    margin: 2.73vw;
   }
 
   .footer__footer-bottom a:hover {
@@ -2049,7 +2049,7 @@ footer {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    height: 12vw;
+    //height: 12vw;
   }
 
   .footer__social img, .slide-item__social .hover img {
@@ -2059,6 +2059,9 @@ footer {
 }
 
 @media all and (max-width: 415px) {
+  .first {
+    z-index: 3;
+  }
   header {
 
     .header__top {
@@ -2903,12 +2906,8 @@ footer {
     -ms-flex-pack: center;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
-      height: 14vw;
+      height: 15vw;
       padding: 2vw 0;
-
-      a {
-        margin-left: 0;
-      }
     }
   }
 
