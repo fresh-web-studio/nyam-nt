@@ -454,7 +454,7 @@ main .content {
   background-position: center top;
   padding-bottom: 7.80vw; }
   main .content .main__title {
-    margin: 2.37vw 1.6vw 3.9vw;
+    margin: 2.37vw 1.6vw 3.90vw;
     font-weight: 900;
     font-size: 3vw;
     line-height: 4vw;
@@ -1719,8 +1719,8 @@ footer .footer__social img, footer .slide-item__social .hover img {
       position: relative;
       top: -3.03vw;
       right: 3.03vw;
-      width: 5vw;
-      height: 5vw;
+      width: 5.0vw;
+      height: 5.0vw;
       box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34); }
     header .main_menu__quantity {
       font-size: 3.29vw;
@@ -1728,7 +1728,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
     header .main_menu__cart {
       padding-right: 1.52vw;
       right: 0;
-      top: 5vw;
+      top: 5.0vw;
       position: absolute;
       z-index: 5; }
     header .main_menu__cart a:before {
@@ -1739,7 +1739,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
       color: #707070; }
     header .main_menu .nav-list {
       margin: 0;
-      padding: 2.64vw 5vw;
+      padding: 2.64vw 5.0vw;
       border-bottom: 0.08vw solid #707070; }
     header .main_menu .nav-list:hover {
       color: #fff; }
@@ -2410,4 +2410,4 @@ footer .footer__social img, footer .slide-item__social .hover img {
     footer .footer__footer-bottom a {
       margin-left: 0; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=template_styles.css.map */

@@ -1,32 +1,3 @@
-$p1: 0.08vw;
-$p2: 0.16vw;
-$p3: 0.23vw;
-$p4: 0.31vw;
-$p5: 0.39vw;
-$p10: 0.8vw;
-$p13: 1.01vw;
-$p15: 1.17vw;
-$p18: 1.4vw;
-$p19: 1.48vw;
-$p20: 1.6vw;
-$p21: 1.64vw;
-$p22: 1.72vw;
-$p23: 1.79vw;
-$p24: 1.87vw;
-$p25: 1.95vw;
-$p27: 2.11vw;
-$p30: 2.34vw;
-$p32: 2.5vw;
-$p35: 2.73vw;
-$p36: 2.81vw;
-$p40: 3.12vw;
-$p41: 3.2vw;
-$p74: 5.77vw;
-$p150: 11.7vw;
-$p195: 15.21vw;
-$p212: 100vw;
-$p319: 24.88vw;
-
 $wight-base: 1366px;
 $wight-percent: 100%;
 
@@ -95,12 +66,12 @@ button {
 }
 
 .container {
-  width: $p212;
+  width: 100vw;
   margin: 0 auto;
 }
 
 .first, .second {
-  border: $p2 solid transparent;
+  border: 0.16vw solid transparent;
   margin: 0;
   padding: 0;
 }
@@ -144,7 +115,7 @@ header {
   }
 
   .header__top {
-    padding: $p10 $p20;
+    padding: 0.8vw 1.6vw;
   }
 
   .header__top {
@@ -273,18 +244,18 @@ header {
   }
 
   .header__text {
-    font-size: $p19;
-    line-height: $p36;
+    font-size: 1.48vw;
+    line-height: 2.81vw;
     color: #000000;
   }
 
   .header__text:before {
     content: "";
     background-position: center;
-    width: $p36;
-    height: $p36;
+    width: 2.81vw;
+    height: 2.81vw;
     background-repeat: no-repeat;
-    margin-left: -$p32;
+    margin-left: -2.5vw;
   }
 
   .town-icon:before {
@@ -314,8 +285,8 @@ header {
     content: "\e971";
     font-family: icomoon-free;
     background-position: center;
-    width: $p27;
-    height: $p36;
+    width: 2.11vw;
+    height: 2.81vw;
     background-repeat: no-repeat;
     position: absolute;
   }
@@ -324,14 +295,14 @@ header {
     content: "\e973";
     font-family: icomoon-free;
     background-position: center;
-    width: $p27;
-    height: $p36;
+    width: 2.11vw;
+    height: 2.81vw;
     background-repeat: no-repeat;
     position: absolute;
   }
 
   .header__link.login, .header__link.reg {
-    margin-right: $p27;
+    margin-right: 2.11vw;
   }
 
   .header__link {
@@ -343,10 +314,10 @@ header {
   }
 
   .header__text_red {
-    font-size: $p19;
-    line-height: $p36;
+    font-size: 1.48vw;
+    line-height: 2.81vw;
     color: $red;
-    margin-left: $p10;
+    margin-left: 0.8vw;
 
     a {
       color: $red;
@@ -390,7 +361,7 @@ header {
   }
 
   .main_menu .nav-list {
-    margin: $p21 $p2;
+    margin: 1.64vw 0.16vw;;
   }
 
   .main_menu .nav-list .root-item {
@@ -400,9 +371,9 @@ header {
 
   .main_menu .nav-list .root-item:hover {
     background: $red;
-    box-shadow: $p4 $p4 $p10 rgba(0, 0, 0, 0.11);
-    border-radius: $p19;
-    padding: $p10 1.3vw;
+    box-shadow: 0.31vw 0.31vw 0.8vw rgba(0, 0, 0, 0.11);
+    border-radius: 1.48vw;
+    padding: 0.8vw 1.3vw;
     margin: 0;
     color: $yellow;
   }
@@ -415,7 +386,7 @@ header {
     height: 2vw;
     border-radius: 50%;
     background: $red;
-    box-shadow: $p1 $p1 $p5 rgba(0, 0, 0, 0.34);
+    box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34);
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
@@ -434,7 +405,7 @@ header {
     -ms-flex-align: center;;
   }
   .main_menu__quantity {
-    font-size: $p18;
+    font-size: 1.4vw;
   }
 
   .main_menu__price {
@@ -446,7 +417,7 @@ header {
   }
 
   .main_menu__cart {
-    padding-right: $p20;
+    padding-right: 1.6vw;
   }
 
   .main_menu__cart a {
@@ -547,7 +518,7 @@ header {
   }
 
   .slide-item__info {
-    font-size: $p21;
+    font-size: 1.64vw;
     margin-top: 2.6vw;
     color: $red-lightly;
   }
@@ -586,7 +557,7 @@ header {
 
   .slide-item__social {
     position: absolute;
-    right: $p20;
+    right: 1.6vw;
     top: 2.03vw;
     display: -webkit-flex;
     display: -webkit-box;
@@ -605,7 +576,7 @@ header {
   }
 
   .slide-item__social .hover img {
-    width: $p41;
+    width: 3.2vw;
   }
 
   .owl-dots {
@@ -618,16 +589,16 @@ header {
   }
 
   .owl-theme .owl-dots .owl-dot span {
-    width: $p23;
-    height: $p23;
-    margin: $p5 0.55vw;
+    width: 1.79vw;
+    height: 1.79vw;
+    margin: 0.39vw 0.55vw;
     background: $red-lightly;
-    border: $p1 solid $red-lightly;
+    border: 0.08vw solid $red-lightly;
   }
 
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: $red-dark;
-    border: $p1 solid $red-lightly;
+    border: 0.08vw solid $red-lightly;
 
   }
 }
@@ -639,7 +610,7 @@ main {
     padding-bottom: 7.80vw;
 
     .main__title {
-      margin: 2.37vw $p20 3.90vw;
+      margin: 2.37vw 1.6vw 3.90vw;
       font-weight: 900;
       font-size: 3vw;
       line-height: 4vw;
@@ -663,9 +634,9 @@ main {
 
     .main__frame {
       width: 25%;
-      padding: $p20;
-      margin: $p20 0;
-      border-right: $p1 solid $gray;
+      padding: 1.6vw;
+      margin: 1.6vw 0;
+      border-right: 0.08vw solid $gray;
     }
 
     .main__frame:nth-child(4n+4) {
@@ -689,7 +660,7 @@ main {
     }
 
     .main__name {
-      margin-top: $p18;
+      margin-top: 1.4vw;
       margin-bottom: 0.3vw;
       font-weight: bold;
       font-size: 1.8vw;
@@ -702,7 +673,7 @@ main {
     .main__description {
       margin-bottom: 0.5vw;
       font-size: 1.1vw;
-      line-height: $p19;
+      line-height: 1.48vw;
       min-height: 3vw;
       height: 3vw;
       color: $gray-dark;
@@ -739,7 +710,7 @@ main {
     .main__item-price {
       font-weight: bold;
       font-size: 2.3vw;
-      line-height: $p32;
+      line-height: 2.5vw;
       color: #000000;
     }
 
@@ -753,7 +724,7 @@ main {
       height: 3.5vw;
       border: 0.18vw solid $red;
       box-sizing: border-box;
-      border-radius: $p19;
+      border-radius: 1.48vw;
       font-size: 1.2vw;
       line-height: 3vw;
       display: -webkit-flex;
@@ -792,12 +763,12 @@ main {
       font-weight: bold;
       font-size: 4vw;
       line-height: 5vw;
-      margin: 6vw $p19 4vw;
+      margin: 6vw 1.48vw 4vw;
       color: $red;
     }
 
     .about__row {
-      padding: 0 $p20;
+      padding: 0 1.6vw;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -845,7 +816,7 @@ main {
     }
 
     .about__photo {
-      margin: $p19 0;
+      margin: 1.48vw 0;
     }
 
     .about__photo.photo1 {
@@ -877,12 +848,12 @@ main {
 
     .main__info {
       font-size: 3vw;
-      padding: 0 $p20;
+      padding: 0 1.6vw;
       color: $gray-dark;
     }
 
     .delivery__row {
-      margin: $p20;
+      margin: 1.6vw;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -899,7 +870,7 @@ main {
 
     .delivery__table {
       width: 50%;
-      padding-right: $p20;
+      padding-right: 1.6vw;
     }
 
     .delivery__table-row {
@@ -918,7 +889,7 @@ main {
       font-size: 2.3vw;
       line-height: 4.9vw;
       color: $gray-dark;
-      border-bottom: $p1 solid $gray;
+      border-bottom: 0.08vw solid $gray;
     }
 
     .delivery__table-row-header {
@@ -962,7 +933,7 @@ main {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-      padding: 0 $p20;
+      padding: 0 1.6vw;
     }
 
     .contacts__title {
@@ -1024,13 +995,13 @@ main {
     }
 
     .link-photo-min {
-      margin: $p20 $p10;
+      margin: 1.6vw 0.8vw;
     }
 
     .goods__photo-price {
       width: 50%;
       text-align: center;
-      padding-top: $p30;
+      padding-top: 2.34vw;
     }
 
     .link-photo img {
@@ -1039,24 +1010,24 @@ main {
 
     .goods__description {
       width: 50%;
-      padding: $p30 $p20;
+      padding: 2.34vw 1.6vw;
     }
 
     .goods__name {
       font-weight: bold;
       font-size: 2.75vw;
-      line-height: $p41;
+      line-height: 3.2vw;
     }
 
     .goods__composition-title {
-      margin-top: $p25;
+      margin-top: 1.95vw;
       font-size: 2.18vw;
       line-height: 2.57vw;
     }
 
     .goods__composition {
       margin-top: 1.01vw;
-      font-size: $p25;
+      font-size: 1.95vw;
       line-height: 2.26vw;
       color: $gray-dark;
     }
@@ -1083,7 +1054,7 @@ main {
 
     .goods__column {
       width: 50%;
-      font-size: $p22;
+      font-size: 1.72vw;
       line-height: 2.03vw;
       color: $gray-dark;
       margin-bottom: 0.94vw;
@@ -1092,7 +1063,7 @@ main {
     .goods__column-right {
       width: 50%;
       text-align: right;
-      font-size: $p22;
+      font-size: 1.72vw;
       line-height: 2.03vw;
       color: $gray-dark;
       margin-bottom: 0.94vw;
@@ -1112,13 +1083,13 @@ main {
       -webkit-box-align: center;
       -webkit-align-items: center;;
       -ms-flex-align: center;;
-      margin-top: $p40;
+      margin-top: 3.12vw;
     }
 
     .goods__variation {
       background-color: #fff;
       border-radius: 50%;
-      box-shadow: $p2 $p2 $p20 rgba(0, 0, 0, 0.25);
+      box-shadow: 0.16vw 0.16vw 1.6vw rgba(0, 0, 0, 0.25);
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1139,7 +1110,7 @@ main {
 
     .goods__variation:hover {
       background-color: #fff;
-      box-shadow: $p4 $p4 $p40 rgba(0, 0, 0, 0.5);
+      box-shadow: 0.31vw 0.31vw 3.12vw rgba(0, 0, 0, 0.5);
       cursor: pointer;
     }
 
@@ -1168,7 +1139,7 @@ main {
 
     .goods__link .goods__variation_row {
       font-size: 1.40vw;
-      line-height: $p21;
+      line-height: 1.64vw;
       text-align: center;
       color: $gray-dark;
     }
@@ -1190,7 +1161,7 @@ main {
       -ms-flex-align: center;;
       position: relative;
       max-width: 11.70vw;
-      margin: 0 auto $p15;
+      margin: 0 auto 1.17vw;
     }
 
     .goods__quantity_price-list {
@@ -1248,8 +1219,8 @@ main {
       display: block;
       min-width: 3.51vw;
       height: 3.51vw;
-      border: $p2 solid $red;
-      border-radius: $p10;
+      border: 0.16vw solid $red;
+      border-radius: 0.8vw;
       background-color: #fff;
       color: #fff;
       vertical-align: middle;
@@ -1275,13 +1246,13 @@ main {
     }
 
     .product-item-amount-field {
-      font-size: $p30;
+      font-size: 2.34vw;
       display: block;
       padding: 0;
       width: $wight-percent;
       height: 3.51vw;
-      border: $p1 solid transparent;
-      border-radius: $p2;
+      border: 0.08vw solid transparent;
+      border-radius: 0.16vw;
       background: transparent !important;
       color: #000;
       vertical-align: middle;
@@ -1311,8 +1282,8 @@ main {
       width: 14.12vw;
       height: 5.38vw;
       background: $red;
-      border-radius: $p20;
-      font-size: $p25;
+      border-radius: 1.6vw;
+      font-size: 1.95vw;
       line-height: 5vw;
       align-items: center;
       -webkit-box-align: center;
@@ -1329,21 +1300,21 @@ main {
 
     .goods__additionally-title {
       font-size: 2.42vw;
-      line-height: $p36;
-      margin-left: $p20;
+      line-height: 2.81vw;
+      margin-left: 1.6vw;
     }
 
     .goods__frame {
       width: $wight-percent;
-      padding: $p20;
-      margin: $p20 0;
+      padding: 1.6vw;
+      margin: 1.6vw 0;
     }
 
     .goods__additionally {
       background: #FFFFFF;
-      box-shadow: 0 $p4 $p20 rgba(0, 0, 0, 0.15);
-      border-radius: $p15;
-      padding: $p20;
+      box-shadow: 0 0.31vw 1.6vw rgba(0, 0, 0, 0.15);
+      border-radius: 1.17vw;
+      padding: 1.6vw;
       text-align: center;
     }
 
@@ -1353,9 +1324,9 @@ main {
 
     .goods__additionally-name {
       margin-top: 1.09vw;
-      margin-bottom: $p25;
+      margin-bottom: 1.95vw;
       font-size: 1vw;
-      line-height: $p19;
+      line-height: 1.48vw;
       color: $gray-dark;
     }
 
@@ -1375,18 +1346,18 @@ main {
     }
 
     .goods__additionally-price {
-      font-size: $p25;
+      font-size: 1.95vw;
       line-height: 2.26vw;
     }
 
     .goods__additionally-bay-btn {
-      width: $p30;
-      height: $p30;
-      border: $p2 solid $red;
+      width: 2.34vw;
+      height: 2.34vw;
+      border: 0.16vw solid $red;
       box-sizing: border-box;
-      border-radius: $p10;
-      font-size: $p25;
-      line-height: $p24;
+      border-radius: 0.8vw;
+      font-size: 1.95vw;
+      line-height: 1.87vw;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1428,8 +1399,8 @@ main {
       -webkit-box-align: center;
       -webkit-align-items: center;;
       -ms-flex-align: center;;
-      border-top: $p1 solid $gray;
-      margin: 0 $p20;
+      border-top: 0.08vw solid $gray;
+      margin: 0 1.6vw;
     }
 
     .cart__img {
@@ -1438,7 +1409,7 @@ main {
 
     .cart__img img {
       width: $wight-percent;
-      padding: $p20 0;
+      padding: 1.6vw 0;
     }
 
     .cart__text {
@@ -1447,8 +1418,8 @@ main {
 
     .cart__link .cart__name {
       font-weight: bold;
-      font-size: $p35;
-      line-height: $p41;
+      font-size: 2.73vw;
+      line-height: 3.2vw;
       color: #000;
     }
 
@@ -1461,7 +1432,7 @@ main {
     }
 
     .cart__description {
-      font-size: $p25;
+      font-size: 1.95vw;
       line-height: 2.26vw;
     }
 
@@ -1471,12 +1442,12 @@ main {
 
     .cart__price, .cart__sum {
       font-weight: 500;
-      font-size: $p35;
+      font-size: 2.73vw;
       line-height: 3.56vw;
     }
 
     .cart__order-sum-list {
-      border-top: $p1 solid $gray;
+      border-top: 0.08vw solid $gray;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1490,13 +1461,13 @@ main {
       -webkit-box-align: center;
       -webkit-align-items: center;;
       -ms-flex-align: center;;
-      margin-right: $p20;
+      margin-right: 1.6vw;
       padding-top: 5.46vw;
     }
 
     .cart__order-text {
-      font-size: $p35;
-      line-height: $p41;
+      font-size: 2.73vw;
+      line-height: 3.2vw;
       color: $gray-dark;
     }
 
@@ -1529,16 +1500,16 @@ main {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-      padding: 5.46vw $p20 0;
+      padding: 5.46vw 1.6vw 0;
     }
 
     .cart__btn_gray {
       width: 25.58vw;
       height: 5.07vw;
-      border: $p2 solid $gray-dark;
+      border: 0.16vw solid $gray-dark;
       box-sizing: border-box;
-      border-radius: $p15;
-      font-size: $p25;
+      border-radius: 1.17vw;
+      font-size: 1.95vw;
       line-height: 2.26vw;
       display: -webkit-flex;
       display: -webkit-box;
@@ -1561,18 +1532,18 @@ main {
 
     .cart__btn_gray:hover {
       background-color: $red-dark;
-      border: $p2 solid $red-dark;
+      border: 0.16vw solid $red-dark;
       color: #fff;
     }
 
     .cart__btn_red {
       width: 25.58vw;
       height: 5.07vw;
-      border: $p2 solid $red;
+      border: 0.16vw solid $red;
       background-color: $red;
       box-sizing: border-box;
-      border-radius: $p15;
-      font-size: $p25;
+      border-radius: 1.17vw;
+      font-size: 1.95vw;
       line-height: 2.26vw;
       display: -webkit-flex;
       display: -webkit-box;
@@ -1595,7 +1566,7 @@ main {
 
     .cart__btn_red:hover {
       background-color: $red-dark;
-      border: $p2 solid $red-dark;
+      border: 0.16vw solid $red-dark;
       color: #fff;
     }
 
@@ -1618,13 +1589,13 @@ main {
     }
 
     .login__column {
-      width: $p212 / 2 - $p41;
+      width: 100vw / 2 - 3.2vw;
       min-height: 60vw;
-      margin: 0 $p20;
+      margin: 0 1.6vw;
       padding: 5.85vw;
       text-align: center;
-      border: $p1 solid $gray;
-      border-radius: $p20;
+      border: 0.08vw solid $gray;
+      border-radius: 1.6vw;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1662,8 +1633,8 @@ main {
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        border: $p1 solid $red;
-        border-radius: $p20;
+        border: 0.08vw solid $red;
+        border-radius: 1.6vw;
       }
     }
 
@@ -1676,9 +1647,9 @@ main {
       display: -ms-flex;
       display: -o-flex;
       display: flex;
-      font-size: $p20;
-      padding: 1vw $p18;
-      border-radius: $p18;
+      font-size: 1.6vw;
+      padding: 1vw 1.4vw;
+      border-radius: 1.4vw;
       background-color: #ffffff;
       color: $red;
       text-align: center;
@@ -1692,30 +1663,30 @@ main {
 
     .panel {
       text-align: left;
-      padding-top: $p10;
+      padding-top: 0.8vw;
       min-height: 23.4vw;
       display: none;
       width: $wight-percent;
       flex-basis: auto;
 
       .resp-tab {
-        border-radius: $p5;
+        border-radius: 0.39vw;
         font-weight: normal;
-        border: $p1 $gray solid;
+        border: 0.08vw $gray solid;
         border-collapse: collapse;
         width: $wight-percent;
         max-width: $wight-percent;
       }
 
       .resp-tab th, .resp-tab td {
-        padding: $p13 $p10;
-        font-size: $p10;
+        padding: 1.01vw 0.8vw;
+        font-size: 0.8vw;
         border: none;
         vertical-align: top;
         text-align: center;
 
         span {
-          margin-right: $p10;
+          margin-right: 0.8vw;
         }
       }
 
@@ -1727,7 +1698,7 @@ main {
       }
 
       .resp-tab tr {
-        border-top: $p1 $gray solid;
+        border-top: 0.08vw $gray solid;
       }
     }
 
@@ -1753,13 +1724,13 @@ main {
     input[type="password"], input[type="text"] {
       width: $wight-percent;
       height: 4.3vw;
-      border-radius: $p20;
-      border: $p2 solid $red;
+      border-radius: 1.6vw;
+      border: 0.16vw solid $red;
       outline: 0;
       line-height: 4vw;
-      padding: 0 $p20;
-      margin-top: $p40;
-      font-size: $p20;
+      padding: 0 1.6vw;
+      margin-top: 3.12vw;
+      font-size: 1.6vw;
     }
 
     .checkbox {
@@ -1770,11 +1741,11 @@ main {
       margin-top: 5.07vw;
       width: 20vw;
       height: 5.07vw;
-      border: $p2 solid $red;
+      border: 0.16vw solid $red;
       background-color: $red;
       box-sizing: border-box;
       border-radius: 1.7vw;
-      font-size: $p25;
+      font-size: 1.95vw;
       line-height: 2.26vw;
       display: -webkit-flex;
       display: -webkit-box;
@@ -1806,22 +1777,22 @@ main {
     }
 
     .bx-filter-param-text {
-      font-size: $p19;
+      font-size: 1.48vw;
       color: $gray-dark;
     }
 
     .bx-filter-param-text:before, .order__pay:before {
-      margin-top: -$p2;
+      margin-top: -0.16vw;
       content: " ";
       color: #ffffff;
       display: inline-block;
       font: 1vw/1.25vw Arial;
-      margin-right: $p10;
+      margin-right: 0.8vw;
       text-align: center;
-      width: $p15;
-      height: $p15;
+      width: 1.17vw;
+      height: 1.17vw;
       background: $red;
-      border: $p3 solid $red;
+      border: 0.23vw solid $red;
       border-image: initial;
       vertical-align: middle;
     }
@@ -1832,19 +1803,19 @@ main {
     }
 
     .bx-captcha {
-      margin-top: $p40;
+      margin-top: 3.12vw;
     }
 
     .bx-authform-description-container {
       margin-top: 1vw;
-      font-size: $p19;
+      font-size: 1.48vw;
       color: $gray-dark;
     }
 
     .login__column:first-child {
       background-color: #fff;
-      border: $p2 solid #fff;
-      box-shadow: 0 $p4 $p20 rgba(0, 0, 0, 0.3);
+      border: 0.16vw solid #fff;
+      box-shadow: 0 0.31vw 1.6vw rgba(0, 0, 0, 0.3);
     }
 
     .login__contacts {
@@ -1854,31 +1825,31 @@ main {
 
     .login__title {
       font-weight: bold;
-      font-size: $p40;
+      font-size: 3.12vw;
     }
 
     .login__subtitle {
       margin-top: 2.74vw;
-      font-size: $p35;
+      font-size: 2.73vw;
       color: $gray-dark;
     }
 
     .login__address {
-      margin-top: $p15;
+      margin-top: 1.17vw;
       font-weight: 300;
-      font-size: $p22;
+      font-size: 1.72vw;
       color: $gray-dark;
     }
 
     .login__phone {
-      margin-top: $p15;
-      font-size: $p25;
+      margin-top: 1.17vw;
+      font-size: 1.95vw;
       color: $gray-dark;
     }
 
     .login__time {
       margin-top: 1.20vw;
-      font-size: $p22;
+      font-size: 1.72vw;
       font-weight: 700;
       color: $gray-dark;
 
@@ -1922,35 +1893,35 @@ main {
       flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      border: $p1 solid $red;
-      border-radius: $p20;
+      border: 0.08vw solid $red;
+      border-radius: 1.6vw;
     }
 
     .order__column {
       min-height: 42vw;
-      margin: 0 $p20;
+      margin: 0 1.6vw;
       padding: 3.59vw;
       text-align: center;
     }
 
     .order__column-bottom {
       width: 22.2vw;
-      margin-top: $p40;
-      padding: $p20;
+      margin-top: 3.12vw;
+      padding: 1.6vw;
       background-color: #fff;
-      border-radius: $p20;
-      border: $p2 solid $red;
+      border-radius: 1.6vw;
+      border: 0.16vw solid $red;
       cursor: pointer;
     }
 
     .order__column-bottom:hover {
       background-color: $red-dark;
       color: #fff;
-      border: $p2 solid $red-dark;
+      border: 0.16vw solid $red-dark;
     }
 
     .order__address, .order__time {
-      font-size: $p20;
+      font-size: 1.6vw;
     }
 
     .order__column:first-child {
@@ -1959,8 +1930,8 @@ main {
 
     .order__column:last-child {
       width: 39vw;
-      border-radius: $p20;
-      box-shadow: 0 $p4 $p20 rgba(0, 0, 0, 0.3);
+      border-radius: 1.6vw;
+      box-shadow: 0 0.31vw 1.6vw rgba(0, 0, 0, 0.3);
       background-color: #fff;
     }
 
@@ -1969,7 +1940,7 @@ main {
     }
 
     .order__title {
-      font-size: $p35;
+      font-size: 2.73vw;
     }
 
     .order__item {
@@ -1982,12 +1953,12 @@ main {
     }
 
     .order__name {
-      font-size: $p24;
+      font-size: 1.87vw;
       font-weight: 700;
     }
 
     .order__description {
-      font-size: $p20;
+      font-size: 1.6vw;
     }
 
     .order__sum-quantity {
@@ -1995,13 +1966,13 @@ main {
     }
 
     .order__sum {
-      font-size: $p24;
+      font-size: 1.87vw;
       text-align: right;
     }
 
     .order__quantity {
       text-align: right;
-      font-size: $p20;
+      font-size: 1.6vw;
     }
 
     .order__row-sum {
@@ -2022,18 +1993,18 @@ main {
       -ms-flex-wrap: wrap;
       width: $wight-percent;
       margin-top: 4.68vw;
-      padding-top: $p20;
-      border-top: $p2 solid $gray;
+      padding-top: 1.6vw;
+      border-top: 0.16vw solid $gray;
     }
 
     .order__title-sum {
       width: ($wight-percent / 3) * 2;
-      font-size: $p25;
+      font-size: 1.95vw;
     }
 
     .order__sum-end {
       width: $wight-percent / 3;
-      font-size: $p25;
+      font-size: 1.95vw;
       text-align: right;
     }
 
@@ -2042,25 +2013,25 @@ main {
     }
 
     input.order__small {
-      width: 52vw / 3 - $p40;
+      width: 52vw / 3 - 3.12vw;
     }
 
     .order__select-pay {
-      margin-top: $p40;
+      margin-top: 3.12vw;
       width: $wight-percent;
       background-color: #F5F4F4;
-      border-radius: $p20;
-      border: $p2 solid #F5F4F4;
-      padding: $p32;
+      border-radius: 1.6vw;
+      border: 0.16vw solid #F5F4F4;
+      padding: 2.5vw;
     }
 
     .order-title {
       font-size: 2vw;
-      margin-bottom: $p20;
+      margin-bottom: 1.6vw;
     }
 
     .order__pay {
-      font-size: $p20;
+      font-size: 1.6vw;
       margin-top: 1vw;
       cursor: pointer;
     }
@@ -2089,7 +2060,7 @@ footer {
     -webkit-box-align: center;
     -webkit-align-items: center;;
     -ms-flex-align: center;;
-    padding: $p35 $p20;
+    padding: 2.73vw 1.6vw;
   }
 
   .footer__logo {
@@ -2136,7 +2107,7 @@ footer {
     -ms-flex-align: center;;
     font-size: 1.25vw;
     height: 4vw;
-    padding: 0 $p20;
+    padding: 0 1.6vw;
   }
 
   .footer__copyright {
@@ -2145,7 +2116,7 @@ footer {
 
   .footer__footer-bottom a {
     color: $red;
-    margin-left: $p35;
+    margin-left: 2.73vw;
   }
 
   .footer__footer-bottom a:hover {
@@ -2159,7 +2130,7 @@ footer {
   .footer__menu-link {
     font-weight: 500;
     font-size: 1.8vw;
-    line-height: $p41;
+    line-height: 3.2vw;
     color: #FFFFFF;
   }
 
@@ -2168,25 +2139,25 @@ footer {
   }
 
   .footer__address {
-    font-size: $p19;
+    font-size: 1.48vw;
     line-height: 3vw;
     color: #FFFFFF;
   }
 
   .footer__address:before {
     background-image: url('images/footer__address.svg');
-    background-size: $p10;
+    background-size: 0.8vw;
     position: absolute;
     content: "";
     background-position: center;
-    width: $p36;
+    width: 2.81vw;
     height: 3.8vw;
     background-repeat: no-repeat;
-    margin-left: -$p32;
+    margin-left: -2.5vw;
   }
 
   .footer__phone {
-    font-size: $p19;
+    font-size: 1.48vw;
     line-height: 3vw;
     color: #FFFFFF;
 
@@ -2197,14 +2168,14 @@ footer {
 
   .footer__phone:before {
     background-image: url('images/footer__phone.svg');
-    background-size: $p10;
+    background-size: 0.8vw;
     position: absolute;
     content: "";
     background-position: center;
-    width: $p36;
-    height: $p41;
+    width: 2.81vw;
+    height: 3.2vw;
     background-repeat: no-repeat;
-    margin-left: -$p32;
+    margin-left: -2.5vw;
   }
 
   .footer__social, .column-between {
@@ -2225,58 +2196,28 @@ footer {
   }
 
   .footer__social img, .slide-item__social .hover img {
-    width: $p41;
+    width: 3.2vw;
     display: block;
   }
 }
 
 @media all and (max-width: 415px) {
-  $p2: 0.51vw;
-  $p3: 0.76vw;
-  $p3-54: 0.9vw;
-  $p6: 1.52vw;
-  $p8: 2.02vw;
-  $p9: 2.27vw;
-  $p10: 2.53vw;
-  $p12: 3.03vw;
-  $p13: 3.29vw;
-  $p14: 3.54vw;
-  $p14-25: 3.6vw;
-  $p16: 4.04vw;
-  $p19: 4.8vw;
-  $p20: 5.0vw;
-  $p24: 6.06vw;
-  $p25: 6.32vw;
-  $p30: 7.58vw;
-  $p35: 8.84vw;
-  $p36: 9.1vw;
-  $p38: 9.6vw;
-  $p40: 10.11vw;
-  $p43: 10.87vw;
-  $p74: 18.7vw;
-  $p75: 18.95vw;
-  $p76: 19.21vw;
-  $p80: 20.22vw;
-  $p89: 22.49vw;
-  $p99: 25.02vw;
-  $p154: 38.92vw;
-
   header {
 
     .header__top {
-      height: $p74;
+      height: 18.7vw;
       z-index: 5;
       position: relative;
       background-color: #fff;
     }
 
     .header__link-logo {
-      margin-left: $p80;
+      margin-left: 20.22vw;
       margin-top: 1vw;
     }
 
     .header__logo {
-      width: $p154;
+      width: 38.92vw;
       height: 14vw;
     }
 
@@ -2285,10 +2226,10 @@ footer {
     }
 
     .header__link.login:after {
-      width: $p38;
-      height: $p38;
+      width: 9.6vw;
+      height: 9.6vw;
       font-size: 10.87vw;
-      top: $p14;
+      top: 3.54vw;
       right: 17.7vw;
       position: relative;
       color: $gray-dark;
@@ -2296,38 +2237,38 @@ footer {
 
     .main_menu__back {
       position: relative;
-      top: -$p12;
-      right: $p12;
-      width: $p20;
-      height: $p20;
+      top: -3.03vw;
+      right: 3.03vw;
+      width: 5.0vw;
+      height: 5.0vw;
       box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34);
     }
 
     .main_menu__quantity {
-      font-size: $p13;
+      font-size: 3.29vw;
       color: #fff;
     }
 
     .main_menu__cart {
-      padding-right: $p6;
+      padding-right: 1.52vw;
       right: 0;
-      top: $p20;
+      top: 5.0vw;
       position: absolute;
       z-index: 5;
     }
 
     .main_menu__cart a:before {
-      width: $p36;
+      width: 9.1vw;
       margin-left: 0;
-      height: $p36;
-      font-size: $p36;
+      height: 9.1vw;
+      font-size: 9.1vw;
       color: $gray-dark;
     }
 
     .main_menu .nav-list {
       margin: 0;
-      padding: 2.64vw $p20;
-      border-bottom: $p1 solid $gray-dark;
+      padding: 2.64vw 5.0vw;
+      border-bottom: 0.08vw solid $gray-dark;
     }
 
     .main_menu .nav-list:hover {
@@ -2384,7 +2325,7 @@ footer {
 
     .main_menu .nav-list .root-item {
       margin: 0 10vw;
-      font-size: $p25;
+      font-size: 6.32vw;
       width: 55vw;
       display: block;
     }
@@ -2420,7 +2361,7 @@ footer {
       }
 
       .owl-theme .owl-nav.disabled + .owl-dots {
-        margin-top: $p10;
+        margin-top: 2.53vw;
       }
     }
 
@@ -2465,7 +2406,7 @@ footer {
     }
 
     .slide-item__span-add {
-      font-size: $p14-25;
+      font-size: 3.6vw;
     }
 
     .menu {
@@ -2519,10 +2460,10 @@ footer {
       -ms-flex-align: center;;
       /* центрируем содержимое кнопки */
       position: absolute;
-      top: $p19;
-      left: $p16;
-      width: $p38;
-      height: $p38;
+      top: 4.8vw;
+      left: 4.04vw;
+      width: 9.6vw;
+      height: 9.6vw;
       cursor: pointer;
       z-index: 6;
     }
@@ -2533,19 +2474,19 @@ footer {
     .menu-btn > span::after {
       display: block;
       position: absolute;
-      width: $p38;
-      height: $p3-54;
+      width: 9.6vw;
+      height: 0.9vw;
       background-color: #000;;
     }
 
     .menu-btn > span::before {
       content: '';
-      top: -$p10;
+      top: -2.53vw;
     }
 
     .menu-btn > span::after {
       content: '';
-      top: $p10;
+      top: 2.53vw;
     }
 
     /* контейнер меню */
@@ -2553,13 +2494,13 @@ footer {
       display: block;
       position: absolute;
       visibility: hidden;
-      top: $p76;
+      top: 19.21vw;
       left: 0;
       width: 100%;
       margin: 0;
       list-style: none;
       background-color: #ffffff;
-      box-shadow: $p1 0 $p6 rgba(0, 0, 0, .2);
+      box-shadow: 0.08vw 0 1.52vw rgba(0, 0, 0, .2);
       z-index: 4;
 
       .menu-item {
@@ -2620,12 +2561,12 @@ footer {
       .main__title {
         font-size: 6vw;
         line-height: 12vw;
-        margin: 2.37vw $p14-25 3.9vw;
+        margin: 2.37vw 3.6vw 3.9vw;
       }
 
       .main__frame {
         width: 50%;
-        padding: $p14-25;
+        padding: 3.6vw;
       }
 
       .main__frame:nth-child(2n) {
@@ -2669,7 +2610,7 @@ footer {
         font-family: roboto, sans-serif;
         font-size: 6vw;
         line-height: 12vw;
-        margin: 2.37vw $p14-25 3.9vw;
+        margin: 2.37vw 3.6vw 3.9vw;
       }
 
       .about__row {
@@ -2680,7 +2621,7 @@ footer {
 
       .about__text {
         width: 100vw;
-        padding: 0 $p14-25;
+        padding: 0 3.6vw;
         font-size: 4.6vw;
         line-height: 7vw;
       }
@@ -2691,7 +2632,7 @@ footer {
 
       .about__photos {
         width: 100vw;
-        padding: 0 $p14-25;
+        padding: 0 3.6vw;
       }
 
       .about__photo {
@@ -2703,7 +2644,7 @@ footer {
       }
 
       .delivery__table-row-header, .delivery__table-row {
-        font-size: $p16;
+        font-size: 4.04vw;
         line-height: 8.9vw
       }
 
@@ -2722,7 +2663,7 @@ footer {
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        margin: $p14-25;
+        margin: 3.6vw;
       }
 
       .delivery__table {
@@ -2730,7 +2671,7 @@ footer {
       }
 
       .contacts__row {
-        padding: 0 $p14-25;
+        padding: 0 3.6vw;
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2785,7 +2726,7 @@ footer {
 
       .login__column {
         width: 100vw;
-        margin: 0 $p14-25;
+        margin: 0 3.6vw;
       }
 
       .login__column:last-child {
@@ -2799,11 +2740,11 @@ footer {
       input[type="password"], input[type="text"] {
         width: 100%;
         height: 11.4vw;
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
         border: 0.16vw solid #F90001;
         outline: 0;
         line-height: 11vw;
-        padding: 0 $p14-25;
+        padding: 0 3.6vw;
         margin-top: 6.12vw;
         font-size: 4.6vw;
         -webkit-appearance: none; //убираем внутренную тень
@@ -2812,7 +2753,7 @@ footer {
       }
 
       .flex-tabs .login__label-row {
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
       }
 
       .tab {
@@ -2824,7 +2765,7 @@ footer {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        font-size: $p14-25;
+        font-size: 3.6vw;
         padding: 3vw 3.2vw;
         border-radius: 3.4vw;
         background-color: #ffffff;
@@ -2837,7 +2778,7 @@ footer {
         margin-top: 5.07vw;
         width: 40vw;
         height: 10vw;
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
         font-size: 4.95vw;
         line-height: 6.26vw;
         display: -webkit-flex;
@@ -2876,7 +2817,7 @@ footer {
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        margin: 0 $p14-25;
+        margin: 0 3.6vw;
       }
 
       .cart__img {
@@ -2949,8 +2890,8 @@ footer {
       .cart__btn_red, .cart__btn_gray {
         width: 45vw;
         height: 10vw;
-        border-radius: $p14-25;
-        font-size: $p14-25;
+        border-radius: 3.6vw;
+        font-size: 3.6vw;
       }
 
       .cart__delete {
@@ -2975,12 +2916,12 @@ footer {
 
       .order__label-row {
         width: 100%;
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
       }
 
       .order-title {
-        font-size: $p14-25;
-        margin-bottom: $p14-25;
+        font-size: 3.6vw;
+        margin-bottom: 3.6vw;
       }
 
       .order__select-pay {
@@ -2990,14 +2931,14 @@ footer {
       }
 
       .order__pay {
-        margin-top: $p24;
+        margin-top: 6.06vw;
       }
 
       .order__column:last-child {
         padding: 6.59vw;
-        margin: 12px $p14-25;
+        margin: 12px 3.6vw;
         width: 100%;
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
         box-shadow: 0 0.31vw 1.6vw rgba(0, 0, 0, 0.3);
       }
 
@@ -3038,7 +2979,7 @@ footer {
         margin-top: 7.12vw;
         padding: 4.2vw;
         background-color: #fff;
-        border-radius: $p14-25;
+        border-radius: 3.6vw;
         text-align: center;
       }
 
@@ -3063,7 +3004,7 @@ footer {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-        padding: 5.46vw $p14-25 0;
+        padding: 5.46vw 3.6vw 0;
       }
 
       .goods__row {
@@ -3175,17 +3116,17 @@ footer {
       .goods__additionally-title {
         font-size: 4.42vw;
         line-height: 6.81vw;
-        margin-left: $p14-25;
+        margin-left: 3.6vw;
       }
 
       .goods__frame {
         width: 50%;
-        padding: $p14-25;
+        padding: 3.6vw;
         margin: 0;
       }
 
       .goods__additionally {
-        padding: $p14-25;
+        padding: 3.6vw;
       }
 
       .goods__additionally img {
@@ -3239,7 +3180,7 @@ footer {
       -webkit-box-align: center;
       -webkit-align-items: center;;
       -ms-flex-align: center;;
-      padding: 10vw $p14-25;
+      padding: 10vw 3.6vw;
       flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -3312,7 +3253,7 @@ footer {
     }
 
     .footer__footer-bottom {
-      font-size: $p14;
+      font-size: 3.54vw;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
