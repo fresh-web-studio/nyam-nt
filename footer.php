@@ -95,16 +95,16 @@
                 <div class="footer__column">
                     <div class="footer__social">
                         <a href="#" class="hover">
-                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg"/>
-                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg"/>
+                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg" alt="ВК"/>
+                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="ВК"/>
                         </a>
                         <!--<a href="#" class="hover">
-                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__ok.svg"/>
-                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg"/>
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__ok.svg" alt="ОК"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="ОК"/>
                         </a>
                         <a href="#" class="hover">
-                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__inst.svg"/>
-                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg"/>
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__inst.svg" alt="Инстаграмм"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="Инстаграмм"/>
                         </a>-->
                     </div>
                 </div>
@@ -114,7 +114,7 @@
     <div class="footer__yellow">
         <div class="container">
             <div class="footer__footer-bottom">
-                <div class="footer__copyright">Все права защищены &copy; 2004 - 2020 Пиццерия Ням-Ням</div>
+                <div class="footer__copyright">Все права защищены &copy; 2004 - <?php echo date('Y'); ?> Пиццерия Ням-Ням</div>
                 <a href="#">Правовая информация</a>
                 <a href="karta-sayta.php">Карта сайта</a>
             </div>

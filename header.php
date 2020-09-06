@@ -2,8 +2,9 @@
 <!doctype html>
 <html>
 <head>
-	<?
-    $APPLICATION->ShowHead();
+    <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
+    <?$APPLICATION->ShowMeta("description");?>
+	<?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
     // CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.carousel.css');
@@ -14,7 +15,6 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
     //STRING
-    //Asset::getInstance()->addString("<link rel='shortcut icon' href='/local/templates/nyam-nt/images/favicon.ico' />");
     Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>");
     Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");
     Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,500italic,700,700italic,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>");
@@ -28,6 +28,7 @@
     </script>
     <link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH;?>/images/favicon.ico" />
     <title><?$APPLICATION->ShowTitle()?></title>
+    <?$APPLICATION->ShowHead()?>
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
