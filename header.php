@@ -195,5 +195,16 @@
 <main>
     <div class="content">
         <div class="container">
+            <? if ($APPLICATION->GetCurDir() !== '/') { ?>
+                <h1 class="
+                        <? if ($APPLICATION->GetCurDir() == '/about/')
+                        { ?>main__title-about<?}
+                        else { ?>main__title<? } ?>
+                    ">
+                    <? if ($APPLICATION->GetCurDir() == '/about/')
+                    { echo "Ïèööåðèÿ Íÿì-Íÿì";}
+                    else { ?><? $APPLICATION->ShowTitle(false); ?> <? } ?>
+                </h1>
+            <? } ?>
 
-	
+
