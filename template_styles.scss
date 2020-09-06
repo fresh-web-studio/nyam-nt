@@ -2003,12 +2003,12 @@ footer {
 
   .footer__address:before {
     background-image: url('images/footer__address.svg');
-    background-size: 0.8vw;
+    background-size: 1vw;
     position: absolute;
     content: "";
     background-position: center;
     width: 2.81vw;
-    height: 3.8vw;
+    height: 3.3vw;
     background-repeat: no-repeat;
     margin-left: -2.5vw;
   }
@@ -2025,12 +2025,12 @@ footer {
 
   .footer__phone:before {
     background-image: url('images/footer__phone.svg');
-    background-size: 0.8vw;
+    background-size: 1vw;
     position: absolute;
     content: "";
     background-position: center;
     width: 2.81vw;
-    height: 3.2vw;
+    height: 2.9vw;
     background-repeat: no-repeat;
     margin-left: -2.5vw;
   }
