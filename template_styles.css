@@ -1529,7 +1529,7 @@ footer .footer__copyright {
   color: #F90001; }
 footer .footer__footer-bottom a {
   color: #F90001;
-  margin: 2.73vw; }
+  margin-left: 2.73vw; }
 footer .footer__footer-bottom a:hover {
   color: #fff; }
 footer .footer__address {
@@ -2090,7 +2090,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
   footer .footer__logo {
     width: 41vw;
     height: 14.5vw; }
-  footer .footer__menu-botton, footer .footer__text {
+  footer .footer__menu-bottom, footer .footer__text {
     display: none; }
   footer .footer__social {
     flex-wrap: wrap;
@@ -2151,7 +2151,11 @@ footer .footer__social img, footer .slide-item__social .hover img {
     -ms-flex-pack: center;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
-    height: 15vw;
-    padding: 2vw 0; } }
+    height: 24vw;
+    padding: 2vw 0; }
+  footer .footer__copyright {
+    margin: 2.73vw 0; }
+  footer .footer__footer-bottom a {
+    margin: 2.73vw; } }
 
 /*# sourceMappingURL=template_styles.css.map */

@@ -1988,7 +1988,7 @@ footer {
 
   .footer__footer-bottom a {
     color: $red;
-    margin: 2.73vw;
+    margin-left: 2.73vw;
   }
 
   .footer__footer-bottom a:hover {
@@ -2828,7 +2828,7 @@ footer {
       height: 14.5vw;
     }
 
-    .footer__menu-botton, .footer__text {
+    .footer__menu-bottom, .footer__text {
       display: none;
     }
 
@@ -2907,9 +2907,14 @@ footer {
     -ms-flex-pack: center;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
-      height: 15vw;
+      height: 24vw;
       padding: 2vw 0;
     }
+    .footer__copyright  {
+      margin: 2.73vw 0;
+    }
+    .footer__footer-bottom a {
+      margin: 2.73vw;
+    }
   }
-
 }

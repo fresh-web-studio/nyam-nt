@@ -17,30 +17,30 @@
                     </div>
                 </div>
                 <div class="footer__column">
-                    <div class="footer__menu-botton">
+                    <div class="footer__menu-bottom">
                         <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"bottom", 
-	array(
-		"ROOT_MENU_TYPE" => "bottom_left",
-		"MAX_LEVEL" => "1",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "bottom",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"CHILD_MENU_TYPE" => "",
-		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
-	),
-	false
-);?>
+                            "bitrix:menu",
+                            "bottom",
+                            array(
+                                "ROOT_MENU_TYPE" => "bottom_left",
+                                "MAX_LEVEL" => "1",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "bottom",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "CHILD_MENU_TYPE" => "",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "N"
+                            ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="footer__column">
-                    <div class="footer__menu-botton">
+                    <div class="footer__menu-bottom">
                         <?$APPLICATION->IncludeComponent(
                             "bitrix:menu",
                             "bottom",
