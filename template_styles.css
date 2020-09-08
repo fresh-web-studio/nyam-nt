@@ -195,7 +195,16 @@ header .header__link.reg:after {
   height: 2.81vw;
   background-repeat: no-repeat;
   position: absolute; }
-header .header__link.login, header .header__link.reg {
+header .header__link.exit:after {
+  content: "\ea14";
+  font-family: icomoon-free;
+  background-position: center;
+  margin-top: 0.1vw;
+  width: 2.11vw;
+  height: 2.81vw;
+  background-repeat: no-repeat;
+  position: absolute; }
+header .header__link.login, header .header__link.reg, header .header__link.exit {
   margin-right: 2.11vw; }
 header .header__link {
   color: #000; }
@@ -1155,6 +1164,7 @@ main .content {
     position: absolute;
     left: -10000px; }
   main .content .flex-tabs .login__label-row {
+    overflow: hidden;
     width: 100%;
     display: -webkit-flex;
     display: -webkit-box;
@@ -1183,7 +1193,7 @@ main .content {
     display: -o-flex;
     display: flex;
     font-size: 1.6vw;
-    padding: 1vw 1.4vw;
+    padding: 1.1vw 1.4vw;
     border-radius: 1.4vw;
     background-color: #ffffff;
     color: #F90001;

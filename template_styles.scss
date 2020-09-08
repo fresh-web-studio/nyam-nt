@@ -256,8 +256,18 @@ header {
     background-repeat: no-repeat;
     position: absolute;
   }
+  .header__link.exit:after {
+    content: "\ea14";
+    font-family: icomoon-free;
+    background-position: center;
+    margin-top: 0.1vw;
+    width: 2.11vw;
+    height: 2.81vw;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
 
-  .header__link.login, .header__link.reg {
+  .header__link.login, .header__link.reg, .header__link.exit {
     margin-right: 2.11vw;
   }
 
@@ -1489,6 +1499,7 @@ main {
 
     .flex-tabs {
       .login__label-row {
+        overflow: hidden;
         width: $wight-percent;
         display: -webkit-flex;
         display: -webkit-box;
@@ -1520,7 +1531,7 @@ main {
       display: -o-flex;
       display: flex;
       font-size: 1.6vw;
-      padding: 1vw 1.4vw;
+      padding: 1.1vw 1.4vw;
       border-radius: 1.4vw;
       background-color: #ffffff;
       color: $red;
