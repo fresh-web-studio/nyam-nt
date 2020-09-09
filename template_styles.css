@@ -1192,7 +1192,7 @@ main .content {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    border: 0.16vw solid #F90001;
+    border: 0.3vw solid #F90001;
     border-radius: 1.8vw; }
   main .content .tab {
     display: -webkit-flex;
@@ -1205,7 +1205,7 @@ main .content {
     display: flex;
     box-sizing: border-box;
     font-size: 1.6vw;
-    padding: 1vw 1vw;
+    padding: 1vw 1.1vw;
     border-radius: 1.4vw;
     background-color: #ffffff;
     color: #F90001;
@@ -1275,7 +1275,7 @@ main .content {
     border: 0.16vw solid #F90001;
     outline: 0;
     line-height: 4vw;
-    padding: 0 1.6vw;
+    padding: 0 1vw;
     margin-top: 3.12vw;
     font-size: 1.6vw;
     color: #F90001; }
