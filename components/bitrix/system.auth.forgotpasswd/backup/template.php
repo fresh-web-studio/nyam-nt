@@ -34,7 +34,7 @@ ShowMessage($arParams["~AUTH_RESULT"]);
                     <input type="hidden" name="AUTH_FORM" value="Y">
                     <input type="hidden" name="TYPE" value="SEND_PWD">
                     <div class="login__info">
-                        Если вы забыли пароль, введите логин или E-Mail.<br />
+                        Если вы забыли пароль, введите логин или E-Mail.
                         Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
                     </div>
                     <div class="input-group input-group-lg">

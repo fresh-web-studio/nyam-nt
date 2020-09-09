@@ -1162,13 +1162,20 @@ main .content {
     -ms-flex-line-pack: stretch; }
   main .content .login__info {
     width: 29vw;
+    font-size: 1.48vw;
     margin: 0 auto;
     padding-top: 1vw; }
+  main .content .login__requirement {
+    width: 29vw;
+    padding-top: 1vw;
+    font-size: 1.48vw;
+    color: #707070; }
   main .content .state {
     position: absolute;
     left: -10000px; }
   main .content .flex-tabs .login__label-row {
     overflow: hidden;
+    box-sizing: border-box;
     width: 100%;
     display: -webkit-flex;
     display: -webkit-box;
@@ -1185,8 +1192,8 @@ main .content {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    border: 0.08vw solid #F90001;
-    border-radius: 1.6vw; }
+    border: 0.16vw solid #F90001;
+    border-radius: 1.8vw; }
   main .content .tab {
     display: -webkit-flex;
     display: -webkit-box;
@@ -1196,8 +1203,9 @@ main .content {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    box-sizing: border-box;
     font-size: 1.6vw;
-    padding: 1.1vw 1.4vw;
+    padding: 1vw 1vw;
     border-radius: 1.4vw;
     background-color: #ffffff;
     color: #F90001;
@@ -1269,7 +1277,8 @@ main .content {
     line-height: 4vw;
     padding: 0 1.6vw;
     margin-top: 3.12vw;
-    font-size: 1.6vw; }
+    font-size: 1.6vw;
+    color: #F90001; }
   main .content .checkbox {
     margin-top: 3.9vw; }
   main .content input[type="submit"] {
@@ -1282,14 +1291,15 @@ main .content {
     border-radius: 1.7vw;
     font-size: 1.95vw;
     line-height: 2.26vw;
-    display: -webkit-flex;
+    /*display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: -ms-flex;
     display: -o-flex;
-    display: flex;
+    display: flex;*/
+    display: initial;
     align-items: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -1799,6 +1809,15 @@ footer .footer__social img, footer .slide-item__social .hover img {
   main .content .login__column {
     width: 100vw;
     margin: 0 3.6vw; }
+  main .content .login__info {
+    width: 70vw;
+    font-size: 3.48vw;
+    margin: 0 auto;
+    padding-top: 5vw; }
+  main .content .login__requirement {
+    width: 70vw;
+    font-size: 3.48vw;
+    padding-top: 5vw; }
   main .content .login__column:last-child {
     display: none; }
   main .content .tabs {
@@ -1841,14 +1860,6 @@ footer .footer__social img, footer .slide-item__social .hover img {
     border-radius: 3.6vw;
     font-size: 4.95vw;
     line-height: 6.26vw;
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: -moz-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
     align-items: center;
     -webkit-box-align: center;
     -webkit-align-items: center;

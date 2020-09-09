@@ -94,7 +94,7 @@
                         <div class="header__text"><a href="/personal/auth/?logout=yes" class="header__link exit"><span class="login-greg-none">Выход</span></a></div>
                     <?else:?>
                         <div class="header__text"><a href="/personal/auth/" class="header__link login"><span class="login-greg-none">Вход</span></a></div>
-                        <div class="header__text"><a href="/personal/auth/registration.php" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
+                        <div class="header__text"><a href="/personal/reg/" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
                     <?endif;?>
                 </div>
                 <!-- #End_Auth -->
