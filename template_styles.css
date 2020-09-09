@@ -1160,6 +1160,10 @@ main .content {
     -ms-flex-pack: center;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch; }
+  main .content .login__info {
+    width: 29vw;
+    margin: 0 auto;
+    padding-top: 1vw; }
   main .content .state {
     position: absolute;
     left: -10000px; }
@@ -1199,9 +1203,15 @@ main .content {
     color: #F90001;
     text-align: center;
     cursor: pointer; }
+    main .content .tab a {
+      color: #F90001; }
+    main .content .tab a:hover {
+      color: #FFF; }
   main .content .tab:hover {
     background-color: #D30102;
     color: #FFF; }
+    main .content .tab:hover a {
+      color: #fff; }
   main .content .panel {
     text-align: left;
     padding-top: 0.8vw;
@@ -1239,6 +1249,10 @@ main .content {
   main .content #check-via:checked ~ #check-via-label {
     background-color: #F90001;
     color: #ffffff; }
+  main .content .tab.active {
+    background-color: #D30102;
+    color: #ffffff;
+    display: block; }
   main .content #tab-one:checked ~ .tabs #tab-one-panel,
   main .content #tab-two:checked ~ .tabs #tab-two-panel,
   main .content #tab-three:checked ~ .tabs #tab-three-panel,

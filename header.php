@@ -91,21 +91,11 @@
                 <div class="header__login">
                     <?if(CUser::IsAuthorized()):?>
                         <div class="header__text"><a href="/personal/" class="header__link reg"><?=(CUser::GetFirstName())?CUser::GetFirstName():CUser::GetLogin()?></a></div>
-                        <div class="header__text"><a href="/auth/?logout=yes" class="header__link exit"><span class="login-greg-none">Выход</span></a></div>
+                        <div class="header__text"><a href="/personal/auth/?logout=yes" class="header__link exit"><span class="login-greg-none">Выход</span></a></div>
                     <?else:?>
-                        <div class="header__text"><a href="/auth/?login=yes" class="header__link login"><span class="login-greg-none">Вход</span></a></div>
-                        <div class="header__text"><a href="/auth/?register=yes" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
+                        <div class="header__text"><a href="/personal/auth/" class="header__link login"><span class="login-greg-none">Вход</span></a></div>
+                        <div class="header__text"><a href="/personal/auth/registration.php" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
                     <?endif;?>
-                    <?/*$APPLICATION->IncludeComponent("bitrix:system.auth.form","auth_base",Array(
-                            "REGISTER_URL" => "/auth/index.php?register=yes",
-                            "FORGOT_PASSWORD_URL" => "",
-                            "PROFILE_URL" => "/personal/",
-                            "SHOW_ERRORS" => "Y"
-                        )
-                    );*/?>
-                    <!--                <div class="header__text"><a href="/auth/?login=yes" class="header__link login"><span class="login-greg-none">Вход</span></a></div>
-                                <div class="header__text"><a href="/auth/?register=yes" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
-                    -->
                 </div>
                 <!-- #End_Auth -->
             </div>

@@ -1491,7 +1491,11 @@ main {
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     }
-
+    .login__info {
+      width: 29vw;
+      margin: 0 auto;
+      padding-top: 1vw;
+    }
     .state {
       position: absolute;
       left: -10000px;
@@ -1537,11 +1541,20 @@ main {
       color: $red;
       text-align: center;
       cursor: pointer;
+      a {
+        color: $red;
+      }
+      a:hover {
+        color: #FFF;
+      }
     }
 
     .tab:hover {
       background-color: $red-dark;
       color: #FFF;
+      a {
+        color: #fff;
+      }
     }
 
     .panel {
@@ -1593,6 +1606,11 @@ main {
     #check-via:checked ~ #check-via-label {
       background-color: $red;
       color: #ffffff;
+    }
+    .tab.active {
+      background-color: $red-dark;
+      color: #ffffff;
+      display: block;
     }
 
     #tab-one:checked ~ .tabs #tab-one-panel,
