@@ -1,0 +1,194 @@
+@import "../../../../../../../SCSS.scss";
+
+main {
+  .content {
+    .main__item-list {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      width: $wight-percent;
+    }
+
+    .main__frame {
+      width: 25%;
+      padding: 1.6vw;
+      margin: 1.6vw 0;
+      border-right: 0.08vw solid $gray;
+    }
+
+    .main__frame:nth-child(4n+4) {
+      border-right: 0 solid;
+    }
+
+    .main__block-item {
+
+    }
+
+    .main__block-item a {
+      opacity: .9;
+    }
+
+    .main__block-item a:hover {
+      opacity: 1;
+    }
+
+    .main__block-item img {
+      width: $wight-percent;
+    }
+
+    .main__name {
+      margin-top: 1.4vw;
+      margin-bottom: 0.3vw;
+      font-weight: bold;
+      font-size: 1.8vw;
+      line-height: 2vw;
+      display: block;
+      color: #000000;
+      min-height: 4vw;
+    }
+
+    .main__description {
+      margin-bottom: 0.5vw;
+      font-size: 1.1vw;
+      line-height: 1.48vw;
+      min-height: 3vw;
+      height: 3vw;
+      color: $gray-dark;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      box-orient: vertical;
+    }
+
+    .main__item-row {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      justify-content: space-between;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+    }
+
+    .main__item-price {
+      font-weight: bold;
+      font-size: 2.3vw;
+      line-height: 2.5vw;
+      color: #000000;
+    }
+
+    .main__item-info {
+      font-size: .8vw;
+      color: $gray;
+    }
+
+    .main__item-btn {
+      width: 8vw;
+      height: 3.5vw;
+      border: 0.18vw solid $red;
+      box-sizing: border-box;
+      border-radius: 1.48vw;
+      font-size: 1.2vw;
+      line-height: 3vw;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      color: $red;
+    }
+
+    .main__item-btn:hover {
+      background-color: $red-dark;
+      border: 0.18vw solid $red-dark;
+      color: #fff;
+      transition-duration: 1s;
+      -webkit-transition-duration: 1s;
+      -moz-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      -ms-transition-duration: 1s;
+
+    }
+  }
+}
+@media all and (max-width: 415px) {
+  main {
+    .content {
+
+      .main__frame {
+        width: 50%;
+        padding: 3.6vw;
+      }
+
+      .main__frame:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .main__name {
+        margin-top: 4.4vw;
+        margin-bottom: 2.3vw;
+        font-size: 3.9vw;
+        line-height: 5vw;
+        min-height: 10vw;
+      }
+
+      .main__description {
+        margin-bottom: 5.5vw;
+        font-size: 3vw;
+        line-height: 3.48vw;
+      }
+
+      .main__item-price {
+        font-size: 3.8vw;
+        line-height: 5.5vw;
+      }
+
+      .main__item-btn {
+        width: 18vw;
+        height: 8.75vw;
+        border: 0.45vw solid #F90001;
+        border-radius: 3.7vw;
+        font-size: 3vw;
+        line-height: 7.5vw;
+      }
+
+      .main__item-info {
+        margin-top: 0.5vw;
+        font-size: 2vw;
+      }
+    }
+  }
+}

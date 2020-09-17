@@ -3,17 +3,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
-    <?$APPLICATION->ShowMeta("description");?>
 	<?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
+
+    CJSCore::Init(array("jquery"));
     // CSS
+    Asset::getInstance()->addCss('/bitrix/css/main/font-awesome.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.carousel.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.theme.default.css');
     // JS
-    CJSCore::Init(array("jquery"));
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
+    //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.js');
     //STRING
     Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>");
     Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");
@@ -28,7 +30,6 @@
     </script>
     <link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH;?>/images/favicon.ico" />
     <title><?$APPLICATION->ShowTitle()?></title>
-    <?$APPLICATION->ShowHead()?>
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
@@ -123,15 +124,23 @@
                     ),
                     false
                 );?>
-                <div class="main_menu__cart">
-                    <a href="cart.html">
-                        <div class="main_menu__back">
-                            <div class="main_menu__quantity">3</div>
-                        </div>
-                        <span class="main_menu__price">
-                        1280.00 Руб.
-                        </span>
-                    </a>
+                <div class="main_menu__cart" id="basket-container">
+                    <?if($_GET['refresh-cart'] == 'Y'){$APPLICATION->RestartBuffer();}?>
+                    <?$APPLICATION->IncludeComponent(
+                        "bazarow:basket.small.bazarow",
+                        "ajax",
+                        array(
+                            "COMPONENT_TEMPLATE" => "ajax",
+                            "PATH_TO_BASKET" => "/personal/cart",
+                            "PATH_TO_ORDER" => "/personal/orders/",
+                            "SHOW_DELAY" => "N",
+                            "SHOW_NOTAVAIL" => "Y",
+                            "SHOW_SUBSCRIBE" => "Y"
+                        ),
+                        false
+                    );
+                    ?>
+                    <?if($_GET['refresh-cart'] == 'Y'){die();}?>
                 </div>
             </nav>
         </div>
