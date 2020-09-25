@@ -52,8 +52,10 @@ $this->setFrameMode(true);
                                 <?endif;?>
                             <?endforeach;?>
                             <?if($arOffer["CAN_BUY"]):?>
-                                <form action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data">
-                                    <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" size="5">
+                                <form action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" ñlass="add_form">
+                                    <a class="MinusList" href="javascript:void(0)" onclick="if (BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value &gt; 1) BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value--;">-</a>
+                                    <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" id="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>">
+                                    <a class="PlusList" href="javascript:void(0)" onclick="BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value++;">+</a>
                                     <input type="hidden" name="<?echo $arParams["ACTION_VARIABLE"]?>" value="BUY">
                                     <input type="hidden" name="<?echo $arParams["PRODUCT_ID_VARIABLE"]?>" value="<?echo $arOffer["ID"]?>">
                                     <input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">
@@ -76,8 +78,11 @@ $this->setFrameMode(true);
                         <?endforeach;?>
 
                         <?if($arElement["CAN_BUY"]):?>
-                            <form action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data">
-                                <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" size="5">
+                            <form action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" ñlass="add_form">
+                                <a class="MinusList" href="javascript:void(0)" onclick="if (BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value &gt; 1) BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value--;">-</a>
+                                <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" id="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>">
+                                <a class="PlusList" href="javascript:void(0)" onclick="BX('<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?><?=$arElement['ID']?>').value++;">+</a>
+
                                 <input type="hidden" name="<?echo $arParams["ACTION_VARIABLE"]?>" value="BUY">
                                 <input type="hidden" name="<?echo $arParams["PRODUCT_ID_VARIABLE"]?>" value="<?echo $arElement["ID"]?>">
                                 <input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">

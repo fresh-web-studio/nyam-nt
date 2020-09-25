@@ -76,7 +76,10 @@ $this->setFrameMode(true);
 		"SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
 		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
 		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
-	),
+
+        "USE_PRODUCT_QUANTITY" => "Y",
+        "PRODUCT_QUANTITY_VARIABLE" => "QUANTITY",
+    ),
 	$component
 );
 ?>

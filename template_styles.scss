@@ -731,10 +731,6 @@ main {
     -ms-flex-line-pack: stretch;
     }
 
-    .link-photo-min {
-      margin: 1.6vw 0.8vw;
-    }
-
     .goods__photo-price {
       width: 50%;
       text-align: center;
@@ -743,6 +739,15 @@ main {
 
     .link-photo img {
       width: 38vw;
+      height: 38vw;
+    }
+
+    .link-photo-min {
+      margin: 1.6vw 0.8vw;
+    }
+    .link-photo-min img {
+      width: 7.321vw;
+      height: 7.321vw;
     }
 
     .goods__description {
@@ -2518,6 +2523,7 @@ footer {
 
       .link-photo img {
         width: 86vw;
+        height: 86vw;
       }
 
       .link-photo-min {
@@ -2526,6 +2532,7 @@ footer {
 
       .link-photo-min img {
         width: 20vw;
+        height: 20vw;
       }
 
       .goods__name {

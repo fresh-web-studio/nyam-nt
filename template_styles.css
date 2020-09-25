@@ -559,14 +559,18 @@ main .content {
     -ms-flex-pack: center;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch; }
-  main .content .link-photo-min {
-    margin: 1.6vw 0.8vw; }
   main .content .goods__photo-price {
     width: 50%;
     text-align: center;
     padding-top: 2.34vw; }
   main .content .link-photo img {
-    width: 38vw; }
+    width: 38vw;
+    height: 38vw; }
+  main .content .link-photo-min {
+    margin: 1.6vw 0.8vw; }
+  main .content .link-photo-min img {
+    width: 7.321vw;
+    height: 7.321vw; }
   main .content .goods__description {
     width: 50%;
     padding: 2.34vw 1.6vw; }
@@ -1877,11 +1881,13 @@ footer .footer__social img, footer .slide-item__social .hover img {
     width: 100%;
     padding: 7.34vw 3.6vw; }
   main .content .link-photo img {
-    width: 86vw; }
+    width: 86vw;
+    height: 86vw; }
   main .content .link-photo-min {
     margin: 4.6vw 2.8vw; }
   main .content .link-photo-min img {
-    width: 20vw; }
+    width: 20vw;
+    height: 20vw; }
   main .content .goods__name {
     font-size: 6.75vw;
     line-height: 8.2vw;

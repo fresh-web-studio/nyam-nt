@@ -3,7 +3,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
-	<?$APPLICATION->ShowHead();
+
+    <?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
 
     CJSCore::Init(array("jquery"));
@@ -11,6 +12,7 @@
     Asset::getInstance()->addCss('/bitrix/css/main/font-awesome.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.carousel.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.theme.default.css');
+
     // JS
     //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
@@ -124,7 +126,7 @@
                     ),
                     false
                 );?>
-                <div class="main_menu__cart" id="basket-container">
+                <div id="basket-container" class="main_menu__cart">
                     <?if($_GET['refresh-cart'] == 'Y'){$APPLICATION->RestartBuffer();}?>
                     <?$APPLICATION->IncludeComponent(
                         "bazarow:basket.small.bazarow",

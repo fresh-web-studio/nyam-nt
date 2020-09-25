@@ -9,3 +9,10 @@ $(document).ready(function(){
         }
     )
 })
+$(document).ready(function(){
+    $("#owl-carousel2").owlCarousel(
+        {
+            items: 1,
+        }
+    )
+})

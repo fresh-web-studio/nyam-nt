@@ -48,17 +48,8 @@ $defaultCurr = CSaleLang::GetLangCurrency(SITE_ID);
             $price=$price+$pr; 
             } 
         } 
-if($quant==0){?>
-    <a href="/personal/cart/" title="Начать покупки">
-        <div class="main_menu__back">
-            <div class="main_menu__quantity">0</div>
-        </div>
-        <span class="main_menu__price">
-                        0.00 Руб.
-       </span>
-    </a>
-<?}else{?>
-    <a href="/personal/cart/" title="Начать покупки">
+?>
+    <a href="/personal/cart/" title="Перейти в корзину">
         <div class="main_menu__back">
             <div class="main_menu__quantity"><?=$quant?></div>
         </div>
@@ -66,4 +57,3 @@ if($quant==0){?>
             <? echo SaleFormatCurrency($price, $defaultCurr); ?>
         </span>
     </a>
-<?}?> 
