@@ -29,7 +29,7 @@ time, mark, audio, video {
   border: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none !important; }
 
 button {
   outline: none; }
@@ -41,7 +41,7 @@ button {
   100% {
     opacity: 1;
     top: 0; } }
-.container {
+.container-base {
   width: 100vw;
   margin: 0 auto; }
 
@@ -130,7 +130,7 @@ header .header__row-top {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center; }
-header .row {
+header .row-base {
   display: -webkit-flex;
   display: -webkit-box;
   display: -moz-flex;
@@ -869,7 +869,7 @@ main .content {
   main .content .goods__additionally-bay-btn:hover {
     background-color: #D30102;
     color: #fff; }
-  main .content .cart__row {
+  main .content .cart__row-base {
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
@@ -907,7 +907,7 @@ main .content {
   main .content .cart__description {
     font-size: 1.95vw;
     line-height: 2.26vw; }
-  main .content .cart__row .quantity__list {
+  main .content .cart__row-base .quantity__list {
     margin: 0; }
   main .content .cart__price, main .content .cart__sum {
     font-weight: 500;
@@ -946,7 +946,7 @@ main .content {
     height: 3.0vw;
     font-size: 3.0vw;
     color: #F90001; }
-  main .content .cart__row-btn {
+  main .content .cart__row-base-btn {
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
@@ -1069,7 +1069,7 @@ main .content {
     position: absolute;
     left: -10000px; }
   main .content .flex-tabs {
-    width: 31.45vw; }
+    width: 31.55vw; }
     main .content .flex-tabs .login__label-row {
       overflow: hidden;
       box-sizing: border-box;

@@ -1,0 +1,25 @@
+@import "../../../../SCSS.scss";
+
+.bx-breadcrumb {
+}
+.bx-breadcrumb i {
+  color: #b5bdc2;
+  vertical-align: middle;
+}
+.bx-breadcrumb .bx-breadcrumb-item {
+  float: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-right: 1.098vw;
+}
+.bx-breadcrumb .bx-breadcrumb-item span {
+  white-space: normal;
+}
+.bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
+.bx-breadcrumb .bx-breadcrumb-item a:hover {}
+a {
+  color: $red;
+  &:hover {
+    color: $red_dark;
+  }
+}

@@ -39,7 +39,7 @@ time, mark, audio, video {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 button {
@@ -57,7 +57,7 @@ button {
   }
 }
 
-.container {
+.container-base {
   width: 100vw;
   margin: 0 auto;
 }
@@ -164,7 +164,7 @@ header {
     -ms-flex-align: center;;
   }
 
-  .row {
+  .row-base {
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
@@ -1124,7 +1124,7 @@ main {
       color: #fff;
     }
 
-    .cart__row {
+    .cart__row-base {
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1178,7 +1178,7 @@ main {
       line-height: 2.26vw;
     }
 
-    .cart__row .quantity__list {
+    .cart__row-base .quantity__list {
       margin: 0;
     }
 
@@ -1229,7 +1229,7 @@ main {
       color: $red;
     }
 
-    .cart__row-btn {
+    .cart__row-base-btn {
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -1369,7 +1369,7 @@ main {
     }
 
     .flex-tabs {
-      width: 31.45vw;
+      width: 31.55vw;
       .login__label-row {
         overflow: hidden;
         box-sizing: border-box;

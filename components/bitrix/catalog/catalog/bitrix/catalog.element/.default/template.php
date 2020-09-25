@@ -34,7 +34,7 @@ $this->setFrameMode(true);
                     </ul>
                 </div>
             <? } else { //Иначе- Если есть дополнительные картинки- выводим только основную?>
-                <a class="oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                <a class="link-photo oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
                     <img src="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
                 </a>
             <? } ?>
@@ -47,7 +47,7 @@ $this->setFrameMode(true);
             <!-- /Картинка детальная -->
         </div>
         <div class="goods__description">
-            <h1 class="goods__name">Пицца «Чоризо»</h1>
+            <h2 class="goods__name"><? $APPLICATION->ShowTitle(false); ?></h2>
             <h3 class="goods__composition-title">Состав:</h3>
             <p class="goods__composition">Колбаса острая сырокопченая, сыр моцарелла, соль, специи.
             <p>

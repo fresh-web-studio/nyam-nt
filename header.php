@@ -3,6 +3,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
@@ -36,7 +38,7 @@
 <body>
 <?$APPLICATION->ShowPanel();?>
 <header class="header__fix">
-    <div class="container">
+    <div class="container-base">
         <div class="header__top">
             <a class="header__link-logo" href="/"><img class="header__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/header__logo.svg" alt="Логотип пиццерии Ням-ням"/></a>
             <div class="header__town-time">
@@ -106,7 +108,7 @@
     </div>
     <div class="header__back-red">
         <div class="main_menu">
-            <nav class="container header__row">
+            <nav class="container-base header__row">
                 <input id="menu-toggle" type="checkbox"/>
                 <label class="menu-btn" for="menu-toggle">
                     <span></span>
@@ -150,7 +152,7 @@
         <div class="slide-wrapper">
             <div class="owl-carousel owl-theme" id="owl-carousel1">
                 <div class="slide-item slide1">
-                    <div class="container slide-item__row">
+                    <div class="container-base slide-item__row">
                         <div class="slide-item__text">
                             <div class="slide-item__header">
                                 Приготовлено
@@ -182,7 +184,7 @@
                     </div>
                 </div>
                 <div class="slide-item slide2">
-                    <div class="container row">
+                    <div class="container-base row-base">
                         <div class="slide-item__text">
                             <div class="slide-item__header">
                                 Скидка 7%
@@ -215,17 +217,40 @@
 </header>
 <main>
     <div class="content">
-        <div class="container">
+        <div class="container-base">
             <? if ($APPLICATION->GetCurDir() !== '/') { ?>
                 <h1 class="
-                        <? if ($APPLICATION->GetCurDir() == '/about/')
-                        { ?>main__title-about<?}
-                        else { ?>main__title<? } ?>
+                    <? if ($APPLICATION->GetCurDir() == '/about/')
+                { ?>main__title-about<?}
+                else { ?>main__title<? } ?>
                     ">
                     <? if ($APPLICATION->GetCurDir() == '/about/')
                     { echo "Пиццерия Ням-Ням";}
-                    else { ?><? $APPLICATION->ShowTitle(false); ?> <? } ?>
+                    else { $APPLICATION->IncludeComponent("bitrix:breadcrumb", "breads", Array(
+                            "COMPOSITE_FRAME_MODE" => "A",    // Голосование шаблона компонента по умолчанию
+                            "COMPOSITE_FRAME_TYPE" => "AUTO",    // Содержимое компонента
+                            "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                            "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                            "START_FROM" => "2",    // Номер пункта, начиная с которого будет построена навигационная цепочка
+                        ),
+                            false
+                        );
+                    } ?>
                 </h1>
+
             <? } ?>
+
+            <!--
+            <?/* if ($APPLICATION->GetCurDir() !== '/') { */?>
+                <h1 class="
+                    <?/* if ($APPLICATION->GetCurDir() == '/about/')
+                    { */?>main__title-about<?/*}
+                    else { */?>main__title<?/* } */?>
+                    ">
+                    <?/* if ($APPLICATION->GetCurDir() == '/about/')
+                    { echo "Пиццерия Ням-Ням";}
+                    else { */?><?/* $APPLICATION->ShowTitle(false); */?> <?/* } */?>
+                </h1>
+            --><?/* } */?>
 
 
