@@ -128,6 +128,7 @@ $this->setFrameMode(true);
                     </div>
                 </a>
             </div>
+
             <div class="goods__quantity_price-list">
                 <div class="goods__price">
                     757 ðóá.
@@ -179,7 +180,7 @@ $this->setFrameMode(true);
 			<?if($arOffer["CAN_BUY"]):?>
 					<form action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" ñlass="add_form">
 						<a href="javascript:void(0)" onclick="if (BX('QUANTITY<?= $arOffer['ID'] ?>').value &gt; 1) BX('QUANTITY<?= $arOffer['ID'] ?>').value--;">-</a>
-	                    <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arOffer['ID'] ?>"/>
+	                    <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" id="QUANTITY<?= $arOffer['ID'] ?>"/>
 	                    <a href="javascript:void(0)" onclick="BX('QUANTITY<?= $arOffer['ID'] ?>').value++;">+</a>
 						<input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" size="5">
 						<input type="hidden" name="<?echo $arParams["ACTION_VARIABLE"]?>" value="BUY">

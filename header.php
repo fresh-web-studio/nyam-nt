@@ -20,9 +20,6 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
 
-
-
-
     //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.js');
 
     //STRING
