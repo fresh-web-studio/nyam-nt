@@ -76,6 +76,9 @@ button {
 .fancybox-stage {
   background-color: #fff; }
 
+button.fancybox-button--fullscreen {
+  display: none; }
+
 header .header__fix.header_fixed {
   top: 0;
   position: fixed;
