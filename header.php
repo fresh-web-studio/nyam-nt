@@ -3,8 +3,6 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
@@ -14,12 +12,19 @@
     Asset::getInstance()->addCss('/bitrix/css/main/font-awesome.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.carousel.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.theme.default.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/bootstrap.min.css');
 
     // JS
     //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
+
+
+
+
+    //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.js');
+
     //STRING
     Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>");
     Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");

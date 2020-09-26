@@ -563,9 +563,26 @@ main .content {
     width: 50%;
     text-align: center;
     padding-top: 2.34vw; }
+  main .content .carousel-item-center {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  main .content .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='69' viewBox='0 0 44 69' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39 4.5L9 34.5L39 64.5' stroke='%23F90001' stroke-width='12'/%3E%3C/svg%3E%0A"); }
+  main .content .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='70' viewBox='0 0 44 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L35 35L5 65' stroke='%23F90001' stroke-width='12'/%3E%3C/svg%3E "); }
+  main .content .carousel-control-btn {
+    display: flex;
+    justify-content: center;
+    list-style: none; }
+    main .content .carousel-control-btn li {
+      cursor: pointer;
+      opacity: 0.9; }
+      main .content .carousel-control-btn li:hover {
+        opacity: 1; }
   main .content .link-photo img {
-    width: 38vw;
-    height: 38vw; }
+    width: 46vw;
+    height: 46vw; }
   main .content .link-photo-min {
     margin: 1.6vw 0.8vw; }
   main .content .link-photo-min img {

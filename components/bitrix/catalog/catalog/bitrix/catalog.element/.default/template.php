@@ -8,60 +8,97 @@ $this->setFrameMode(true);
             <?
             if (count($arResult["MORE_PHOTO"]) > 0) {//Если есть дополнительные картинки, выводим карусель
                 ?>
-                <div class="list_carousel">
-                    <a id="prev1" class="prev fa" href="#">&#xf104;</a>
-                    <a id="next1" class="next fa" href="#">&#xf105;</a>
-                    <div class="clb"></div>
-                    <ul id="foo1">
-                        <li>
+                <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
                             <?
                             $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
                             ?>
-                            <a class="link-photo" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
-                                <img src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
+                            <a class="link-photo carousel-item-center" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                                <img class="d-block" src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
                             </a>
-                        </li>
+                        </div>
                         <? foreach ($arResult["MORE_PHOTO"] as $PHOTO): ?>
-                            <li>
-                                <a class="link-photo-min" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
-                                    <?
-                                    $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
-                                    ?>
-                                    <img src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
-                                </a>
-                            </li>
+                        <div class="carousel-item">
+                                    <a class="link-photo carousel-item-center" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                                        <?
+                                        $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                                        ?>
+                                        <img class="d-block" src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
+                                    </a>
+                        </div>
                         <? endforeach ?>
-                    </ul>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
+                <ol class="carousel-control-btn" <?$index=0;?>>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="<?=$index++;?>" class="active">
+                        <?
+                        $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                        ?>
+                        <div class="link-photo-min" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                            <img src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
+                        </div>
+                    </li>
+                    <? foreach ($arResult["MORE_PHOTO"] as $PHOTO): ?>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="<?=$index++;?>">
+                            <div class="link-photo-min" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                                <?
+                                $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                                ?>
+                                <img src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
+                            </div>
+                        </li>
+                    <? endforeach ?>
+                </ol>
             <? } else { //Иначе- Если есть дополнительные картинки- выводим только основную?>
                 <a class="link-photo oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
                     <img src="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
                 </a>
             <? } ?>
-            <?/*
-            $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
-            */?><!--
-            <a class="link-photo" href="<?/*= $arResult["DETAIL_PICTURE"]['SRC'] */?>" data-fancybox="group" data-caption="<?/*= $arResult['NAME'] */?>">
-                <img src="<?/*= $renderImageFirst["src"] */?>" alt="<?/*= $arResult["NAME"] */?>" title="<?/*= $arResult["NAME"] */?>"/>
-            </a>  -->
             <!-- /Картинка детальная -->
         </div>
         <div class="goods__description">
             <h2 class="goods__name"><? $APPLICATION->ShowTitle(false); ?></h2>
-            <h3 class="goods__composition-title">Состав:</h3>
-            <p class="goods__composition">Колбаса острая сырокопченая, сыр моцарелла, соль, специи.
-            <p>
+            <?php if($arResult['DETAIL_TEXT'] != ''): ?>
+                <h3 class="goods__composition-title">Состав:</h3>
+                <p class="goods__composition">
+                    <!-- Описание -->
+                    <?=$arResult["DETAIL_TEXT"]?>
+                <p>
+            <?php endif; ?>
+            <!-- Свойства -->
+            <? if (($arResult["DISPLAY_PROPERTIES"]['calories']) || ($arResult["DISPLAY_PROPERTIES"]['proteins']) || ($arResult["DISPLAY_PROPERTIES"]['fats']) || ($arResult["DISPLAY_PROPERTIES"]['carbohydrates'])){?>
             <h3 class="goods__composition-title">Выпуск блюд на 1 порцию:</h3>
             <div class="goods__composition-row">
-                <div class="goods__column">Колорийность:</div>
-                <div class="goods__column-right">447</div>
-                <div class="goods__column">Белки:</div>
-                <div class="goods__column-right">16,2</div>
-                <div class="goods__column">Жиры:</div>
-                <div class="goods__column-right">27,3</div>
-                <div class="goods__column">Углеводы:</div>
-                <div class="goods__column-right">33,9</div>
+                <? if ($arResult["DISPLAY_PROPERTIES"]['calories']){?>
+                    <div class="goods__column"><?=$arResult['DISPLAY_PROPERTIES']['calories']['NAME']?>:</div>
+                    <div class="goods__column-right"><?echo $arResult['DISPLAY_PROPERTIES']['calories']['DISPLAY_VALUE'];?></div>
+                <?}?>
+                <? if ($arResult["DISPLAY_PROPERTIES"]['proteins']){?>
+                    <div class="goods__column"><?=$arResult['DISPLAY_PROPERTIES']['proteins']['NAME']?>:</div>
+                    <div class="goods__column-right"><?echo $arResult['DISPLAY_PROPERTIES']['proteins']['DISPLAY_VALUE'];?></div>
+                <?}?>
+                <? if ($arResult["DISPLAY_PROPERTIES"]['fats']){?>
+                    <div class="goods__column"><?=$arResult['DISPLAY_PROPERTIES']['fats']['NAME']?>:</div>
+                    <div class="goods__column-right"><?echo $arResult['DISPLAY_PROPERTIES']['fats']['DISPLAY_VALUE'];?></div>
+                <?}?>
+                <? if ($arResult["DISPLAY_PROPERTIES"]['carbohydrates']){?>
+                    <div class="goods__column"><?=$arResult['DISPLAY_PROPERTIES']['carbohydrates']['NAME']?>:</div>
+                    <div class="goods__column-right"><?echo $arResult['DISPLAY_PROPERTIES']['carbohydrates']['DISPLAY_VALUE'];?></div>
+                <?}?>
             </div>
+            <?}?>
+            <!-- /Свойства -->
+
+
             <div class="goods__variations-list">
                 <a href="#" class="goods__link">
                     <div class="goods__variation goods__forty goods__active">
@@ -115,32 +152,8 @@ $this->setFrameMode(true);
     </div>
 
 
-
-
-
-
-
-
-<!-- Свойства -->
-				<?foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
-					<?=$arProperty["NAME"]?>: <?
-					if(is_array($arProperty["DISPLAY_VALUE"])):
-						echo implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);
-					elseif($pid=="MANUAL"):
-						?><a href="<?=$arProperty["VALUE"]?>"><?=GetMessage("CATALOG_DOWNLOAD")?></a><?
-					else:
-						echo $arProperty["DISPLAY_VALUE"];?>
-					<?endif?>
-				<?endforeach?>
-
-
-
-
-
-			
-
 	<?if(is_array($arResult["OFFERS"]) && !empty($arResult["OFFERS"])):?>
-	<!-- Если есть преддожения -->
+	<!-- Если есть предложения -->
 		<?foreach($arResult["OFFERS"] as $arOffer):?>
 			<!-- Свойства -->
 			<?foreach($arOffer["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
@@ -208,7 +221,3 @@ $this->setFrameMode(true);
 			<?=GetMessage("CATALOG_NOT_AVAILABLE")?>
 		<?endif?>
 	<?endif?>
-		
-	
-	<!-- Описание -->
-	<?=$arResult["DETAIL_TEXT"]?>
