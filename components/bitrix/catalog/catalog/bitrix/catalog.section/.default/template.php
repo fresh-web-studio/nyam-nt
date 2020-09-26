@@ -16,11 +16,13 @@ $this->setFrameMode(true);
         <div class="main__frame">
             <div class="main__block-item">
                 <div id="<?=$this->GetEditAreaId($arElement['ID']);?>">
-
-                    <a href="<?=$arElement["DETAIL_PAGE_URL"]?>" title="<?=$arElement["NAME"]?>">
-                        <img src="<?=$arElement["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arElement["NAME"]?>"/>
-                    </a>
-
+                    <?if (strlen($arElement["PREVIEW_PICTURE"]["SRC"])>0):?>
+                        <a href="<?=$arElement["DETAIL_PAGE_URL"]?>" title="<?=$arElement["NAME"]?>">
+                            <img src="<?=$arElement["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arElement["NAME"]?>"/>
+                        </a>
+                    <?else:?>
+                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>
+                    <?endif?>
                     <?foreach($arElement["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
                         <?=$arProperty["NAME"]?>: <?
                         if(is_array($arProperty["DISPLAY_VALUE"]))

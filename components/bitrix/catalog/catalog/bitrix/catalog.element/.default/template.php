@@ -5,28 +5,27 @@ $this->setFrameMode(true);
     <div class="goods__row">
         <div class="goods__photo-price">
             <!-- Картинка детальная -->
-            <?
-            if (count($arResult["MORE_PHOTO"]) > 0) {//Если есть дополнительные картинки, выводим карусель
+            <? if (count($arResult["MORE_PHOTO"]) > 0) {//Если есть дополнительные картинки, выводим карусель
                 ?>
                 <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <?
-                            $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                            $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1178, "height" => 1178), BX_RESIZE_IMAGE_EXACT, false);
                             ?>
                             <a class="link-photo carousel-item-center" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
                                 <img class="d-block" src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
                             </a>
                         </div>
                         <? foreach ($arResult["MORE_PHOTO"] as $PHOTO): ?>
-                        <div class="carousel-item">
-                                    <a class="link-photo carousel-item-center" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
-                                        <?
-                                        $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
-                                        ?>
-                                        <img class="d-block" src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
-                                    </a>
-                        </div>
+                            <div class="carousel-item">
+                                <a class="link-photo carousel-item-center" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                                    <?
+                                    $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 187, "height" => 187), BX_RESIZE_IMAGE_EXACT, false);
+                                    ?>
+                                    <img class="d-block" src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
+                                </a>
+                            </div>
                         <? endforeach ?>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -59,9 +58,15 @@ $this->setFrameMode(true);
                     <? endforeach ?>
                 </ol>
             <? } else { //Иначе- Если есть дополнительные картинки- выводим только основную?>
-                <a class="link-photo oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
-                    <img src="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
-                </a>
+                <?if (strlen($arResult["DETAIL_PICTURE"]["SRC"])>0):?>
+                    <a class="link-photo oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                        <img src="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
+                    </a>
+                <?else:?>
+                    <div class="link-photo">
+                        <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>
+                    </div>
+                <?endif?>
             <? } ?>
             <!-- /Картинка детальная -->
         </div>
@@ -167,7 +172,6 @@ $this->setFrameMode(true);
 			<!-- Цены -->
 			<?foreach($arOffer["PRICES"] as $code=>$arPrice):?>
 				<?if($arPrice["CAN_ACCESS"]):?>
-					<?=$arResult["CAT_PRICES"][$code]["TITLE"];?>
 					<?if($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]):?>
 						<s><?=$arPrice["PRINT_VALUE"]?></s> <?=$arPrice["PRINT_DISCOUNT_VALUE"]?>
 					<?else:?>
@@ -182,11 +186,10 @@ $this->setFrameMode(true);
 						<a href="javascript:void(0)" onclick="if (BX('QUANTITY<?= $arOffer['ID'] ?>').value &gt; 1) BX('QUANTITY<?= $arOffer['ID'] ?>').value--;">-</a>
 	                    <input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" id="QUANTITY<?= $arOffer['ID'] ?>"/>
 	                    <a href="javascript:void(0)" onclick="BX('QUANTITY<?= $arOffer['ID'] ?>').value++;">+</a>
-						<input type="text" name="<?echo $arParams["PRODUCT_QUANTITY_VARIABLE"]?>" value="1" size="5">
 						<input type="hidden" name="<?echo $arParams["ACTION_VARIABLE"]?>" value="BUY">
 						<input type="hidden" name="<?echo $arParams["PRODUCT_ID_VARIABLE"]?>" value="<?echo $arOffer["ID"]?>">
-						<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">
-						<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."ADD2BASKET"?>" value="<?echo GetMessage("CT_BCE_CATALOG_ADD")?>">
+<!--						<input type="submit" name="<?/*echo $arParams["ACTION_VARIABLE"]."BUY"*/?>" value="<?/*echo GetMessage("CATALOG_BUY")*/?>">
+-->						<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."ADD2BASKET"?>" value="<?echo GetMessage("CT_BCE_CATALOG_ADD")?>">
 					</form>
 			<?elseif(count($arResult["CAT_PRICES"]) > 0):?>
 				<?=GetMessage("CATALOG_NOT_AVAILABLE")?>
@@ -198,7 +201,6 @@ $this->setFrameMode(true);
 		<!-- Цены -->
 		<?foreach($arResult["PRICES"] as $code=>$arPrice):?>
 			<?if($arPrice["CAN_ACCESS"]):?>
-				<?=$arResult["CAT_PRICES"][$code]["TITLE"];?>
 				<?if($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]):?>
 					<s><?=$arPrice["PRINT_VALUE"]?></s> <?=$arPrice["PRINT_DISCOUNT_VALUE"]?>
 				<?else:?>
