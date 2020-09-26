@@ -13,9 +13,11 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.carousel.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/owlcarousel/assets/owl.theme.default.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/bootstrap.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.css');
 
     // JS
     //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');

@@ -42,13 +42,13 @@ $this->setFrameMode(true);
                         <?
                         $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
                         ?>
-                        <div class="link-photo-min" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                        <div class="link-photo-min" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-caption="<?= $arResult['NAME'] ?>">
                             <img src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
                         </div>
                     </li>
                     <? foreach ($arResult["MORE_PHOTO"] as $PHOTO): ?>
                         <li data-target="#carouselExampleIndicators" data-slide-to="<?=$index++;?>">
-                            <div class="link-photo-min" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
+                            <div class="link-photo-min" href="<?= $PHOTO["SRC"] ?>" data-caption="<?= $arResult['NAME'] ?>">
                                 <?
                                 $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
                                 ?>

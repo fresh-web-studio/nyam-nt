@@ -73,6 +73,9 @@ button {
 .link-red {
   color: #F90001; }
 
+.fancybox-stage {
+  background-color: #fff; }
+
 header .header__fix.header_fixed {
   top: 0;
   position: fixed;
