@@ -21,7 +21,7 @@ $this->setFrameMode(true);
                             <div class="carousel-item">
                                 <a class="link-photo carousel-item-center" href="<?= $PHOTO["SRC"] ?>" data-fancybox="group" data-caption="<?= $arResult['NAME'] ?>">
                                     <?
-                                    $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 187, "height" => 187), BX_RESIZE_IMAGE_EXACT, false);
+                                    $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1178, "height" => 1178), BX_RESIZE_IMAGE_EXACT, false);
                                     ?>
                                     <img class="d-block" src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
                                 </a>
@@ -40,7 +40,7 @@ $this->setFrameMode(true);
                 <ol class="carousel-control-btn" <?$index=0;?>>
                     <li data-target="#carouselExampleIndicators" data-slide-to="<?=$index++;?>" class="active">
                         <?
-                        $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                        $renderImageFirst = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], Array("width" => 1178, "height" => 1178), BX_RESIZE_IMAGE_EXACT, false);
                         ?>
                         <div class="link-photo-min" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-caption="<?= $arResult['NAME'] ?>">
                             <img src="<?= $renderImageFirst["src"] ?>" alt="<?= $arResult["NAME"] ?>" title="<?= $arResult["NAME"] ?>"/>
@@ -50,7 +50,7 @@ $this->setFrameMode(true);
                         <li data-target="#carouselExampleIndicators" data-slide-to="<?=$index++;?>">
                             <div class="link-photo-min" href="<?= $PHOTO["SRC"] ?>" data-caption="<?= $arResult['NAME'] ?>">
                                 <?
-                                $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1000, "height" => 1000), BX_RESIZE_IMAGE_EXACT, false);
+                                $renderImage = CFile::ResizeImageGet($PHOTO, Array("width" => 1178, "height" => 1178), BX_RESIZE_IMAGE_EXACT, false);
                                 ?>
                                 <img src="<?= $renderImage["src"] ?>" alt="<?= $arResult["NAME"] ?>"/>
                             </div>
