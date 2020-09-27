@@ -384,6 +384,115 @@ main .content {
     line-height: 5vw;
     margin: 6vw 1.48vw 4vw;
     color: #F90001; }
+  main .content .main__item-list {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    width: 100%; }
+  main .content .main__frame {
+    width: 25%;
+    padding: 1.6vw;
+    margin: 1.6vw 0;
+    border-right: 0.08vw solid #C6C6C6; }
+  main .content .main__frame:nth-child(4n+4) {
+    border-right: 0 solid; }
+  main .content .main__block-item a {
+    opacity: .9; }
+  main .content .main__block-item a:hover {
+    opacity: 1; }
+  main .content .main__block-item img {
+    width: 100%; }
+  main .content .main__name {
+    margin-top: 1.4vw;
+    margin-bottom: 0.3vw;
+    font-weight: bold;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    display: block;
+    color: #000000;
+    min-height: 4vw; }
+  main .content .main__description {
+    margin-bottom: 0.5vw;
+    font-size: 1.1vw;
+    line-height: 1.48vw;
+    min-height: 3vw;
+    height: 3vw;
+    color: #707070;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical; }
+  main .content .main__item-row {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify; }
+  main .content .main__item-price {
+    font-weight: bold;
+    font-size: 2.3vw;
+    line-height: 2.5vw;
+    color: #000000; }
+  main .content .main__item-info {
+    font-size: .8vw;
+    color: #C6C6C6; }
+  main .content .main__item-btn {
+    width: 8vw;
+    height: 3.5vw;
+    border: 0.18vw solid #F90001;
+    box-sizing: border-box;
+    border-radius: 1.48vw;
+    font-size: 1.2vw;
+    line-height: 3vw;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    color: #F90001; }
+  main .content .main__item-btn:hover {
+    background-color: #D30102;
+    border: 0.18vw solid #D30102;
+    color: #fff;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -ms-transition-duration: 1s; }
   main .content .about__row {
     padding: 0 1.6vw;
     display: -webkit-flex;
@@ -1627,6 +1736,34 @@ footer .footer__social img, footer .slide-item__social .hover img {
     font-size: 6vw;
     line-height: 12vw;
     margin: 2.37vw 3.6vw 3.9vw; }
+  main .content .main__frame {
+    width: 50%;
+    padding: 3.6vw; }
+  main .content .main__frame:nth-child(2n) {
+    border-right: 0; }
+  main .content .main__name {
+    margin-top: 4.4vw;
+    margin-bottom: 2.3vw;
+    font-size: 3.9vw;
+    line-height: 5vw;
+    min-height: 10vw; }
+  main .content .main__description {
+    margin-bottom: 5.5vw;
+    font-size: 3vw;
+    line-height: 3.48vw; }
+  main .content .main__item-price {
+    font-size: 3.8vw;
+    line-height: 5.5vw; }
+  main .content .main__item-btn {
+    width: 18vw;
+    height: 8.75vw;
+    border: 0.45vw solid #F90001;
+    border-radius: 3.7vw;
+    font-size: 3vw;
+    line-height: 7.5vw; }
+  main .content .main__item-info {
+    margin-top: 0.5vw;
+    font-size: 2vw; }
   main .content .main__title-about {
     font-family: roboto, sans-serif;
     font-size: 6vw;

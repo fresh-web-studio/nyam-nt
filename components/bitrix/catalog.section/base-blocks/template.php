@@ -2,29 +2,30 @@
 $this->setFrameMode(true);
 ?>
 
-    <div class="goods__row">
+<div class="blocks_items">
+    <div class="row">
     <? foreach ($arResult["ITEMS"] as $cell => $arElement): ?>
 
-        <div class="goods__frame">
-            <div class="goods__additionally">
+        <div class="blocks_item col-lg-4">
+            <div class="over_item">
                 <a href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                     <? if (strlen($arElement["DETAIL_PICTURE"]["SRC"]) !== 0) { ?>
-                        <img src="<?= $arElement["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
+                        <div class="image_item" style="background: url(<?= $arElement["DETAIL_PICTURE"]["SRC"] ?>) no-repeat center; background-size: contain"></div>
                     <? } else { ?>
-                        <div class="link-photo">
-                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="��� ��������"/>
-                        </div>
+                        <div class="image_item" style="background: url(/local/images/nof.jpg) no-repeat center; background-size: contain"></div>
                     <? } ?>
-
-                    <div class="goods__additionally-name" >
+                    <span>
+                     Артикул: <? echo $arElement["DISPLAY_PROPERTIES"]["ATT_BARCADE"]["~VALUE"];?>
+                    </span>
+                    <h5>
                         <?
                         $strname = $arElement["NAME"];
                         echo TruncateText($strname, 55);
                         ?>
-                    </div>
+                    </h5>
                 </a>
-                <!--<div class="price2">
-                        <?/*
+                <div class="price2">
+                        <?
                         $intIBlockID = 4;
                         $mxResult = CCatalogSKU::GetInfoByProductIBlock(
                             $intIBlockID
@@ -37,39 +38,56 @@ $this->setFrameMode(true);
                             {
                                 $ar_price = GetCatalogProductPrice($arOffer["ID"], 1);
 
-                                echo "<div class=\"pricebl\"><strong>�� "; echo CurrencyFormat($ar_price["PRICE"], "RUB"); echo "</strong></div>" ;
-                                */?>
+                                echo "<div class=\"pricebl\"><strong>от "; echo CurrencyFormat($ar_price["PRICE"], "RUB"); echo "</strong></div>" ;
+                                ?>
 
                                 <div>
-                                  <a class="btn-default" href="<?/* echo $arElement["DETAIL_PAGE_URL"] */?>" title="<?/*= $arElement["NAME"] */?>">���������</a>
+                                  <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">Подробнее</a>
                                 </div>
-                    <?/*
+                    <?
                                 break;
                             }
                         }
-                        */?>
-                </div>-->
-                <div class="goods__additionally-price-bay">
+                        ?>
+
+                </div>
+
+                <div class="price">
+
+
+
+                    <? //echo '<pre>'; print_r($arElement); echo'</pre>';?>
                     <? foreach ($arElement["PRICES"] as $code => $arPrice): ?>
                         <? if ($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]): ?>
-                            <strong class="goods__additionally-price"><s><?= $arPrice["PRINT_VALUE"] ?></s> <?= $arPrice["PRINT_DISCOUNT_VALUE"] ?>
+                            <strong><s><?= $arPrice["PRINT_VALUE"] ?></s> <?= $arPrice["PRINT_DISCOUNT_VALUE"] ?>
                             </strong>
                         <? else: ?>
-                            <strong class="goods__additionally-price"><?= $arPrice["PRINT_VALUE"] ?></strong>
-                            <form action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data"
+                            <strong>от <?= $arPrice["PRINT_VALUE"] ?></strong>
+                            <?/*<form action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data"
                                   class="add_form">
                                 <input type="text" name="QUANTITY" value="1" size="5" style="display: none;">
                                 <input type="hidden" name="<? echo $arParams["ACTION_VARIABLE"] ?>" value="BUY">
                                 <input type="hidden" name="<? echo $arParams["PRODUCT_ID_VARIABLE"] ?>" value="<? echo $arElement["ID"] ?>">
                                 <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "BUY" ?>" value="<? echo GetMessage("CATALOG_BUY") ?>" style="display: none;">
-                                <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" ?>" value="+" class="goods__additionally-bay-btn">
-                            </form>
+                                <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" ?>" value=" Добавить в корзину" class="fa">
+                            </form>*/?>
+                            <div>
+                                <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">Подробнее</a>
+                            </div>
+                            <!--<button data-id="<?= $arElement['ID'] ?>" class="h2o_add_favor fa"><i class="far fa-star"></i> В избранное</button> -->
                         <? endif; ?>
                     <? endforeach; ?>
+
+
+
+                    <div class="clb"></div>
+
                 </div>
+                <div class="clb"></div>
             </div>
         </div>
     <? endforeach; ?>
+</div>
 </div>
 
 
