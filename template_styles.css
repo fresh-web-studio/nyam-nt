@@ -841,7 +841,8 @@ main .content {
     padding: 1.6vw;
     text-align: center; }
   main .content .goods__additionally img {
-    width: 10vw; }
+    width: 10vw;
+    height: 10vw; }
   main .content .goods__additionally-name {
     margin-top: 1.09vw;
     margin-bottom: 1.95vw;
@@ -864,10 +865,12 @@ main .content {
   main .content .goods__additionally-price {
     font-size: 1.95vw;
     line-height: 2.26vw; }
-  main .content .goods__additionally-bay-btn {
+  main .content input[type="submit"].goods__additionally-bay-btn {
+    margin-top: 0;
     width: 2.34vw;
     height: 2.34vw;
     border: 0.16vw solid #F90001;
+    background-color: transparent;
     box-sizing: border-box;
     border-radius: 0.8vw;
     font-size: 1.95vw;
@@ -889,7 +892,7 @@ main .content {
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     color: #F90001; }
-  main .content .goods__additionally-bay-btn:hover {
+  main .content input[type="submit"].goods__additionally-bay-btn:hover {
     background-color: #D30102;
     color: #fff; }
   main .content .cart__row-base {

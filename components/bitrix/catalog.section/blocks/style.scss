@@ -1,0 +1,169 @@
+@import "../../../../SCSS.scss";
+
+.blocks_items {
+  .blocks_item {
+/*    float: left;
+    width: 380px;*/
+    margin-top: 60px;
+    min-height: 620px;
+    @include animation_0_25;
+
+    .over_item {
+      border: 1px gray solid;
+
+
+      &:hover {
+        box-shadow: 0 0 50px 0 rgba(0,0,0,0.28);
+        position: relative;
+        z-index: 9;
+      }
+      background: white;
+      .btn-default {
+        background-image: linear-gradient(90deg, green 3%, green 99%);
+        box-shadow: 0 3px 9px -3px rgba(0,0,0,0.5);
+        border-radius: 100px;
+        font-size: 18px;
+        color: white;
+        padding: 10px 20px;
+        border: 0px;
+        transition: all .25s ease-out;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        -o-transition: all .25s ease-out;
+        -ms-transition: all .25s ease-out;
+        font-family: FontAwesome, Arial;
+        text-align: center;
+        margin: 30px auto;
+        width: 160px;
+      }
+      .btn-default:hover {
+        background-image: linear-gradient(90deg, green 3%, green 99%);
+      }
+
+      a {
+
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: green;
+        padding: 0px 15px;
+       /* overflow: hidden;*/
+        .image_item {
+          height: 324px;
+          margin-top: -20px;
+          border: 1px $gray solid;
+          box-shadow: 0 2px 4px 0 rgba(0,0,0,0.34);
+        }
+        span {
+          display: block;
+          color: black;
+          padding-top: 10px;
+          text-align: center;
+        }
+        h5 {
+          font-family: Helvetica;
+          font-size: 21px;
+          color: green;
+          text-align: center;
+          margin: 10px 50px;
+          height: 46px;
+        }
+        &:hover {
+          text-decoration: none;
+          h5 {
+            color: green;
+          }
+        }
+      }
+      .stars {
+        padding: 10px 0px 0px 15px;
+        position: relative;
+        z-index: 100;
+        border-top: 1px solid gray;
+        margin: 10px 15px 0px;
+      }
+      .price {
+        clear: both;
+        strong {
+          display: block;
+          padding: 10px 0px 10px 15px;
+          text-align: center;
+          font-size: 36px;
+          color: green;
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          margin: 10px 15px;
+          s {
+            font-size: 12px;
+            color: $gray;
+          }
+        }
+        .add_form {
+          text-align: center;
+        }
+
+        button.h2o_add_favor {
+          background: none;
+          border: none;
+          font-style: normal;
+          color: green;
+          font-size: 21px;
+          margin: 0px 80px 30px;;
+          &:hover {
+            color: green;
+          }
+        }
+      }
+      .price2 {
+        clear: both;
+        .pricebl {
+          display: block;
+          padding: 10px 0px 10px 15px;
+          text-align: center;
+          font-size: 36px;
+          color: green;
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          margin: 10px 15px;
+          s {
+            font-size: 12px;
+            color: gray;
+          }
+        }
+        .add_form {
+          text-align: center;
+        }
+        input[type="submit"] {
+          background-image: linear-gradient(90deg, green 3%, green 99%);
+          box-shadow: 0 3px 9px -3px rgba(0, 0, 0, 0.50);
+          border-radius: 100px;
+          font-size: 18px;
+          color: white;
+          padding: 20px 30px;
+          margin-top: 20px;
+          margin-bottom: 40px;
+          border: 0px;
+          @include animation_0_25;
+          font-family: FontAwesome, Arial;
+          &:hover {
+            background-image: linear-gradient(90deg, green 3%, green 99%);
+            color: white;
+          }
+        }
+        button.h2o_add_favor {
+          background: none;
+          border: none;
+          font-style: normal;
+          color: green;
+          font-size: 21px;
+          margin: 0px 80px 30px;;
+          &:hover {
+            color: green;
+          }
+        }
+      }
+    }
+  }
+}
+
+
