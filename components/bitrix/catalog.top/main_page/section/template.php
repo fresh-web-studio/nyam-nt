@@ -97,571 +97,123 @@ $generalParams = array(
 $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($this->randString()));
 $containerName = 'catalog-top-container';
 ?>
-<div class="catalog-top" data-entity="<?=$containerName?>">
-	<?
-	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
-	{
-		$areaIds = array();
 
-		foreach ($arResult['ITEMS'] as $item)
-		{
-			$uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
-			$areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
-			$this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
-			$this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
-		}
-		?>
-		<!-- items-container -->
-		<?
-		foreach ($arResult['ITEM_ROWS'] as $rowData)
-		{
-			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
-			?>
-			<div class="row <?=$rowData['CLASS']?>" data-entity="items-row">
-				<?
-				switch ($rowData['VARIANT'])
-				{
-					case 0:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<div class="col-xs-12 product-item-big-card">
-									<div class="row">
-										<div class="col-md-12">
-											<?
-											$item = reset($rowItems);
-											$APPLICATION->IncludeComponent(
-												'bitrix:catalog.item',
-												'',
-												array(
-													'RESULT' => array(
-														'ITEM' => $item,
-														'AREA_ID' => $areaIds[$item['ID']],
-														'TYPE' => $rowData['TYPE'],
-														'BIG_LABEL' => 'N',
-														'BIG_DISCOUNT_PERCENT' => 'N',
-														'BIG_BUTTONS' => 'N',
-														'SCALABLE' => 'N'
-													),
-													'PARAMS' => $generalParams
-														+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-												),
-												$component,
-												array('HIDE_ICONS' => 'Y')
-											);
-											?>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<?
-						break;
+<div class="main__item-list">
+    <? foreach ($arResult["ITEMS"] as $cell => $arElement): ?>
 
-					case 1:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-xs-6 product-item-big-card">
-										<div class="row">
-											<div class="col-md-12">
-												<?
-												$APPLICATION->IncludeComponent(
-													'bitrix:catalog.item',
-													'',
-													array(
-														'RESULT' => array(
-															'ITEM' => $item,
-															'AREA_ID' => $areaIds[$item['ID']],
-															'TYPE' => $rowData['TYPE'],
-															'BIG_LABEL' => 'N',
-															'BIG_DISCOUNT_PERCENT' => 'N',
-															'BIG_BUTTONS' => 'N',
-															'SCALABLE' => 'N'
-														),
-														'PARAMS' => $generalParams
-															+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-													),
-													$component,
-													array('HIDE_ICONS' => 'Y')
-												);
-												?>
-											</div>
-										</div>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+    <div class="main__frame">
+        <div class="main__block-item">
+            <a href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
+                <? if (strlen($arElement["PREVIEW_PICTURE"]["SRC"]) !== 0) { ?>
+                    <img src="<?= $arElement["PREVIEW_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
+                <? } else { ?>
+                    <div>
+                        <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>
+                    </div>
+                <? } ?>
+                <h3>
+                    <div class="main__name">
+                        <?
+                        $strname = $arElement["NAME"];
+                        echo TruncateText($strname, 55);
+                        ?>
+                    </div>
+                </h3>
+            </a>
 
-					case 2:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-sm-4 product-item-big-card">
-										<div class="row">
-											<div class="col-md-12">
-												<?
-												$APPLICATION->IncludeComponent(
-													'bitrix:catalog.item',
-													'',
-													array(
-														'RESULT' => array(
-															'ITEM' => $item,
-															'AREA_ID' => $areaIds[$item['ID']],
-															'TYPE' => $rowData['TYPE'],
-															'BIG_LABEL' => 'N',
-															'BIG_DISCOUNT_PERCENT' => 'N',
-															'BIG_BUTTONS' => 'Y',
-															'SCALABLE' => 'N'
-														),
-														'PARAMS' => $generalParams
-															+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-													),
-													$component,
-													array('HIDE_ICONS' => 'Y')
-												);
-												?>
-											</div>
-										</div>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+            <div class="main__description">
+                <?=$arElement["DETAIL_TEXT"]?>
+            </div>
+            <div class="main__item-row">
+                <?
+                $intIBlockID = 4;
+                $mxResult = CCatalogSKU::GetInfoByProductIBlock(
+                    $intIBlockID
+                );
+                if (is_array($mxResult))
+                {
 
-					case 3:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-xs-6 col-md-3">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+                $rsOffers = CIBlockElement::GetList(array("PRICE"=>"ASC"),array('IBLOCK_ID' => $mxResult['IBLOCK_ID'], 'PROPERTY_'.$mxResult['SKU_PROPERTY_ID'] => $arElement["ID"]));
+                while ($arOffer = $rsOffers->GetNext())
+                {
+                $ar_price = GetCatalogProductPrice($arOffer["ID"], 1);
 
-					case 4:
-						$rowItemsCount = count($rowItems);
-						?>
-						<div class="col-sm-6 product-item-big-card">
-							<div class="row">
-								<div class="col-md-12">
-									<?
-									$item = array_shift($rowItems);
-									$APPLICATION->IncludeComponent(
-										'bitrix:catalog.item',
-										'',
-										array(
-											'RESULT' => array(
-												'ITEM' => $item,
-												'AREA_ID' => $areaIds[$item['ID']],
-												'TYPE' => $rowData['TYPE'],
-												'BIG_LABEL' => 'N',
-												'BIG_DISCOUNT_PERCENT' => 'N',
-												'BIG_BUTTONS' => 'Y',
-												'SCALABLE' => 'Y'
-											),
-											'PARAMS' => $generalParams
-												+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-										),
-										$component,
-										array('HIDE_ICONS' => 'Y')
-									);
-									unset($item);
-									?>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 product-item-small-card">
-							<div class="row">
-								<?
-								for ($i = 0; $i < $rowItemsCount - 1; $i++)
-								{
-									?>
-									<div class="col-xs-6">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $rowItems[$i],
-													'AREA_ID' => $areaIds[$rowItems[$i]['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$rowItems[$i]['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+                echo "<div  class='main__item-text'><div class='main__item-price'>"; echo CurrencyFormat($ar_price["PRICE"], "RUB"); echo "</div>" ;
+                ?>
 
-					case 5:
-						$rowItemsCount = count($rowItems);
-						?>
-						<div class="col-sm-6 product-item-small-card">
-							<div class="row">
-								<?
-								for ($i = 0; $i < $rowItemsCount - 1; $i++)
-								{
-									?>
-									<div class="col-xs-6">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $rowItems[$i],
-													'AREA_ID' => $areaIds[$rowItems[$i]['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$rowItems[$i]['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<div class="col-sm-6 product-item-big-card">
-							<div class="row">
-								<div class="col-md-12">
-									<?
-									$item = end($rowItems);
-									$APPLICATION->IncludeComponent(
-										'bitrix:catalog.item',
-										'',
-										array(
-											'RESULT' => array(
-												'ITEM' => $item,
-												'AREA_ID' => $areaIds[$item['ID']],
-												'TYPE' => $rowData['TYPE'],
-												'BIG_LABEL' => 'N',
-												'BIG_DISCOUNT_PERCENT' => 'N',
-												'BIG_BUTTONS' => 'Y',
-												'SCALABLE' => 'Y'
-											),
-											'PARAMS' => $generalParams
-												+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-										),
-										$component,
-										array('HIDE_ICONS' => 'Y')
-									);
-									unset($item);
-									?>
-								</div>
-							</div>
-						</div>
-						<?
-						break;
+                <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PIZZA_PRICE_FOR_PIZZA']){?>
+                    <div class="main__item-info">
+                        <?=$arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['NAME']?> / <?echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE'];?>
+                    </div>
+                <?}?>
+                <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                    <div class="main__item-info">
+                        <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                        / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
+                    </div>
+                <? } ?>
+            </div>
+            <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
+                <div class="main__item-btn">
+                    Выбрать
+                </div>
+            </a>
+            <?
+            break;
+            }
+            }
+            ?>
 
-					case 6:
-						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-xs-6 col-sm-4 col-md-2">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+        </div>
+        <div class="main__item-row">
 
-					case 7:
-						$rowItemsCount = count($rowItems);
-						?>
-						<div class="col-sm-6 product-item-big-card">
-							<div class="row">
-								<div class="col-md-12">
-									<?
-									$item = array_shift($rowItems);
-									$APPLICATION->IncludeComponent(
-										'bitrix:catalog.item',
-										'',
-										array(
-											'RESULT' => array(
-												'ITEM' => $item,
-												'AREA_ID' => $areaIds[$item['ID']],
-												'TYPE' => $rowData['TYPE'],
-												'BIG_LABEL' => 'N',
-												'BIG_DISCOUNT_PERCENT' => 'N',
-												'BIG_BUTTONS' => 'Y',
-												'SCALABLE' => 'Y'
-											),
-											'PARAMS' => $generalParams
-												+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-										),
-										$component,
-										array('HIDE_ICONS' => 'Y')
-									);
-									unset($item);
-									?>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 product-item-small-card">
-							<div class="row">
-								<?
-								for ($i = 0; $i < $rowItemsCount - 1; $i++)
-								{
-									?>
-									<div class="col-xs-6 col-md-4">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $rowItems[$i],
-													'AREA_ID' => $areaIds[$rowItems[$i]['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$rowItems[$i]['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<?
-						break;
+            <? foreach ($arElement["PRICES"] as $code => $arPrice): ?>
+                <? if ($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]): ?>
+                    <div class="main__item-text">
+                        <div class="main__item-price">
+                            <s><?= $arPrice["PRINT_VALUE"] ?></s> <?= $arPrice["PRINT_DISCOUNT_VALUE"] ?>
+                        </div>
+                        <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PIZZA_PRICE_FOR_PIZZA']) { ?>
+                            <div class="main__item-info">
+                                <?= $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['NAME'] ?>
+                                / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE']; ?>
+                            </div>
+                        <? } ?>
+                        <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                            <div class="main__item-info">
+                                <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                                / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
+                            </div>
+                        <? } ?>
+                    </div>
+                <? else: ?>
 
-					case 8:
-						$rowItemsCount = count($rowItems);
-						?>
-						<div class="col-sm-6 product-item-small-card">
-							<div class="row">
-								<?
-								for ($i = 0; $i < $rowItemsCount - 1; $i++)
-								{
-									?>
-									<div class="col-xs-6 col-md-4">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $rowItems[$i],
-													'AREA_ID' => $areaIds[$rowItems[$i]['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$rowItems[$i]['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
-						</div>
-						<div class="col-sm-6 product-item-big-card">
-							<div class="row">
-								<div class="col-md-12">
-									<?
-									$item = end($rowItems);
-									$APPLICATION->IncludeComponent(
-										'bitrix:catalog.item',
-										'',
-										array(
-											'RESULT' => array(
-												'ITEM' => $item,
-												'AREA_ID' => $areaIds[$item['ID']],
-												'TYPE' => $rowData['TYPE'],
-												'BIG_LABEL' => 'N',
-												'BIG_DISCOUNT_PERCENT' => 'N',
-												'BIG_BUTTONS' => 'Y',
-												'SCALABLE' => 'Y'
-											),
-											'PARAMS' => $generalParams
-												+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-										),
-										$component,
-										array('HIDE_ICONS' => 'Y')
-									);
-									unset($item);
-									?>
-								</div>
-							</div>
-						</div>
-						<?
-						break;
-
-					case 9:
-						?>
-						<div class="col-xs-12">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-xs-12 product-line-item-card">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-
-							</div>
-						</div>
-						<?
-						break;
-				}
-				?>
-			</div>
-			<?
-		}
-		unset($generalParams, $rowItems);
-		?>
-		<!-- items-container -->
-		<?
-	}
-	else
-	{
-		// load css for bigData/deferred load
-		$APPLICATION->IncludeComponent(
-			'bitrix:catalog.item',
-			'',
-			array(),
-			$component,
-			array('HIDE_ICONS' => 'Y')
-		);
-	}
-
-	$signer = new \Bitrix\Main\Security\Sign\Signer;
-	$signedTemplate = $signer->sign($templateName, 'catalog.top');
-	$signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAMETERS'])), 'catalog.top');
-	?>
+                    <div class="main__item-text">
+                        <div class="main__item-price"><?= $arPrice["PRINT_VALUE"] ?></div>
+                        <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PIZZA_PRICE_FOR_PIZZA']) { ?>
+                            <div class="main__item-info">
+                                <?= $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['NAME'] ?>
+                                / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE']; ?>
+                            </div>
+                        <? } ?>
+                        <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                            <div class="main__item-info">
+                                <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                                / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
+                            </div>
+                        <? } ?>
+                    </div>
+                    <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
+                        <div class="main__item-btn">
+                            Выбрать
+                        </div>
+                    </a>
+                <? endif; ?>
+            <? endforeach; ?>
+        </div>
+    </div>
+</div>
+<? endforeach; ?>
 </div>
 <script>
 	BX.message({

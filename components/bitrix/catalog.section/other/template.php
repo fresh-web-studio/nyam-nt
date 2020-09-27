@@ -8,8 +8,8 @@ $this->setFrameMode(true);
         <div class="goods__frame">
             <div class="goods__additionally">
                 <a href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
-                    <? if (strlen($arElement["DETAIL_PICTURE"]["SRC"]) !== 0) { ?>
-                        <img src="<?= $arElement["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
+                    <? if (strlen($arElement["PREVIEW_PICTURE"]["SRC"]) !== 0) { ?>
+                        <img src="<?= $arElement["PREVIEW_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
                     <? } else { ?>
                         <div class="link-photo">
                             <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>

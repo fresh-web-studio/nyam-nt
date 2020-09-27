@@ -50,6 +50,12 @@ $this->setFrameMode(true);
                                         <?=$arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['NAME']?> / <?echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE'];?>
                                     </div>
                                 <?}?>
+                                <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                                    <div class="main__item-info">
+                                        <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                                        / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
+                                    </div>
+                                <? } ?>
                                 </div>
                                 <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                                     <div class="main__item-btn">
@@ -77,6 +83,12 @@ $this->setFrameMode(true);
                                         / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE']; ?>
                                     </div>
                                 <? } ?>
+                                <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                                    <div class="main__item-info">
+                                        <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                                        / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
+                                    </div>
+                                <? } ?>
                             </div>
                         <? else: ?>
 
@@ -86,6 +98,12 @@ $this->setFrameMode(true);
                                     <div class="main__item-info">
                                         <?= $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['NAME'] ?>
                                         / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PIZZA_PRICE_FOR_PIZZA']['DISPLAY_VALUE']; ?>
+                                    </div>
+                                <? } ?>
+                                <? if ($arElement["DISPLAY_PROPERTIES"]['ATT_PRICE_PER_SERVING']) { ?>
+                                    <div class="main__item-info">
+                                        <?= $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['NAME'] ?>
+                                        / <? echo $arElement['DISPLAY_PROPERTIES']['ATT_PRICE_PER_SERVING']['DISPLAY_VALUE']; ?>
                                     </div>
                                 <? } ?>
                             </div>

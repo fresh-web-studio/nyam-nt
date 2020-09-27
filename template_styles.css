@@ -2113,7 +2113,8 @@ footer .footer__social img, footer .slide-item__social .hover img {
   main .content .goods__additionally {
     padding: 3.6vw; }
   main .content .goods__additionally img {
-    width: 30vw; }
+    width: 30vw;
+    height: 30vw; }
   main .content .goods__additionally-price {
     font-size: 5.95vw;
     line-height: 9.26vw; }
@@ -2127,7 +2128,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center; }
-  main .content .goods__additionally-bay-btn {
+  main .content input[type="submit"].goods__additionally-bay-btn {
     width: 9.26vw;
     height: 9.26vw;
     border: 0.51vw solid #F90001;

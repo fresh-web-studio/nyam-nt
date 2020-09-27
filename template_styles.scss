@@ -2848,6 +2848,7 @@ footer {
 
       .goods__additionally img {
         width: 30vw;
+        height: 30vw;
       }
 
       .goods__additionally-price {
@@ -2869,7 +2870,7 @@ footer {
         -ms-flex-align: center;;
       }
 
-      .goods__additionally-bay-btn {
+      input[type="submit"].goods__additionally-bay-btn {
         width: 9.26vw;
         height: 9.26vw;
         border: 0.51vw solid #F90001;
