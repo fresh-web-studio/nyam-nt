@@ -1075,7 +1075,7 @@ main {
       -ms-flex-align: center;;
       position: relative;
       max-width: 11.70vw;
-      margin: 0 auto 1.17vw;
+      margin: 0 auto;
     }
 
     .goods__quantity_price-list {
@@ -1240,7 +1240,7 @@ main {
     .goods__additionally-name {
       margin-top: 1.09vw;
       margin-bottom: 1.95vw;
-      font-size: 1vw;
+      font-size: 0.9vw;
       line-height: 1.48vw;
       color: $gray-dark;
     }
@@ -1261,7 +1261,7 @@ main {
     }
 
     .goods__additionally-price {
-      font-size: 1.95vw;
+      font-size: 1.75vw;
       line-height: 2.26vw;
     }
 
@@ -2171,6 +2171,18 @@ footer {
       color: $gray-dark;
     }
 
+    .header__link.exit:after {
+      background-position: center;
+      top: 1.24vw;
+      font-size: 9.97vw;
+      width: 9.6vw;
+      height: 9.6vw;
+      right: 15.7vw;
+      background-repeat: no-repeat;
+      position: relative;
+      color: $gray-dark;
+    }
+
     .main_menu__back {
       position: relative;
       top: -3.03vw;
@@ -2188,7 +2200,7 @@ footer {
     .main_menu__cart {
       padding-right: 1.52vw;
       right: 0;
-      top: 5.0vw;
+      top: 2.6vw;
       position: absolute;
       z-index: 5;
     }
@@ -2873,7 +2885,7 @@ footer {
       input[type="submit"].goods__additionally-bay-btn {
         width: 9.26vw;
         height: 9.26vw;
-        border: 0.51vw solid #F90001;
+        border: 0.51vw solid $red;
         border-radius: 2.8vw;
         font-size: 6.95vw;
         line-height: 1.87vw;

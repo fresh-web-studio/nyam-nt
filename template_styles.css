@@ -824,7 +824,7 @@ main .content {
     -ms-flex-align: center;
     position: relative;
     max-width: 11.70vw;
-    margin: 0 auto 1.17vw; }
+    margin: 0 auto; }
   main .content .goods__quantity_price-list {
     margin-top: 4.68vw;
     display: -webkit-flex;
@@ -955,7 +955,7 @@ main .content {
   main .content .goods__additionally-name {
     margin-top: 1.09vw;
     margin-bottom: 1.95vw;
-    font-size: 1vw;
+    font-size: 0.9vw;
     line-height: 1.48vw;
     color: #707070; }
   main .content .goods__additionally-price-bay {
@@ -972,7 +972,7 @@ main .content {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify; }
   main .content .goods__additionally-price {
-    font-size: 1.95vw;
+    font-size: 1.75vw;
     line-height: 2.26vw; }
   main .content input[type="submit"].goods__additionally-bay-btn {
     margin-top: 0;
@@ -1671,6 +1671,16 @@ footer .footer__social img, footer .slide-item__social .hover img {
     right: 17.7vw;
     position: relative;
     color: #707070; }
+  header .header__link.exit:after {
+    background-position: center;
+    top: 1.24vw;
+    font-size: 9.97vw;
+    width: 9.6vw;
+    height: 9.6vw;
+    right: 15.7vw;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #707070; }
   header .main_menu__back {
     position: relative;
     top: -3.03vw;
@@ -1684,7 +1694,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
   header .main_menu__cart {
     padding-right: 1.52vw;
     right: 0;
-    top: 5.0vw;
+    top: 2.6vw;
     position: absolute;
     z-index: 5; }
   header .main_menu__cart a:before {

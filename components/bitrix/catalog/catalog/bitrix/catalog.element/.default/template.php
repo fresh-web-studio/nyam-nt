@@ -145,9 +145,6 @@ $this->setFrameMode(true);
                     <span class="quantity__btn-minus" data-role="buy_decrement"></span>
                     <div class="quantity__quantity">
                         <input class="product-item-amount-field" type="number" value="1" data-role="buy_quantity">
-                        <span class="product-item-amount-description-container">
-                                רע
-                            </span>
                     </div>
                     <span class="quantity__btn-plus" data-role="buy_increment"></span>
                 </div>
