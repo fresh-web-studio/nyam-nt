@@ -155,7 +155,7 @@ $containerName = 'catalog-top-container';
             </div>
             <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                 <div class="main__item-btn">
-                    Выбрать
+                    <?=GetMessage('SELECT_PRODUCT')?>
                 </div>
             </a>
             <?
@@ -205,7 +205,7 @@ $containerName = 'catalog-top-container';
                     </div>
                     <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                         <div class="main__item-btn">
-                            Выбрать
+                            <?=GetMessage('SELECT_PRODUCT')?>
                         </div>
                     </a>
                 <? endif; ?>

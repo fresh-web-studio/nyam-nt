@@ -1,8 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <!doctype html>
-<html>
+<html lang="<?=GetMessage('LANG')?>">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=<?echo LANG_CHARSET;?>">
 
     <?$APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;
@@ -47,7 +46,7 @@
             <a class="header__link-logo" href="/"><img class="header__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/header__logo.svg" alt="Логотип пиццерии Ням-ням"/></a>
             <div class="header__town-time">
                 <div class="header__row-top">
-                    <div class="header__text town-icon">Доставка пиццы:</div>
+                    <div class="header__text town-icon"><?=GetMessage('PIZZA_DELIVERY')?>:</div>
                     <div class="header__text_red">Нижний Тагил</div>
                 </div>
                 <div class="header__row-top">
