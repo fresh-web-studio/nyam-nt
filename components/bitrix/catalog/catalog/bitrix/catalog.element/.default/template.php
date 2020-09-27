@@ -105,50 +105,53 @@ $this->setFrameMode(true);
 
 
             <div class="goods__variations-list">
-                <a href="#" class="goods__link">
-                    <div class="goods__variation goods__forty goods__active">
-                        <div class="unification">
-                            <div class="goods__variation_row">40 см</div>
-                            <div class="goods__variation_row">(8 порций)</div>
-                            <div class="goods__variation_row">3 576 ккал</div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="goods__link">
-                    <div class="goods__variation goods__thirty">
-                        <div class="unification">
-                            <div class="goods__variation_row">30 см</div>
-                            <div class="goods__variation_row">(4 порций)</div>
-                            <div class="goods__variation_row">1788 ккал</div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="goods__link">
-                    <div class="goods__variation goods__twenty">
-                        <div class="unification">
-                            <div class="goods__variation_row">20 см</div>
-                            <div class="goods__variation_row">(2 порций)</div>
-                            <div class="goods__variation_row">894 ккал</div>
-                        </div>
-                    </div>
-                </a>
+								<?
+								$arValues = [
+									'20' => ['CALORIES' => 894, 'PORTIONS' => '2 порции', 'CLASS' => 'goods__twenty'],
+									'30' => ['CALORIES' => 1788, 'PORTIONS' => '3 порции', 'CLASS' => 'goods__thirty'],
+									'40' => ['CALORIES' => 3576, 'PORTIONS' => '8 порций', 'CLASS' => 'goods__forty'],
+								];
+								?>
+								<?foreach($arResult['OFFERS'] as $arOffer):?>
+										<?
+										$intDiameter = $arOffer['PROPERTIES']['DIAMETER']['VALUE_XML_ID'];
+										?>
+										<pre style="display:none">
+											<?print_r($arOffer);?>
+										</pre>
+										<a href="#" class="goods__link" data-role="pizza_diameter" data-id="<?=$arOffer['ID'];?>" data-price="<?=$arOffer['MIN_PRICE']['DISCOUNT_VALUE'];?>" data-price-formatted="<?=$arOffer['MIN_PRICE']['PRINT_DISCOUNT_VALUE'];?>">
+												<div class="goods__variation <?=$arValues[$intDiameter]['CLASS'];?>">
+														<div class="unification">
+																<div class="goods__variation_row">
+																	<?=$intDiameter;?> см
+																</div>
+																<div class="goods__variation_row">
+																	(<?=$arValues[$intDiameter]['PORTIONS'];?>)
+																</div>
+																<div class="goods__variation_row">
+																	<?=number_format($arValues[$intDiameter]['CALORIES'], 0, '', ' ');?> ккал
+																</div>
+														</div>
+												</div>
+										</a>
+								<?endforeach?>
             </div>
 
             <div class="goods__quantity_price-list">
-                <div class="goods__price">
-                    757 руб.
+                <div class="goods__price" data-role="buy_price">
+                    
                 </div>
                 <div class="quantity__list">
-                    <span class="quantity__btn-minus"></span>
+                    <span class="quantity__btn-minus" data-role="buy_decrement"></span>
                     <div class="quantity__quantity">
-                        <input class="product-item-amount-field" type="number" value="1">
+                        <input class="product-item-amount-field" type="number" value="1" data-role="buy_quantity">
                         <span class="product-item-amount-description-container">
                                 шт
                             </span>
                     </div>
-                    <span class="quantity__btn-plus"></span>
+                    <span class="quantity__btn-plus" data-role="buy_increment"></span>
                 </div>
-                <a href="#">
+                <a href="#" data-role="buy_button">
                     <div class="goods__bay-btn">
                         В корзину
                     </div>
@@ -159,7 +162,8 @@ $this->setFrameMode(true);
 
 
 	<?if(is_array($arResult["OFFERS"]) && !empty($arResult["OFFERS"])):?>
-	<!-- Если есть предложения -->
+		<?/*
+		<!-- Если есть предложения -->
 		<?foreach($arResult["OFFERS"] as $arOffer):?>
 			<!-- Свойства -->
 			<?foreach($arOffer["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
@@ -188,13 +192,13 @@ $this->setFrameMode(true);
 	                    <a href="javascript:void(0)" onclick="BX('QUANTITY<?= $arOffer['ID'] ?>').value++;">+</a>
 						<input type="hidden" name="<?echo $arParams["ACTION_VARIABLE"]?>" value="BUY">
 						<input type="hidden" name="<?echo $arParams["PRODUCT_ID_VARIABLE"]?>" value="<?echo $arOffer["ID"]?>">
-<!--						<input type="submit" name="<?/*echo $arParams["ACTION_VARIABLE"]."BUY"*/?>" value="<?/*echo GetMessage("CATALOG_BUY")*/?>">
 -->						<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."ADD2BASKET"?>" value="<?echo GetMessage("CT_BCE_CATALOG_ADD")?>">
 					</form>
 			<?elseif(count($arResult["CAT_PRICES"]) > 0):?>
 				<?=GetMessage("CATALOG_NOT_AVAILABLE")?>
 			<?endif?>
 		<?endforeach;?>
+		*/?>
 	<?else:?>
 	<!-- Если нет предложений -->
 
