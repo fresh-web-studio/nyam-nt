@@ -823,8 +823,7 @@ main .content {
     -webkit-align-items: center;
     -ms-flex-align: center;
     position: relative;
-    max-width: 11.70vw;
-    margin: 0 auto; }
+    max-width: 11.70vw; }
   main .content .goods__quantity_price-list {
     margin-top: 4.68vw;
     display: -webkit-flex;
@@ -886,16 +885,19 @@ main .content {
     content: "-";
     color: #F90001;
     font-size: 4vw;
-    line-height: 2.7vw;
+    line-height: 3.1vw;
+    margin-left: 0.1vw;
     background-position: center; }
   main .content .quantity__btn-plus:after {
     content: "+";
     color: #F90001;
     font-size: 3vw;
-    line-height: 3vw;
+    line-height: 3.4vw;
+    margin-left: 0.1vw;
     background-position: center; }
-  main .content .product-item-amount-field {
+  main .content input[type="text"].product-item-amount-field, main .content .product-item-amount-field {
     font-size: 2.34vw;
+    margin-top: 0;
     display: block;
     padding: 0;
     width: 100%;
@@ -919,13 +921,13 @@ main .content {
     text-align: center;
     width: 4.68vw;
     color: #C6C6C6; }
-  main .content .goods__bay-btn {
+  main .content input[type="submit"].goods__bay-btn, main .content .goods__bay-btn {
     width: 14.12vw;
-    height: 5.38vw;
+    margin-top: 0;
     background: #F90001;
     border-radius: 1.6vw;
     font-size: 1.95vw;
-    line-height: 5vw;
+    line-height: 4vw;
     align-items: center;
     -webkit-box-align: center;
     -webkit-align-items: center;

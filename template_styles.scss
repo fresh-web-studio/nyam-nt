@@ -1075,7 +1075,6 @@ main {
       -ms-flex-align: center;;
       position: relative;
       max-width: 11.70vw;
-      margin: 0 auto;
     }
 
     .goods__quantity_price-list {
@@ -1147,7 +1146,8 @@ main {
       content: "-";
       color: $red;
       font-size: 4vw;
-      line-height: 2.7vw;
+      line-height: 3.1vw;
+      margin-left: 0.1vw;
       background-position: center;
     }
 
@@ -1155,12 +1155,14 @@ main {
       content: "+";
       color: $red;
       font-size: 3vw;
-      line-height: 3vw;
+      line-height: 3.4vw;
+      margin-left: 0.1vw;
       background-position: center;
     }
 
-    .product-item-amount-field {
+    input[type="text"].product-item-amount-field, .product-item-amount-field {
       font-size: 2.34vw;
+      margin-top: 0;
       display: block;
       padding: 0;
       width: $wight-percent;
@@ -1192,13 +1194,13 @@ main {
       color: $gray;
     }
 
-    .goods__bay-btn {
+    input[type="submit"].goods__bay-btn, .goods__bay-btn {
       width: 14.12vw;
-      height: 5.38vw;
+      margin-top: 0;
       background: $red;
       border-radius: 1.6vw;
       font-size: 1.95vw;
-      line-height: 5vw;
+      line-height: 4vw;
       align-items: center;
       -webkit-box-align: center;
       -webkit-align-items: center;;
