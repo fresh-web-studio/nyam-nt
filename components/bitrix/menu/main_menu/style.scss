@@ -87,7 +87,7 @@
 }
 
 .main_menu .nav-list .root-item:hover, .main_menu .nav-list .root-item.selected {
-  background: $red;
+  background: $main-color;
   box-shadow: 0.31vw 0.31vw 0.8vw rgba(0, 0, 0, 0.11);
   border-radius: 1.48vw;
   padding: 0.8vw 1.3vw;
@@ -102,7 +102,7 @@
   width: 2vw;
   height: 2vw;
   border-radius: 50%;
-  background: $red;
+  background: $main-color;
   box-shadow: 0.08vw 0.08vw 0.39vw rgba(0, 0, 0, 0.34);
   display: -webkit-flex;
   display: -webkit-box;
@@ -141,7 +141,7 @@
   }
 
   .main_menu .nav-list:before {
-    color: $red;
+    color: $main-color;
     font-family: fa-solid-900;
     margin-top: 1.7vw;
     position: absolute;
@@ -184,7 +184,7 @@
   }
 
   .main_menu .nav-list:hover, .main_menu .nav-list:active, .main_menu .nav-list.selected, .main_menu .nav-list.selected:before, .main_menu .nav-list:hover:before {
-    background-color: $red;
+    background-color: $main-color;
     color: #fff;
   }
 
@@ -207,7 +207,7 @@
   }
 
   .main_menu a {
-    color: $red;
+    color: $main-color;
   }
 
   .main_menu a:hover {

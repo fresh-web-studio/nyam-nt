@@ -18,8 +18,8 @@
 .bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
 .bx-breadcrumb .bx-breadcrumb-item a:hover {}
 a {
-  color: $red;
+  color: $main-color;
   &:hover {
-    color: $red_dark;
+    color: $main-color_dark;
   }
 }

@@ -911,6 +911,9 @@ main .content {
     font-weight: bold;
     line-height: 3.51vw;
     transition: border 300ms ease; }
+  main .content input[disabled], main .content input.disabled, main .content input[disabled="disabled"] {
+    color: #000;
+    opacity: 1; }
   main .content input[type='number'] {
     -moz-appearance: textfield; }
   main .content input::-webkit-outer-spin-button,
@@ -1948,25 +1951,22 @@ footer .footer__social img, footer .slide-item__social .hover img {
   main .content .cart__sum {
     text-align: right; }
   main .content .quantity__list {
-    max-width: 28vw; }
+    max-width: 30vw; }
   main .content .product-item-amount-field {
     font-size: 5.34vw;
     height: 6.51vw;
     line-height: 5.51vw; }
   main .content .quantity__btn-minus, main .content .quantity__btn-plus {
-    min-width: 8.51vw;
-    height: 8.51vw;
-    border: 0.16vw solid #F90001;
-    border-radius: 2.8vw;
-    margin-top: -5vw; }
+    min-width: 9.26vw;
+    height: 9.26vw;
+    border: 0.51vw solid #F90001;
+    border-radius: 2.8vw; }
   main .content .quantity__btn-minus:after {
     font-size: 10vw;
-    line-height: 7vw; }
+    line-height: 8.3vw; }
   main .content .quantity__btn-plus:after {
     font-size: 7vw;
     line-height: 8vw; }
-  main .content .quantity__quantity {
-    margin-top: -5vw; }
   main .content .cart__order-text, main .content .cart__order-sum {
     font-size: 5.73vw;
     line-height: 8.2vw; }
