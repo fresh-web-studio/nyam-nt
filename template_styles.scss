@@ -1128,6 +1128,11 @@ main {
       transition: opacity 300ms ease, background 300ms ease;
     }
 
+    .quantity__btn-minus:hover:after, .quantity__btn-plus:hover:after {
+      color: #fff;
+      opacity: 1;
+    }
+
     .quantity__btn-minus, .quantity__btn-plus {
       position: relative;
       display: block;
@@ -1136,19 +1141,21 @@ main {
       border: 0.16vw solid $main-color;
       border-radius: 0.8vw;
       background-color: #fff;
-      color: #fff;
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
       transition: background 300ms ease, opacity 300ms ease;
+      &:hover {
+        background-color: $main-color;
+      }
     }
 
     .quantity__btn-minus:after {
       content: "-";
       color: $main-color;
       font-size: 4vw;
-      line-height: 3.1vw;
-      margin-left: 0.1vw;
+      line-height: 2.9vw;
+      margin-left: -0.1vw;
       background-position: center;
     }
 
@@ -1156,8 +1163,8 @@ main {
       content: "+";
       color: $main-color;
       font-size: 3vw;
-      line-height: 3.4vw;
-      margin-left: 0.1vw;
+      line-height: 3.1vw;
+      margin-left: -0.1vw;
       background-position: center;
     }
 
@@ -1405,6 +1412,16 @@ justify-content: center;
 
     .cart__row-base .quantity__list {
       margin: 0;
+    }
+
+    .quantity__btn-minus:hover:after, .quantity__btn-plus:hover:after {
+      color: $main-color;
+    }
+
+    .quantity__btn-minus, .quantity__btn-plus {
+      &:hover {
+        background-color: #fff;
+      }
     }
 
     .basket-item-block-price {
@@ -2730,7 +2747,7 @@ footer {
 
       .quantity__btn-minus:after {
         font-size: 10vw;
-        line-height: 8.3vw;
+        line-height: 7.2vw;
       }
 
       .quantity__btn-plus:after {

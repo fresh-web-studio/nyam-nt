@@ -55,10 +55,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                             {{#DETAIL_PAGE_URL}}
                                 <a href="{{DETAIL_PAGE_URL}}" class="basket-item-image-link">
                             {{/DETAIL_PAGE_URL}}
-
                             <img class="basket-item-image" alt="{{NAME}}"
                                 src="{{{IMAGE_URL}}}{{^IMAGE_URL}}<?=$templateFolder?>/images/no_photo.png{{/IMAGE_URL}}">
-
                             {{#SHOW_LABEL}}
                                 <div class="basket-item-label-text basket-item-label-big <?=$labelPositionClass?>">
                                     {{#LABEL_VALUES}}
@@ -68,7 +66,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                     {{/LABEL_VALUES}}
                                 </div>
                             {{/SHOW_LABEL}}
-
                             <?
                             if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y')
                             {
@@ -81,7 +78,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                 <?
                             }
                             ?>
-
                             {{#DETAIL_PAGE_URL}}
                                 </a>
                             {{/DETAIL_PAGE_URL}}
@@ -153,7 +149,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                 {{/PROPS}}
                                                 <?
                                             }
-
                                             break;
                                         case 'sku':
                                             ?>
@@ -181,7 +176,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                         </div>
                                                     </div>
                                                 {{/IS_IMAGE}}
-
                                                 {{^IS_IMAGE}}
                                                     <div class="basket-item-property basket-item-property-scu-text"
                                                         data-entity="basket-item-sku-block">
@@ -205,7 +199,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                     </div>
                                                 {{/IS_IMAGE}}
                                             {{/SKU_BLOCK_LIST}}
-
                                             {{#HAS_SIMILAR_ITEMS}}
                                                 <div class="basket-items-list-item-double" data-entity="basket-item-sku-notification">
                                                     <div class="alert alert-info alert-dismissable text-center">
@@ -247,12 +240,10 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                         </div>
                                                     </div>
                                                 {{/IS_IMAGE}}
-
                                                 {{#IS_TEXT}}
                                                     <div class="basket-item-property-custom basket-item-property-custom-text
                                                         {{#HIDE_MOBILE}}hidden-xs{{/HIDE_MOBILE}}"
                                                         data-entity="basket-item-property">
-<!--														<div class="basket-item-property-custom-name">{{NAME}}</div>
 -->														<div class="cart__description"
                                                             data-column-property-code="{{CODE}}"
                                                             data-entity="basket-item-property-column-value">
@@ -265,7 +256,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                     <div class="basket-item-property-custom basket-item-property-custom-text
                                                         {{#HIDE_MOBILE}}hidden-xs{{/HIDE_MOBILE}}"
                                                         data-entity="basket-item-property">
-<!--														<div class="basket-item-property-custom-name">{{NAME}}</div>
 -->														<div class="cart__description"
                                                             data-column-property-code="{{CODE}}"
                                                             data-entity="basket-item-property-column-value">

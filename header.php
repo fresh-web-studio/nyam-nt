@@ -170,18 +170,18 @@
                         </div>
                         <div class="slide-item__img">
                             <div class="slide-item__social">
-                                <a href="#" class="hover">
+                                <a href="https://vk.com/njamnjam_nt" target="_blank" class="hover">
                                     <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk.svg" alt="Иконка ВК"/>
                                     <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="Иконка ВК"/>
                                 </a>
-                                <a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/ok.svg" alt="Иконка ОК"/>
-                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/ok-active.svg" alt="Иконка ОК"/>
+                                <!--<a href="#" class="hover">
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok.svg" alt="Иконка ОК"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="Иконка ОК"/>
                                 </a>
                                 <a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/inst.svg" alt="Иконка Инстаграм"/>
-                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/inst-active.svg" alt="Иконка Инстаграм"/>
-                                </a>
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst.svg" alt="Иконка Инстаграм"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="Иконка Инстаграм"/>
+                                </a>-->
                             </div>
                         </div>
                     </div>
@@ -197,18 +197,18 @@
                         </div>
                         <div class="slide-item__img">
                             <div class="slide-item__social">
-                                <a href="#" class="hover">
+                                <a href="https://vk.com/njamnjam_nt" target="_blank" class="hover">
                                     <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk.svg"/>
                                     <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg"/>
                                 </a>
-                                <a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/ok.svg"/>
-                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/ok-active.svg"/>
+                                <!--<a href="#" class="hover">
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok.svg"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg"/>
                                 </a>
                                 <a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/inst.svg"/>
-                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/inst-active.svg"/>
-                                </a>
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst.svg"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg"/>
+                                </a>-->
                             </div>
                         </div>
                     </div>

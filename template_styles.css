@@ -869,6 +869,9 @@ main .content {
     content: "";
     opacity: .8;
     transition: opacity 300ms ease, background 300ms ease; }
+  main .content .quantity__btn-minus:hover:after, main .content .quantity__btn-plus:hover:after {
+    color: #fff;
+    opacity: 1; }
   main .content .quantity__btn-minus, main .content .quantity__btn-plus {
     position: relative;
     display: block;
@@ -877,24 +880,25 @@ main .content {
     border: 0.16vw solid #F90001;
     border-radius: 0.8vw;
     background-color: #fff;
-    color: #fff;
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
     transition: background 300ms ease, opacity 300ms ease; }
+    main .content .quantity__btn-minus:hover, main .content .quantity__btn-plus:hover {
+      background-color: #F90001; }
   main .content .quantity__btn-minus:after {
     content: "-";
     color: #F90001;
     font-size: 4vw;
-    line-height: 3.1vw;
-    margin-left: 0.1vw;
+    line-height: 2.9vw;
+    margin-left: -0.1vw;
     background-position: center; }
   main .content .quantity__btn-plus:after {
     content: "+";
     color: #F90001;
     font-size: 3vw;
-    line-height: 3.4vw;
-    margin-left: 0.1vw;
+    line-height: 3.1vw;
+    margin-left: -0.1vw;
     background-position: center; }
   main .content input[type="text"].product-item-amount-field, main .content .product-item-amount-field, main .content input[type="text"].basket-item-amount-filed {
     font-size: 2.34vw;
@@ -1088,6 +1092,10 @@ main .content {
     line-height: 2.26vw; }
   main .content .cart__row-base .quantity__list {
     margin: 0; }
+  main .content .quantity__btn-minus:hover:after, main .content .quantity__btn-plus:hover:after {
+    color: #F90001; }
+  main .content .quantity__btn-minus:hover, main .content .quantity__btn-plus:hover {
+    background-color: #fff; }
   main .content .basket-item-block-price {
     padding-top: 0;
     width: 10vw;
@@ -2067,7 +2075,7 @@ footer .footer__social img, footer .slide-item__social .hover img {
     border-radius: 2.8vw; }
   main .content .quantity__btn-minus:after {
     font-size: 10vw;
-    line-height: 8.3vw; }
+    line-height: 7.2vw; }
   main .content .quantity__btn-plus:after {
     font-size: 7vw;
     line-height: 8vw; }

@@ -94,7 +94,7 @@
                 </div>
                 <div class="footer__column">
                     <div class="footer__social">
-                        <a href="#" class="hover">
+                        <a href="https://vk.com/njamnjam_nt" target="_blank" class="hover">
                             <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg" alt="ÂÊ"/>
                             <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="ÂÊ"/>
                         </a>
