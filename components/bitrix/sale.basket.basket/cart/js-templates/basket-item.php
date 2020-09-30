@@ -90,14 +90,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                     }
                     ?>
                     <div class="cart__text">
-                        <?
-                        if (isset($mobileColumns['DELETE']))
-                        {
-                            ?>
-                            <span class="basket-item-actions-remove visible-xs" data-entity="basket-item-delete"></span>
-                            <?
-                        }
-                        ?>
                         <h2 class="basket-item-info-name">
                             {{#DETAIL_PAGE_URL}}
                                 <a href="{{DETAIL_PAGE_URL}}" class="cart__link">
@@ -310,90 +302,100 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                     {{/SHOW_LOADING}}
                 </div>
 
-                <?
-                if ($usePriceInAdditionalColumn)
-                {
-                    ?>
-                        <div class="basket-item-block-price">
-                            {{#SHOW_DISCOUNT_PRICE}}
-                                <div class="basket-item-price-old">
+        <div class="cart__calc">
+            <!-- Цена -->
+            <?
+            if ($usePriceInAdditionalColumn) {
+                ?>
+                <div class="basket-item-block-price">
+                    {{#SHOW_DISCOUNT_PRICE}}
+                    <div class="cart__price basket-item-price-old">
                                     <span class="basket-item-price-old-text">
                                         {{{FULL_PRICE_FORMATED}}}
                                     </span>
-                                </div>
-                            {{/SHOW_DISCOUNT_PRICE}}
+                    </div>
+                    {{/SHOW_DISCOUNT_PRICE}}
 
-                            <div class="basket-item-price-current">
+                    <div class="basket-item-price-current">
                                 <span class="cart__price" id="basket-item-price-{{ID}}">
                                     {{{PRICE_FORMATED}}}
                                 </span>
-                            </div>
-                        </div>
-
-                    <?
-                }
-                ?>
-                    <div class="quantity__list basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
-                        data-entity="basket-item-quantity-block">
-                        <span class="quantity__btn-minus" data-entity="basket-item-quantity-minus"></span>
-                        <div class="basket-item-amount-filed-block">
-                            <input type="text" class="basket-item-amount-filed" value="{{QUANTITY}}" disabled
-                                {{#NOT_AVAILABLE}} disabled="disabled"{{/NOT_AVAILABLE}}
-                                data-value="{{QUANTITY}}" data-entity="basket-item-quantity-field"
-                                id="basket-item-quantity-{{ID}}">
-                        </div>
-                        <span class="quantity__btn-plus" data-entity="basket-item-quantity-plus"></span>
-                        {{#SHOW_LOADING}}
-                            <div class="basket-items-list-item-overlay"></div>
-                        {{/SHOW_LOADING}}
                     </div>
+                </div>
+
                 <?
-                if ($useSumColumn)
-                {
-                    ?>
-                        <div class="basket-item-block-price">
-                            {{#SHOW_DISCOUNT_PRICE}}
-                                <div class="basket-item-price-old">
-                                    <span class="basket-item-price-old-text" id="basket-item-sum-price-old-{{ID}}">
+            }
+            ?>
+            <!-- /Цена -->
+            <!-- Количество -->
+            <div class="quantity__list basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
+                 data-entity="basket-item-quantity-block">
+                <span class="quantity__btn-minus" data-entity="basket-item-quantity-minus"></span>
+                <div class="basket-item-amount-filed-block">
+                    <input type="text" class="basket-item-amount-filed" value="{{QUANTITY}}" disabled
+                           {{#NOT_AVAILABLE}} disabled="disabled" {{/NOT_AVAILABLE}}
+                    data-value="{{QUANTITY}}" data-entity="basket-item-quantity-field"
+                    id="basket-item-quantity-{{ID}}">
+                </div>
+                <span class="quantity__btn-plus" data-entity="basket-item-quantity-plus"></span>
+                {{#SHOW_LOADING}}
+                <div class="basket-items-list-item-overlay"></div>
+                {{/SHOW_LOADING}}
+            </div>
+            <!-- /Количество -->
+            <!-- Сумма -->
+            <?
+            if ($useSumColumn) {
+                ?>
+                <div class="basket-item-block-price">
+                    {{#SHOW_DISCOUNT_PRICE}}
+                    <div class="basket-item-price-old">
+                                    <span class="cart__sum basket-item-price-old-text"
+                                          id="basket-item-sum-price-old-{{ID}}">
                                         {{{SUM_FULL_PRICE_FORMATED}}}
                                     </span>
-                                </div>
-                            {{/SHOW_DISCOUNT_PRICE}}
+                    </div>
+                    {{/SHOW_DISCOUNT_PRICE}}
 
-                            <div class="basket-item-price-current">
+                    <div class="basket-item-price-current">
                                 <span class="cart__sum" id="basket-item-sum-price-{{ID}}">
                                     {{{SUM_PRICE_FORMATED}}}
                                 </span>
-                            </div>
+                    </div>
 
-                            {{#SHOW_DISCOUNT_PRICE}}
-                                <div class="basket-item-price-difference">
-                                    <?=Loc::getMessage('SBB_BASKET_ITEM_ECONOMY')?>
-                                    <span id="basket-item-sum-price-difference-{{ID}}" style="white-space: nowrap;">
+                    {{#SHOW_DISCOUNT_PRICE}}
+                    <div class="basket-item-price-difference">
+                        <?= Loc::getMessage('SBB_BASKET_ITEM_ECONOMY') ?>
+                        <span id="basket-item-sum-price-difference-{{ID}}" style="white-space: nowrap;">
                                         {{{SUM_DISCOUNT_PRICE_FORMATED}}}
                                     </span>
-                                </div>
-                            {{/SHOW_DISCOUNT_PRICE}}
-                            {{#SHOW_LOADING}}
-                                <div class="basket-items-list-item-overlay"></div>
-                            {{/SHOW_LOADING}}
-                        </div>
-                    <?
-                }
-
-                if ($useActionColumn)
-                {
-                    ?>
-                        <div class="basket-item-block-actions">
-                            <div class="cart__delete" data-entity="basket-item-delete"></div>
-                            {{#SHOW_LOADING}}
-                                <div class="basket-items-list-item-overlay"></div>
-                            {{/SHOW_LOADING}}
-                        </div>
-                    <?
-                }
+                    </div>
+                    {{/SHOW_DISCOUNT_PRICE}}
+                    {{#SHOW_LOADING}}
+                    <div class="basket-items-list-item-overlay"></div>
+                    {{/SHOW_LOADING}}
+                </div>
+                <?
+            }
+            ?>
+            <!-- /Сумма -->
+            <!-- Удаление -->
+            <?
+            if ($useActionColumn) {
                 ?>
-            {{/SHOW_RESTORE}}
+                <div class="basket-item-block-actions">
+                    <div class="cart__delete" data-entity="basket-item-delete"></div>
+                    {{#SHOW_LOADING}}
+                    <div class="basket-items-list-item-overlay"></div>
+                    {{/SHOW_LOADING}}
+                </div>
+                <?
+            }
+            ?>
+            <!-- /Удаление -->
+        </div>
+
+        {{/SHOW_RESTORE}}
         </div>
 	</div>
 </script>

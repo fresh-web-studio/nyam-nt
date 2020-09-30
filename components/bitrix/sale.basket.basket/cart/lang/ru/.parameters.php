@@ -4,6 +4,7 @@ $MESS["CP_SBB_TPL_PROPERTIES_RECALCULATE_BASKET"] = "—войства, вли€ющие на перес
 $MESS["CP_SBB_TPL_THEME_SITE"] = "Ѕрать тему из настроек сайта (дл€ решени€ bitrix.eshop)";
 $MESS["CP_SBB_TPL_THEME_BLUE"] = "—ин€€ (тема по умолчанию)";
 $MESS["CP_SBB_TPL_THEME_GREEN"] = "«елена€";
+$MESS["CP_SBB_TPL_THEME_RED-N"] = " расна€ Ќ€м-нт";
 $MESS["CP_SBB_TPL_THEME_RED"] = " расна€";
 $MESS["CP_SBB_TPL_THEME_YELLOW"] = "∆елта€";
 $MESS["CP_SBB_TPL_DEFERRED_REFRESH"] = "»спользовать механизм отложенной актуализации данных товаров с провайдером";

@@ -28,7 +28,7 @@ use Bitrix\Main\Localization\Loc;
 			<?
 		}
 		?>
-		<div class="basket-checkout-section">
+		<div class="cart__order-sum-list basket-checkout-section">
 			<div class="basket-checkout-section-inner">
 				<div class="basket-checkout-block basket-checkout-block-total">
 					<div class="basket-checkout-block-total-inner">
@@ -44,11 +44,7 @@ use Bitrix\Main\Localization\Loc;
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
-
             <div class="basket-checkout-block basket-checkout-block-total-price">
                 <div class="basket-checkout-block-total-price-inner">
                     {{#DISCOUNT_PRICE_FORMATED}}
@@ -69,9 +65,6 @@ use Bitrix\Main\Localization\Loc;
                     {{/DISCOUNT_PRICE_FORMATED}}
                 </div>
             </div>
-
-
-
 		</div>
 
 		<?

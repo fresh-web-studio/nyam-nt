@@ -120,7 +120,7 @@ $this->setFrameMode(true);
 											'CLASS' => 'goods__twenty',
 										],
                     '30' => [
-											'PORTIONS' => '3 порции',
+											'PORTIONS' => '4 порции',
 											'CLASS' => 'goods__thirty',
 										],
                     '40' => [
