@@ -81,7 +81,7 @@ $this->setFrameMode(true);
     <div class="goods__description">
         <h2 class="goods__name"><? $APPLICATION->ShowTitle(false); ?></h2>
         <?php if ($arResult['DETAIL_TEXT'] != ''): ?>
-        <h3 class="goods__composition-title">Состав:</h3>
+        <h3 class="goods__composition-title">Описание:</h3>
         <p class="goods__composition">
             <!-- Описание -->
             <?= $arResult["DETAIL_TEXT"] ?>
@@ -115,18 +115,24 @@ $this->setFrameMode(true);
             <div class="goods__variations-list">
                 <?
                 $arValues = [
-                    '20' => ['CALORIES' => 894, 'PORTIONS' => '2 порции', 'CLASS' => 'goods__twenty'],
-                    '30' => ['CALORIES' => 1788, 'PORTIONS' => '3 порции', 'CLASS' => 'goods__thirty'],
-                    '40' => ['CALORIES' => 3576, 'PORTIONS' => '8 порций', 'CLASS' => 'goods__forty'],
+                    '20' => [
+											'PORTIONS' => '2 порции',
+											'CLASS' => 'goods__twenty',
+										],
+                    '30' => [
+											'PORTIONS' => '3 порции',
+											'CLASS' => 'goods__thirty',
+										],
+                    '40' => [
+											'PORTIONS' => '8 порций',
+											'CLASS' => 'goods__forty',
+										],
                 ];
                 ?>
                 <? foreach ($arResult['OFFERS'] as $arOffer): ?>
                     <?
                     $intDiameter = $arOffer['PROPERTIES']['DIAMETER']['VALUE_XML_ID'];
                     ?>
-                    <pre style="display:none">
-                            <? print_r($arOffer); ?>
-                        </pre>
                     <a href="#" class="goods__link" data-role="pizza_diameter" data-id="<?= $arOffer['ID']; ?>"
                        data-price="<?= $arOffer['MIN_PRICE']['DISCOUNT_VALUE']; ?>"
                        data-price-formatted="<?= $arOffer['MIN_PRICE']['PRINT_DISCOUNT_VALUE']; ?>">
@@ -139,98 +145,13 @@ $this->setFrameMode(true);
                                     (<?= $arValues[$intDiameter]['PORTIONS']; ?>)
                                 </div>
                                 <div class="goods__variation_row">
-                                    <?= number_format($arValues[$intDiameter]['CALORIES'], 0, '', ' '); ?> ккал
+                                    <?=$arOffer['PROPERTIES']['ATT_CALORIES_OFFERS']['VALUE'];?> ккал
                                 </div>
                             </div>
                         </div>
                     </a>
                 <? endforeach ?>
             </div>
-						<?/*
-            <div class="goods__quantity_price-list">
-                <div class="quantity__list">
-                    <span class="quantity__btn-minus" data-role="buy_decrement"></span>
-                    <div class="quantity__quantity">
-                        <input class="product-item-amount-field" type="number" value="1" data-role="buy_quantity">
-                    </div>
-                    <span class="quantity__btn-plus" data-role="buy_increment"></span>
-                </div>
-                <div class="goods__price" data-role="buy_price">
-                </div>
-                <a href="#" data-role="buy_button">
-                    <div class="goods__bay-btn">
-                        В корзину
-                    </div>
-                </a>
-            </div>
-						*/?>
-        <? else: ?>
-            <!-- Если нет предложений -->
-								
-								<?/*
-                <!-- Покупка -->
-                <? if ($arResult["CAN_BUY"]): ?>
-                    <form action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" сlass="add_form">
-                        <div class="goods__quantity_price-list">
-                            <div class="quantity__list">
-                                <a class="quantity__btn-minus" href="javascript:void(0)"
-                                   onclick="if (BX('QUANTITY<?= $arElement['ID'] ?>').value &gt; 1) BX('QUANTITY<?= $arElement['ID'] ?>').value--;">-</a>
-                                    <div class="quantity__quantity">
-                                        <input class="product-item-amount-field" type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
-                                    </div>
-                                <a class="quantity__btn-plus" href="javascript:void(0)" onclick="BX('QUANTITY<?= $arElement['ID'] ?>').value++;">+</a>
-                            </div>
-                            <input type="hidden" name="<? echo $arParams["ACTION_VARIABLE"] ?>" value="BUY">
-                            <input type="hidden" name="<? echo $arParams["PRODUCT_ID_VARIABLE"] ?>"
-                                   value="<? echo $arResult["ID"] ?>">
-                            <!--<input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "BUY" ?>"
-                                   value="<?GetMessage("CATALOG_BUY")>">-->
-
-                            <div class="goods__price" >
-                                <!-- Цены -->
-                                <? foreach ($arResult["PRICES"] as $code => $arPrice): ?>
-                                    <? if ($arPrice["CAN_ACCESS"]): ?>
-                                        <? if ($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]): ?>
-                                            <s><?= $arPrice["PRINT_VALUE"] ?></s> <?= $arPrice["PRINT_DISCOUNT_VALUE"] ?>
-                                        <? else: ?>
-                                            <?= $arPrice["PRINT_VALUE"] ?>
-                                        <? endif ?>
-                                        </p>
-                                    <? endif; ?>
-                                <? endforeach; ?>
-                                <!-- /Цены -->
-                            </div>
-                            <a href="#">
-                                <input class="goods__bay-btn" type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" ?>"
-                                       value="<? echo GetMessage("CATALOG_ADD_TO_BASKET") ?>">
-                            </a>
-                        </div>
-                    </form>
-	
-                <div class="goods__quantity_price-list">
-
-                    <div class="quantity__list">
-                        <span class="quantity__btn-minus" data-role="buy_decrement_n"></span>
-                        <div class="quantity__quantity">
-                            <input class="product-item-amount-field" type="number" value="1" data-role="buy_quantity_n">
-                        </div>
-                        <span class="quantity__btn-plus" data-role="buy_increment_n"></span>
-                    </div>
-                    <div class="goods__price" data-role="buy_price_n">
-
-                    </div>
-                    <a href="#" data-role="buy_button_n">
-                        <div class="goods__bay-btn">
-                            В корзину
-                        </div>
-                    </a>
-                </div>
-
-                <? elseif ((count($arResult["PRICES"]) > 0) || is_array($arResult["PRICE_MATRIX"])): ?>
-                    <?= GetMessage("CATALOG_NOT_AVAILABLE") ?>
-                <? endif ?>
-								*/?>
-                <!-- /Покупка -->
 
         <? endif ?>
 				

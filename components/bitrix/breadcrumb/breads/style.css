@@ -1,3 +1,8 @@
+.bx-breadcrumb a {
+  color: #F90001; }
+  .bx-breadcrumb a:hover {
+    color: #D30102; }
+
 .bx-breadcrumb i {
   color: #b5bdc2;
   vertical-align: middle; }
@@ -13,10 +18,5 @@
 
 .bx-breadcrumb .bx-breadcrumb-item a {
   border-bottom: none; }
-
-a {
-  color: #F90001; }
-  a:hover {
-    color: #D30102; }
 
 /*# sourceMappingURL=style.css.map */

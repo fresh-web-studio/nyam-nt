@@ -76,90 +76,108 @@
     <div class="content">
         <div class="container">
             <h2 class="main__title">Корзина</h2>
-            <div class="cart__row">
-                <div class="cart__img">
-                    <img src="images/main__chorizo-min.png" alt="Пицца Чоризо"/>
-                </div>
-                <div class="cart__text">
-                    <a href="chorizo.html" class="cart__link">
-                        <div class="cart__name">Пицца Чоризо</div>
-                    </a>
-                    <div class="cart__description">
-                        Колбаса острая сырокопченая, сыр моцарелла.
+            <div class="basket-items-list-table" id="basket-item-table">
+                <div class="basket-items-list-item-container">
+                    <div class="cart__row-base">
+                        <div class="basket-items-list-item-descriptions-inner">
+                            <div class="cart__img">
+                                <img src="images/main__chorizo-min.png" alt="Пицца Чоризо"/>
+                            </div>
+                            <div class="cart__text">
+                                <a href="chorizo.html" class="cart__link">
+                                    <div class="cart__name">Пицца Чоризо</div>
+                                </a>
+                                <div class="cart__description">
+                                    Колбаса острая сырокопченая, сыр моцарелла.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__price">728 руб.</div>
+                        <div class="quantity__list">
+                            <span class="quantity__btn-minus"></span>
+                            <div class="quantity__quantity">
+                                <input class="product-item-amount-field" type="number" value="1">
+                            </div>
+                            <span class="quantity__btn-plus"></span>
+                        </div>
+                        <div class="cart__sum">728 руб.</div>
+                        <div class="cart__delete"><a href="#"></a></div>
                     </div>
                 </div>
-                <div class="cart__price">728 руб.</div>
-                <div class="quantity__list">
-                    <span class="quantity__btn-minus"></span>
-                    <div class="quantity__quantity">
-                        <input class="product-item-amount-field" type="number" value="1">
-                    </div>
-                    <span class="quantity__btn-plus"></span>
-                </div>
-                <div class="cart__sum">728 руб.</div>
-                <div class="cart__delete"><a href="#"></a></div>
-            </div>
-            <div class="cart__row">
-                <div class="cart__img">
-                    <img src="images/additionally-img06.jpg" alt="Соус"/>
-                </div>
-                <div class="cart__text">
-                    <a href="#" class="cart__link">
-                        <div class="cart__name">Соус 20 гр.</div>
-                    </a>
-                    <div class="cart__description">
+                <div class="basket-items-list-item-container">
+                    <div class="cart__row-base">
+                        <div class="basket-items-list-item-descriptions-inner">
+                            <div class="cart__img">
+                                <img src="images/additionally-img06.jpg" alt="Соус"/>
+                            </div>
+                            <div class="cart__text">
+                                <a href="#" class="cart__link">
+                                    <div class="cart__name">Соус 20 гр.</div>
+                                </a>
+                                <div class="cart__description">
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__price">5 руб.</div>
+                        <div class="quantity__list">
+                            <span class="quantity__btn-minus"></span>
+                            <div class="quantity__quantity">
+                                <input class="product-item-amount-field" type="number" value="2">
+                            </div>
+                            <span class="quantity__btn-plus"></span>
+                        </div>
+                        <div class="cart__sum">10 руб.</div>
+                        <div class="cart__delete"><a href="#"></a></div>
                     </div>
                 </div>
-                <div class="cart__price">5 руб.</div>
-                <div class="quantity__list">
-                    <span class="quantity__btn-minus"></span>
-                    <div class="quantity__quantity">
-                        <input class="product-item-amount-field" type="number" value="2">
-                    </div>
-                    <span class="quantity__btn-plus"></span>
-                </div>
-                <div class="cart__sum">10 руб.</div>
-                <div class="cart__delete"><a href="#"></a></div>
-            </div>
-            <div class="cart__row">
-                <div class="cart__img">
-                    <img src="images/additionally-img04.jpg" alt="Коробка для пиццы"/>
-                </div>
-                <div class="cart__text">
-                    <a href="chorizo.html" class="cart__link">
-                        <div class="cart__name">Коробка на 8 порций</div>
-                    </a>
-                    <div class="cart__description">
+                <div class="basket-items-list-item-container">
+                    <div class="cart__row-base">
+                        <div class="basket-items-list-item-descriptions-inner">
+                            <div class="cart__img">
+                                <img src="images/additionally-img04.jpg" alt="Коробка для пиццы"/>
+                            </div>
+                            <div class="cart__text">
+                                <a href="chorizo.html" class="cart__link">
+                                    <div class="cart__name">Коробка на 8 порций</div>
+                                </a>
+                                <div class="cart__description">
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__price">27 руб.</div>
+                        <div class="quantity__list">
+                            <span class="quantity__btn-minus"></span>
+                            <div class="quantity__quantity">
+                                <input class="product-item-amount-field" type="number" value="1">
+                            </div>
+                            <span class="quantity__btn-plus"></span>
+                        </div>
+                        <div class="cart__sum">27 руб.</div>
+                        <div class="cart__delete"><a href="#"></a></div>
                     </div>
                 </div>
-                <div class="cart__price">27 руб.</div>
-                <div class="quantity__list">
-                    <span class="quantity__btn-minus"></span>
-                    <div class="quantity__quantity">
-                        <input class="product-item-amount-field" type="number" value="1">
+            </div>
+            <div class="col-xs-12" data-entity="basket-total-block">
+                <div class="basket-checkout-container" data-entity="basket-checkout-aligner">
+                    <div class="cart__order-sum-list">
+                        <div class="cart__order-text">Сумма заказа:</div>
+                        <div class="cart__order-sum">765 руб.</div>
                     </div>
-                    <span class="quantity__btn-plus"></span>
+                    <div class="cart__row-base-btn">
+                        <a href="#">
+                            <div class="cart__btn_gray">
+                                Назад на главную
+                            </div>
+                        </a>
+                        <a href="order.html">
+                            <div class="cart__btn_red">
+                                Оформить заказ
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="cart__sum">27 руб.</div>
-                <div class="cart__delete"><a href="#"></a></div>
-            </div>
-            <div class="cart__order-sum-list">
-                <div class="cart__order-text">Сумма заказа:</div>
-                <div class="cart__order-sum">765 руб.</div>
-            </div>
-            <div class="cart__row-btn">
-                <a href="#">
-                    <div class="cart__btn_gray">
-                        Назад на главную
-                    </div>
-                </a>
-                <a href="order.html">
-                    <div class="cart__btn_red">
-                        Оформить заказ
-                    </div>
-                </a>
             </div>
         </div>
     </div>

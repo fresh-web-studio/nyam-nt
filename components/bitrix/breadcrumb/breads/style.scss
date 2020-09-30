@@ -1,6 +1,12 @@
 @import "../../../../SCSS.scss";
 
 .bx-breadcrumb {
+  a {
+    color: $main-color;
+    &:hover {
+      color: $main-color_dark;
+    }
+  }
 }
 .bx-breadcrumb i {
   color: #b5bdc2;
@@ -17,9 +23,3 @@
 }
 .bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
 .bx-breadcrumb .bx-breadcrumb-item a:hover {}
-a {
-  color: $main-color;
-  &:hover {
-    color: $main-color_dark;
-  }
-}
