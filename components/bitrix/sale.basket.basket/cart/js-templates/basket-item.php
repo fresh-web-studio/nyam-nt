@@ -244,7 +244,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                     <div class="basket-item-property-custom basket-item-property-custom-text
                                                         {{#HIDE_MOBILE}}hidden-xs{{/HIDE_MOBILE}}"
                                                         data-entity="basket-item-property">
--->														<div class="cart__description"
+														<div class="cart__description"
                                                             data-column-property-code="{{CODE}}"
                                                             data-entity="basket-item-property-column-value">
                                                             {{VALUE}}
@@ -256,7 +256,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                     <div class="basket-item-property-custom basket-item-property-custom-text
                                                         {{#HIDE_MOBILE}}hidden-xs{{/HIDE_MOBILE}}"
                                                         data-entity="basket-item-property">
--->														<div class="cart__description"
+														<div class="cart__description"
                                                             data-column-property-code="{{CODE}}"
                                                             data-entity="basket-item-property-column-value">
                                                             {{{VALUE}}}
@@ -268,8 +268,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                                                     <div class="basket-item-property-custom basket-item-property-custom-text
                                                         {{#HIDE_MOBILE}}hidden-xs{{/HIDE_MOBILE}}"
                                                         data-entity="basket-item-property">
-<!--														<div class="basket-item-property-custom-name">{{NAME}}</div>
--->														<div class="cart__description"
+                                                        <div class="cart__description"
                                                             data-column-property-code="{{CODE}}"
                                                             data-entity="basket-item-property-column-value">
                                                             {{#VALUE}}

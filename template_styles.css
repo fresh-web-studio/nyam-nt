@@ -1286,29 +1286,27 @@ main .content {
   main .content .state {
     position: absolute;
     left: -10000px; }
-  main .content .flex-tabs {
-    width: 31.55vw; }
-    main .content .flex-tabs .login__label-row {
-      overflow: hidden;
-      box-sizing: border-box;
-      width: 100%;
-      display: -webkit-flex;
-      display: -webkit-box;
-      display: -moz-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
-      justify-content: space-between;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      border: 0.4vw solid #F90001;
-      border-radius: 1.8vw; }
+  main .content .flex-tabs .login__label-row {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    border: 0.4vw solid #F90001;
+    border-radius: 1.8vw; }
   main .content .tab {
     display: -webkit-flex;
     display: -webkit-box;
@@ -1503,7 +1501,10 @@ main .content {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap; }
   main .content .order__label-row {
-    width: 50%;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: -ms-fit-content;
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-flex;
@@ -1588,7 +1589,8 @@ main .content {
     width: 100%;
     margin-top: 4.68vw;
     padding-top: 1.6vw;
-    border-top: 0.16vw solid #C6C6C6; }
+    border-top: 0.16vw solid #C6C6C6;
+    color: #F90001; }
   main .content .order__title-sum {
     width: 66.6666666667%;
     font-size: 1.95vw; }
@@ -1960,8 +1962,6 @@ footer .footer__social img, footer .slide-item__social .hover img {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
-  main .content .flex-tabs {
-    width: 75.5vw; }
   main .content .flex-tabs .login__label-row {
     border-radius: 3.6vw; }
   main .content .tab {
@@ -2096,7 +2096,6 @@ footer .footer__social img, footer .slide-item__social .hover img {
   main .content .order__column:first-child {
     width: 100vw; }
   main .content .order__label-row {
-    width: 100%;
     border-radius: 3.6vw; }
   main .content .order-title {
     font-size: 3.6vw;

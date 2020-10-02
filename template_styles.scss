@@ -1649,7 +1649,6 @@ justify-content: center;
     }
 
     .flex-tabs {
-      width: 31.55vw;
       .login__label-row {
         overflow: hidden;
         box-sizing: border-box;
@@ -1930,7 +1929,10 @@ justify-content: center;
     }
 
     .order__label-row {
-      width: $wight-percent / 2;
+      width: fit-content;
+      width:-moz-fit-content;
+      width:-webkit-fit-content;
+      width:-ms-fit-content;
       display: -webkit-flex;
       display: -webkit-box;
       display: -moz-flex;
@@ -2048,6 +2050,7 @@ justify-content: center;
       margin-top: 4.68vw;
       padding-top: 1.6vw;
       border-top: 0.16vw solid $gray;
+      color: $main-color;
     }
 
     .order__title-sum {
@@ -2589,9 +2592,7 @@ footer {
         appearance: none;
       }
       .flex-tabs {
-        width: 75.5vw;
       }
-
       .flex-tabs .login__label-row {
         border-radius: 3.6vw;
       }
@@ -2788,7 +2789,6 @@ footer {
       }
 
       .order__label-row {
-        width: 100%;
         border-radius: 3.6vw;
       }
 
