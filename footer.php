@@ -116,7 +116,6 @@
             <div class="footer__footer-bottom">
                 <div class="footer__copyright">Все права защищены &copy; 2004 - <?php echo date('Y'); ?> Пиццерия Ням-Ням</div>
                 <a href="#">Правовая информация</a>
-                <a href="/karta-sayta.php">Карта сайта</a>
             </div>
         </div>
     </div>

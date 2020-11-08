@@ -1,13 +1,12 @@
 $main-color-lightly: #FFCCCC;
 $main-color: #F90001;
-$main-color-dark: #D30102;
-$yellow: #E4E22C;
+$secondary-color: #AD1111;
+$accent-color: #FAF719;
 $gray: #C6C6C6;
 $gray-dark: #707070;
 
 $wight-base: 1366px;
 $wight-percent: 100%;
-
 
 @mixin animation_0_25 {
   transition: all .25s ease-out;

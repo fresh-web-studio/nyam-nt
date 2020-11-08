@@ -86,10 +86,16 @@ button {
 
 .link-black {
   color: black;
+  &:hover {
+    color: $main-color;
+  }
 }
 
-.link-wite {
+.link-white {
   color: white;
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .link-red {
@@ -280,7 +286,7 @@ header {
   }
 
   .header__link:hover {
-    color: $main-color-dark;
+    color: $secondary-color;
   }
 
   .header__text_red {
@@ -295,7 +301,9 @@ header {
   }
 
   .main_menu__quantity {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
+    padding-left: 0.1vw;
+    padding-top: 0.1vw;
   }
 
   .main_menu__price {
@@ -331,7 +339,7 @@ header {
   }
 
   .main_menu__cart a:hover {
-    color: $yellow;
+    color: $accent-color;
   }
 
   .slide-wrapper {
@@ -372,7 +380,7 @@ header {
     font-size: 5.6vw;
     line-height: 3.6vw;
     letter-spacing: 0.02em;
-    color: $yellow;
+    color: $accent-color;
     display: block;
     padding-top: 1vw;
   }
@@ -388,7 +396,7 @@ header {
     font-size: 6.6vw;
     line-height: 3.6vw;
     letter-spacing: 0.02em;
-    color: $yellow;
+    color: $accent-color;
     display: block;
     padding-top: 4vw;
   }
@@ -478,13 +486,13 @@ header {
     width: 1.79vw;
     height: 1.79vw;
     margin: 0.39vw 0.55vw;
-    background: $main-color-lightly;
-    border: 0.08vw solid $main-color-lightly;
+    background: $accent-color;
+    border: 0.08vw solid $accent-color;
   }
 
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: $main-color-dark;
-    border: 0.08vw solid $main-color-lightly;
+    background: $secondary-color;
+    border: 0.18vw solid $accent-color;
 
   }
 }
@@ -642,8 +650,8 @@ main {
     }
 
     .main__item-btn:hover {
-      background-color: $main-color-dark;
-      border: 0.18vw solid $main-color-dark;
+      background-color: $secondary-color;
+      border: 0.18vw solid $secondary-color;
       color: #fff;
       transition-duration: 1s;
       -webkit-transition-duration: 1s;
@@ -920,6 +928,9 @@ main {
     .link-photo-min img {
       width: 7.321vw;
       height: 7.321vw;
+    }
+    #bx_1847241719_20 {
+      display: none;
     }
 
     .goods__description {
@@ -1223,7 +1234,7 @@ main {
     }
 
     .goods__bay-btn:hover {
-      background: $main-color-dark;
+      background: $secondary-color;
       color: #fff;
     }
 
@@ -1310,7 +1321,7 @@ main {
     }
 
     input[type="submit"].goods__additionally-bay-btn:hover {
-      background-color: $main-color-dark;
+      background-color: $secondary-color;
       color: #fff;
     }
     #basket-root .row {
@@ -1398,7 +1409,7 @@ justify-content: center;
     }
 
     .cart__link:hover {
-      color: $main-color-dark;
+      color: $secondary-color;
     }
 
     .cart__name {
@@ -1552,8 +1563,8 @@ justify-content: center;
     }
 
     .cart__btn_gray:hover {
-      background-color: $main-color-dark;
-      border: 0.16vw solid $main-color-dark;
+      background-color: $secondary-color;
+      border: 0.16vw solid $secondary-color;
       color: #fff;
     }
 
@@ -1586,8 +1597,8 @@ justify-content: center;
     }
 
     .cart__btn_red:hover {
-      background-color: $main-color-dark;
-      border: 0.16vw solid $main-color-dark;
+      background-color: $secondary-color;
+      border: 0.16vw solid $secondary-color;
       color: #fff;
     }
 
@@ -1699,7 +1710,7 @@ justify-content: center;
     }
 
     .tab:hover {
-      background-color: $main-color-dark;
+      background-color: $secondary-color;
       color: #FFF;
       a {
         color: #fff;
@@ -1757,7 +1768,7 @@ justify-content: center;
       color: #ffffff;
     }
     .tab.active {
-      background-color: $main-color-dark;
+      background-color: $secondary-color;
       color: #ffffff;
       display: block;
     }
@@ -1786,6 +1797,16 @@ justify-content: center;
 
     .checkbox {
       margin-top: 3.9vw;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+      border: 0.16vw solid $main-color;
+      background-color: $main-color;
+    }
+
+    .bx-pagination .bx-pagination-container ul li.bx-active span {
+      background-color: $main-color;
+      color: #fff;
     }
 
     input[type="submit"] {
@@ -1819,7 +1840,7 @@ justify-content: center;
       cursor: pointer;
 
       &:hover {
-        background-color: $main-color-dark;
+        background-color: $secondary-color;
         color: #FFF;
       }
     }
@@ -1970,9 +1991,9 @@ justify-content: center;
     }
 
     .order__column-bottom:hover {
-      background-color: $main-color-dark;
+      background-color: $secondary-color;
       color: #fff;
-      border: 0.16vw solid $main-color-dark;
+      border: 0.16vw solid $secondary-color;
     }
 
     .order__address, .order__time {
@@ -2145,7 +2166,7 @@ footer {
   }
 
   .footer__yellow {
-    background-color: $yellow;
+    background-color: $accent-color;
   }
 
   .footer__footer-bottom {
@@ -2176,7 +2197,7 @@ footer {
   }
 
   .footer__footer-bottom a:hover {
-    color: #fff;
+    color: $secondary-color;
   }
 
   .footer__address {
@@ -2204,6 +2225,9 @@ footer {
 
     a {
       color: #fff;
+      &:hover {
+        color: $accent-color;
+      }
     }
   }
 

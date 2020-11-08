@@ -36,7 +36,6 @@
         {"@context":"http://schema.org","@type":"Organization","url":"http://SITE.ru/","sameAs":[],"@id":"#organization","name":"Домен - Описание","logo":"http://SITE.ru/полный_путь_к_логотипу.png"}
     </script>
     <link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH;?>/images/favicon.ico" />
-    <title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
