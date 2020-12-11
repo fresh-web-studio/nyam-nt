@@ -190,7 +190,7 @@
                         <div class="slide-item__text">
                             <div class="slide-item__header">
                                 Скидка 7%
-                                <span class="slide-item__span">в день рожденья!</span>
+                                <span class="slide-item__span">в день рожденье!</span>
                                 <span class="slide-item__span-add">*При предъявлении документа</span>
                             </div>
                         </div>
