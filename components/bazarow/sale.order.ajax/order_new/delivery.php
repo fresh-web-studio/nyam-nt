@@ -1,3 +1,4 @@
+
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
 <style>.set_delivery input:not(:checked) + label { display: none; }</style>
@@ -21,15 +22,14 @@
         if ($arDelivery["ID"] == 3) {
             if ($arDelivery["CHECKED"] == "Y") { // ≈сли самовывоз - пр€чем свойство местоположени€
                 ?>
-
                 <style type="text/css">
                     .set_delivery input:not(:checked) + label:nth-child(2) { display: block; }
 
-                <!--
-                .order_props .order_props_item_28 {
-                    display: none !important;
-                }
-                -->
+                    <!--
+                    .order_props .order_props_item_28 {
+                        display: none !important;
+                    }
+                    -->
                 </style>
                 <?
             }
@@ -38,4 +38,3 @@
     }
     ?>
 </div>
-
