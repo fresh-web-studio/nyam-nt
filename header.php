@@ -45,11 +45,10 @@
             <a class="header__link-logo" href="/"><img class="header__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/header__logo.svg" alt="Логотип пиццерии Ням-ням"/></a>
             <div class="header__town-time">
                 <div class="header__row-top">
-                    <div class="header__text town-icon"><?=GetMessage('PIZZA_DELIVERY')?>:</div>
-                    <div class="header__text_red">Нижний Тагил</div>
+                    <div class="header__text time-icon">Часы работы:</div>
+                    <div class="header__text_red">Вс-Чт 10:00 - 21:00</div>
                 </div>
                 <div class="header__row-top">
-                    <div class="header__text time-icon">Часы работы:</div>
                     <div class="header__text_red">
                         <?$APPLICATION->IncludeFile(
                                 SITE_TEMPLATE_PATH."/include_areas/time_inc.php",
