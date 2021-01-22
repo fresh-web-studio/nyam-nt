@@ -29,12 +29,14 @@
     Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,500italic,700,700italic,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>");
     ?>
 	<title><?$APPLICATION->ShowTitle()?></title>
+
 	<script type='application/ld+json'>
         {"@context":"http://schema.org","@type":"WebSite","@id":"#website","url":"http://SITE.ru/","name":"Название - Описание","potentialAction":{"@type":"SearchAction","target":"http://SITE.ru/search/index.php","query-input":"required name=search_term_string"}}
     </script>
     <script type='application/ld+json'>
         {"@context":"http://schema.org","@type":"Organization","url":"http://SITE.ru/","sameAs":[],"@id":"#organization","name":"Домен - Описание","logo":"http://SITE.ru/полный_путь_к_логотипу.png"}
     </script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
     <link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH;?>/images/favicon.ico" />
 </head>
 <body>
@@ -46,7 +48,7 @@
             <div class="header__town-time">
                 <div class="header__row-top">
                     <div class="header__text time-icon">Часы работы:</div>
-                    <div class="header__text_red">Вс-Чт 10:00 - 21:00</div>
+                    <div class="header__text_red">Вс - Чт 10:00 - 21:00</div>
                 </div>
                 <div class="header__row-top">
                     <div class="header__text_red">

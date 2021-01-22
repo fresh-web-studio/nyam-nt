@@ -93,10 +93,11 @@
 
 
 // LOCATION
+
 .location-block-wrapper {
   .dropdown-block {
     background: #fff;
-    border-radius: 1.6vw !important;
+    border-radius: 1.6vw;
     border: 0.16vw solid $main-color !important;
     height: 4.3vw;
     margin-top: 3.12vw;
@@ -117,11 +118,14 @@
   }
 
   .bx-ui-sls-clear {
-    top: 10px;
+    top: 0.7vw;
   }
 
   .bx-ui-sls-container {
-    height: 45px;
+    height: 4vw;
+    @media (max-width: 415px) {
+      height: 11vw;
+    }
   }
 
   .bx-ui-sls-fake {
@@ -249,6 +253,9 @@
   &_title {
     font-size: 2vw;
     margin-bottom: 1vw;
+    @media (max-width: 415px) {
+      font-size: 6vw;
+    }
   }
 
   &_item {
@@ -256,6 +263,9 @@
       font-size: 1.6vw;
       margin-top: 1vw;
       cursor: pointer;
+      @media (max-width: 415px) {
+        font-size: 4.6vw;
+      }
     }
 
     label:before {
@@ -272,6 +282,9 @@
       background: #F90001;
       border: 0.23vw solid $main-color;
       vertical-align: middle;
+      @media (max-width: 415px) {
+        font: 4vw/9vw Arial;
+      }
     }
 
     input {
@@ -363,7 +376,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 5.46vw 1.6vw 0;
-
+  width: 100%;
   &_to_cart {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -380,9 +393,16 @@
     font-size: 1.95vw;
     line-height: 5.07vw;
     color: #707070;
-
+    @media (max-width: 415px) {
+      width: 37vw;
+      height: 9vw;
+      border-radius: 2.17vw;
+      font-size: 3.95vw;
+      line-height: 8vw;
+    }
     &:hover {
       background-color: $secondary-color;
+      border: 0.16vw solid #AD1111;
       color: #ffffff;
     }
   }
@@ -404,7 +424,13 @@
     line-height: 5.07vw;
     color: #fff;
     background: $main-color;
-
+    @media (max-width: 415px) {
+      width: 37vw;
+      height: 9vw;
+      border-radius: 2.17vw;
+      font-size: 3.95vw;
+      line-height: 8vw;
+    }
     &:hover {
       background-color: $secondary-color;
       color: #fff !important;

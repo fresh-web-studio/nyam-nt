@@ -1,5 +1,4 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
-
 <?php
 if (!function_exists("PrintPropsForm")) {
     function PrintPropsForm($arSource = array(), $locationTemplate = ".default")
@@ -13,9 +12,9 @@ if (!function_exists("PrintPropsForm")) {
                     <?
                     if ($arProperties["TYPE"] == "TEXT") {
                         ?>
-                        <input type="text" maxlength="250" value="<?= $arProperties["VALUE"] ?>"
+                        <input type="text" maxlength="250"  value="<?= $arProperties["VALUE"] ?>"
                                placeholder="<?= $arProperties["NAME"] ?>" name="<?= $arProperties["FIELD_NAME"] ?>"
-                               id="<?= $arProperties["FIELD_NAME"] ?>"/>
+                               id="<?= $arProperties["ID"] ?>"/>
                         <?
                     } elseif ($arProperties["TYPE"] == "RADIO") {
                         if (is_array($arProperties["VARIANTS"])) {

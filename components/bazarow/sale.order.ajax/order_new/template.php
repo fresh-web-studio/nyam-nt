@@ -79,8 +79,11 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                     var orderForm = BX('ORDER_FORM');
                     BX.showWait();
 
+
+
                     <?if(CSaleLocation::isLocationProEnabled()):?>
                     BX.saleOrderAjax.cleanUp();
+
                     <?endif?>
 
                     BX.ajax.submit(orderForm, ajaxResult);
@@ -112,6 +115,12 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                         BX.saleOrderAjax.initDeferredControl();
                         <?endif?>
                     }
+
+                        // Телефоны
+                        $('#25').inputmask({"mask": "+7 (999) 999-9999"});
+
+                        // Электронная почта
+                        $("#2").inputmask("email");
 
                     BX.closeWait();
                     BX.onCustomEvent(orderForm, 'onAjaxSuccess');
@@ -180,31 +189,38 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                                 echo $arResult["PREPAY_ADIT_FIELDS"];
                             ?>
 
-                            <?// if ($_POST["is_ajax_post"] != "Y") { ?>
-                                <div class="order_footer">
-                                    <a class="order_footer_to_cart" href="/personal/cart/">
-                                        Назад в корзину
-                                    </a>
-                                    <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
-                                    <input type="hidden" name="profile_change" id="profile_change" value="N">
-                                    <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
-                                    <input type="hidden" name="json" value="Y">
-                                    <a
-                                            class="order_footer_checkut"
-                                            href="javascript:void();"
-                                            onclick="submitForm('Y'); return false;"
-                                            id="ORDER_CONFIRM_BUTTON"
-                                    >
-                                        <?= GetMessage("SOA_TEMPL_BUTTON") ?>
-                                    </a>
-                                </div>
-                            <?// } ?>
+
                         </div>
                         <div class="order_template_col_summ">
                             <?
                             include($_SERVER["DOCUMENT_ROOT"] . $templateFolder . "/summary.php");
                             ?>
                         </div>
+                    <?// if ($_POST["is_ajax_post"] != "Y") { ?>
+                    <div class="order_footer">
+                        <div class="attention" style="color: red; font-size: 2vw">
+                            Оформление заказа временно не работает, просьба позвонить в магазин для оформления заказа! <br>
+                        <br>
+                        </div>
+                        <a class="order_footer_to_cart" href="/personal/cart/">
+                            Назад в корзину
+                        </a>
+                        <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
+                        <input type="hidden" name="profile_change" id="profile_change" value="N">
+                        <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
+                        <input type="hidden" name="json" value="Y">
+                        <!--<a
+                                class="order_footer_checkut"
+                                href="javascript:void();"
+                                onclick="submitForm('Y'); return false;"
+                                id="ORDER_CONFIRM_BUTTON"
+                        >-->
+                        <a class="order_footer_to_cart" href="">
+                            <?= GetMessage("SOA_TEMPL_BUTTON") ?>
+                        </a>
+
+                    </div>
+                    <?// } ?>
                 </div>
             </form>
             <?
@@ -237,5 +253,12 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
     </div>
 
 <?endif?>
+<script>
 
+    // Телефоны
+    $('#25').inputmask({"mask": "+7 (999) 999-9999"});
 
+    // Электронная почта
+    $("#2").inputmask("email");
+
+</script>

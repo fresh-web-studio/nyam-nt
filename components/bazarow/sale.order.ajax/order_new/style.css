@@ -71,7 +71,7 @@
 
 .location-block-wrapper .dropdown-block {
   background: #fff;
-  border-radius: 1.6vw !important;
+  border-radius: 1.6vw;
   border: 0.16vw solid #F90001 !important;
   height: 4.3vw;
   margin-top: 3.12vw; }
@@ -84,9 +84,12 @@
   top: 20px;
   display: none; }
 .location-block-wrapper .bx-ui-sls-clear {
-  top: 10px; }
+  top: 0.7vw; }
 .location-block-wrapper .bx-ui-sls-container {
-  height: 45px; }
+  height: 4vw; }
+  @media (max-width: 415px) {
+    .location-block-wrapper .bx-ui-sls-container {
+      height: 11vw; } }
 .location-block-wrapper .bx-ui-sls-fake {
   height: 45px; }
 .location-block-wrapper .bx-ui-sls-route {
@@ -177,10 +180,16 @@
   .set_payment_title {
     font-size: 2vw;
     margin-bottom: 1vw; }
+    @media (max-width: 415px) {
+      .set_payment_title {
+        font-size: 6vw; } }
   .set_payment_item label {
     font-size: 1.6vw;
     margin-top: 1vw;
     cursor: pointer; }
+    @media (max-width: 415px) {
+      .set_payment_item label {
+        font-size: 4.6vw; } }
   .set_payment_item label:before {
     display: inline-block;
     margin-top: -0.16vw;
@@ -195,6 +204,9 @@
     background: #F90001;
     border: 0.23vw solid #F90001;
     vertical-align: middle; }
+    @media (max-width: 415px) {
+      .set_payment_item label:before {
+        font: 4vw/9vw Arial; } }
   .set_payment_item input {
     position: absolute;
     left: -9999999999px;
@@ -264,7 +276,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 5.46vw 1.6vw 0; }
+  padding: 5.46vw 1.6vw 0;
+  width: 100%; }
   .order_footer_to_cart {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -281,8 +294,16 @@
     font-size: 1.95vw;
     line-height: 5.07vw;
     color: #707070; }
+    @media (max-width: 415px) {
+      .order_footer_to_cart {
+        width: 37vw;
+        height: 9vw;
+        border-radius: 2.17vw;
+        font-size: 3.95vw;
+        line-height: 8vw; } }
     .order_footer_to_cart:hover {
       background-color: #AD1111;
+      border: 0.16vw solid #AD1111;
       color: #ffffff; }
   .order_footer_checkut {
     display: -webkit-box;
@@ -301,6 +322,13 @@
     line-height: 5.07vw;
     color: #fff;
     background: #F90001; }
+    @media (max-width: 415px) {
+      .order_footer_checkut {
+        width: 37vw;
+        height: 9vw;
+        border-radius: 2.17vw;
+        font-size: 3.95vw;
+        line-height: 8vw; } }
     .order_footer_checkut:hover {
       background-color: #AD1111;
       color: #fff !important; }

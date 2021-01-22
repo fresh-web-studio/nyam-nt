@@ -829,6 +829,9 @@ main {
       -ms-flex-pack: justify;
       padding: 0 1.6vw;
     }
+    .contacts__column:first-child {
+      width: 22%;
+    }
 
     .contacts__title {
       font-weight: bold;
@@ -850,8 +853,7 @@ main {
     }
 
     .contacts__phone {
-      margin-top: 1.2vw;
-      font-size: 2.1vw;
+      font-size: 1.8vw;
     }
 
     .contacts__phone + .contacts__title-phone {
@@ -2532,7 +2534,8 @@ footer {
 
       .contacts__title {
         font-size: 4.3vw;
-        margin-bottom: 4vw;
+        margin-bottom: 3vw;
+        margin-top: 4vw;
       }
 
       .contacts__text {
@@ -2556,6 +2559,7 @@ footer {
       }
 
       .contacts__phone {
+        margin-top: 0;
         font-size: 3.85vw;
       }
 
@@ -2563,20 +2567,12 @@ footer {
         margin-top: 23vw;
         position: absolute;
       }
-
-      .contacts__column:nth-child(2) {
-        order: 3;
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 3;
-        -ms-flex-order: 3;
-        width: 50vw;
-        margin-top: 6vw;
+      .contacts__column {
+        width: 100%;
       }
-
-      .contacts__column:nth-child(3) {
-        margin-top: 8.2vw;
+      .contacts__column:first-child {
+        width: 100%;
       }
-
       .login__column {
         width: 100vw;
         margin: 0 3.6vw;
@@ -2601,7 +2597,7 @@ footer {
         width: 100%;
       }
 
-      input[type="password"], input[type="text"] {
+      input[type="password"], input[type="text"], .location-block-wrapper .dropdown-block {
         width: 100%;
         height: 11.4vw;
         border-radius: 3.6vw;
