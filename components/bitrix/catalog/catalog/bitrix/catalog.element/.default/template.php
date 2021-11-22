@@ -4,8 +4,8 @@ $this->setFrameMode(true);
 
 <div class="goods__row">
     <div class="goods__photo-price">
-        <!-- Картинка детальная -->
-        <? if (count($arResult["MORE_PHOTO"]) > 0) {//Если есть дополнительные картинки, выводим карусель
+        <!-- РљР°СЂС‚РёРЅРєР° РґРµС‚Р°Р»СЊРЅР°СЏ -->
+        <? if (count($arResult["MORE_PHOTO"]) > 0) {//Р•СЃР»Рё РµСЃС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєР°СЂС‚РёРЅРєРё, РІС‹РІРѕРґРёРј РєР°СЂСѓСЃРµР»СЊ
             ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
                 <div class="carousel-inner">
@@ -62,7 +62,7 @@ $this->setFrameMode(true);
                     </li>
                 <? endforeach ?>
             </ol>
-        <? } else { //Иначе- Если есть дополнительные картинки- выводим только основную?>
+        <? } else { //РРЅР°С‡Рµ- Р•СЃР»Рё РµСЃС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєР°СЂС‚РёРЅРєРё- РІС‹РІРѕРґРёРј С‚РѕР»СЊРєРѕ РѕСЃРЅРѕРІРЅСѓСЋ?>
             <? if (strlen($arResult["DETAIL_PICTURE"]["SRC"]) > 0): ?>
                 <a class="link-photo oneimage" href="<?= $arResult["DETAIL_PICTURE"]['SRC'] ?>" data-fancybox="group"
                    data-caption="<?= $arResult['NAME'] ?>">
@@ -72,24 +72,24 @@ $this->setFrameMode(true);
             <? else: ?>
                 <div class="link-photo">
                     <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID; ?>/images/no_image.png"
-                         alt="Нет картинки"/>
+                         alt="РќРµС‚ РєР°СЂС‚РёРЅРєРё"/>
                 </div>
             <? endif ?>
         <? } ?>
-        <!-- /Картинка детальная -->
+        <!-- /РљР°СЂС‚РёРЅРєР° РґРµС‚Р°Р»СЊРЅР°СЏ -->
     </div>
     <div class="goods__description">
         <h2 class="goods__name"><? $APPLICATION->ShowTitle(false); ?></h2>
         <?php if ($arResult['DETAIL_TEXT'] != ''): ?>
-        <h3 class="goods__composition-title">Описание:</h3>
+        <h3 class="goods__composition-title">РћРїРёСЃР°РЅРёРµ:</h3>
         <p class="goods__composition">
-            <!-- Описание -->
+            <!-- РћРїРёСЃР°РЅРёРµ -->
             <?= $arResult["DETAIL_TEXT"] ?>
         <p>
             <?php endif; ?>
-            <!-- Свойства -->
+            <!-- РЎРІРѕР№СЃС‚РІР° -->
             <? if (($arResult["DISPLAY_PROPERTIES"]['calories']) || ($arResult["DISPLAY_PROPERTIES"]['proteins']) || ($arResult["DISPLAY_PROPERTIES"]['fats']) || ($arResult["DISPLAY_PROPERTIES"]['carbohydrates'])){ ?>
-                <h3 class="goods__composition-title">Выпуск блюд на 1 порцию:</h3>
+                <h3 class="goods__composition-title">Р’С‹РїСѓСЃРє Р±Р»СЋРґ РЅР° 1 РїРѕСЂС†РёСЋ:</h3>
                 <div class="goods__composition-row">
                     <? if ($arResult["DISPLAY_PROPERTIES"]['calories']) { ?>
                         <div class="goods__column"><?= $arResult['DISPLAY_PROPERTIES']['calories']['NAME'] ?>:</div>
@@ -109,22 +109,22 @@ $this->setFrameMode(true);
                     <? } ?>
                 </div>
             <? } ?>
-            <!-- /Свойства -->
+            <!-- /РЎРІРѕР№СЃС‚РІР° -->
 
         <? if (is_array($arResult["OFFERS"]) && !empty($arResult["OFFERS"])): ?>
             <div class="goods__variations-list">
                 <?
                 $arValues = [
                     '20' => [
-											'PORTIONS' => '2 порции',
+											'PORTIONS' => '2 РїРѕСЂС†РёРё',
 											'CLASS' => 'goods__twenty',
 										],
                     '30' => [
-											'PORTIONS' => '4 порции',
+											'PORTIONS' => '4 РїРѕСЂС†РёРё',
 											'CLASS' => 'goods__thirty',
 										],
                     '40' => [
-											'PORTIONS' => '8 порций',
+											'PORTIONS' => '8 РїРѕСЂС†РёР№',
 											'CLASS' => 'goods__forty',
 										],
                 ];
@@ -139,13 +139,13 @@ $this->setFrameMode(true);
                         <div class="goods__variation <?= $arValues[$intDiameter]['CLASS']; ?>">
                             <div class="unification">
                                 <div class="goods__variation_row">
-                                    <?= $intDiameter; ?> см
+                                    <?= $intDiameter; ?> СЃРј
                                 </div>
                                 <div class="goods__variation_row">
                                     (<?= $arValues[$intDiameter]['PORTIONS']; ?>)
                                 </div>
                                 <div class="goods__variation_row">
-                                    <?=$arOffer['PROPERTIES']['ATT_CALORIES_OFFERS']['VALUE'];?> ккал
+                                    <?=$arOffer['PROPERTIES']['ATT_CALORIES_OFFERS']['VALUE'];?> РєРєР°Р»
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ $this->setFrameMode(true);
 						</div>
 						<a href="#" data-role="buy_button" data-id="<?=$arResult['ID'];?>">
 								<div class="goods__bay-btn">
-										В корзину
+										Р’ РєРѕСЂР·РёРЅСѓ
 								</div>
 						</a>
 				</div>

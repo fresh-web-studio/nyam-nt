@@ -1,8 +1,8 @@
 <?php
-$MESS['MAIN_AUTH_OTP_HEADER'] = 'Ïîæàëóéñòà, ââåäèòå âàø îäíîðàçîâûé ïàðîëü';
-$MESS['MAIN_AUTH_OTP_FIELD_OTP'] = 'Îäíîðàçîâûé ïàðîëü';
-$MESS['MAIN_AUTH_OTP_FIELD_CAPTCHA'] = 'Ââåäèòå ñëîâî íà êàðòèíêå';
-$MESS['MAIN_AUTH_OTP_FIELD_REMEMBER'] = 'Çàïîìíèòü êîä íà ýòîì êîìïüþòåðå';
-$MESS['MAIN_AUTH_OTP_FIELD_SUBMIT'] = 'Âîéòè';
-$MESS['MAIN_AUTH_OTP_URL_AUTH_URL'] = 'Àâòîðèçàöèÿ';
-$MESS['MAIN_AUTH_OTP_URL_REGISTER_URL'] = 'Ðåãèñòðàöèÿ';
+$MESS['MAIN_AUTH_OTP_HEADER'] = 'ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð°Ñˆ Ð¾Ð´Ð½Ð¾Ñ€Ð°Ð·Ð¾Ð²Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ';
+$MESS['MAIN_AUTH_OTP_FIELD_OTP'] = 'ÐžÐ´Ð½Ð¾Ñ€Ð°Ð·Ð¾Ð²Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ';
+$MESS['MAIN_AUTH_OTP_FIELD_CAPTCHA'] = 'Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»Ð¾Ð²Ð¾ Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐµ';
+$MESS['MAIN_AUTH_OTP_FIELD_REMEMBER'] = 'Ð—Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ñ‚ÑŒ ÐºÐ¾Ð´ Ð½Ð° ÑÑ‚Ð¾Ð¼ ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ðµ';
+$MESS['MAIN_AUTH_OTP_FIELD_SUBMIT'] = 'Ð’Ð¾Ð¹Ñ‚Ð¸';
+$MESS['MAIN_AUTH_OTP_URL_AUTH_URL'] = 'ÐÐ²Ñ‚Ð¾Ñ€Ð¸Ð·Ð°Ñ†Ð¸Ñ';
+$MESS['MAIN_AUTH_OTP_URL_REGISTER_URL'] = 'Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ';

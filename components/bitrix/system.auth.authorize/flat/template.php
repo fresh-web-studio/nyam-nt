@@ -21,7 +21,7 @@ if ($arResult['AUTHORIZED'])
         <div class="flex-tabs">
             <div class="login__label-row">
                 <noindex>
-                    <div class="tab active">Вход</div>
+                    <div class="tab active">Р’С…РѕРґ</div>
                 </noindex>
                 <noindex>
                 <?if ($arResult['AUTH_REGISTER_URL']):?>
@@ -111,26 +111,26 @@ if ($arResult['AUTHORIZED'])
     </div>
     <div class="login__column">
         <div class="login__contacts">
-            <div class="login__title">Контакты</div>
+            <div class="login__title">РљРѕРЅС‚Р°РєС‚С‹</div>
             <div class="login__subtitle">
-                Центр
+                Р¦РµРЅС‚СЂ
             </div>
             <div class="login__address">
-                ул. Карла Маркса, 81/23
+                СѓР». РљР°СЂР»Р° РњР°СЂРєСЃР°, 81/23
             </div>
             <div class="login__phone">+7 (3435) 41-62-60</div>
             <div class="login__phone">+7 (3435) 41-37-47</div>
-            <div class="login__time">Доставка: <span>10:00 - 20:00</span></div>
-            <div class="login__time">Пиццерия: <span>10:00 - 21:00</span></div>
+            <div class="login__time">Р”РѕСЃС‚Р°РІРєР°: <span>10:00 - 20:00</span></div>
+            <div class="login__time">РџРёС†С†РµСЂРёСЏ: <span>10:00 - 21:00</span></div>
             <div class="login__subtitle">
-                Выя
+                Р’С‹СЏ
             </div>
             <div class="login__address">
-                ул. Космонавтов, 10
+                СѓР». РљРѕСЃРјРѕРЅР°РІС‚РѕРІ, 10
             </div>
             <div class="login__phone">+7 (3435) 34-30-10</div>
-            <div class="login__time">Доставка: <span>10:00 - 20:00</span></div>
-            <div class="login__time">Пиццерия: <span>10:00 - 21:00</span></div>
+            <div class="login__time">Р”РѕСЃС‚Р°РІРєР°: <span>10:00 - 20:00</span></div>
+            <div class="login__time">РџРёС†С†РµСЂРёСЏ: <span>10:00 - 21:00</span></div>
         </div>
     </div>
 </div>

@@ -96,7 +96,7 @@ use Bitrix\Main\Localization\Loc;
     <div class="cart__row-base-btn">
         <a href="/">
             <div class="cart__btn_gray">
-                Назад на главную
+                РќР°Р·Р°Рґ РЅР° РіР»Р°РІРЅСѓСЋ
             </div>
         </a>
         <div class="basket-checkout-block basket-checkout-block-btn">

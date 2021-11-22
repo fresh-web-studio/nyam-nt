@@ -22,7 +22,7 @@
 
 <div class="set_payment">
     <div class="set_payment_title">
-        Выберите способ оплаты:
+        Р’С‹Р±РµСЂРёС‚Рµ СЃРїРѕСЃРѕР± РѕРїР»Р°С‚С‹:
     </div>
 
     <?

@@ -108,7 +108,7 @@ $containerName = 'catalog-top-container';
                     <img src="<?= $arElement["PREVIEW_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
                 <? } else { ?>
                     <div>
-                        <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Íåò êàðòèíêè"/>
+                        <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="ÐÐµÑ‚ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ¸"/>
                     </div>
                 <? } ?>
                 <h3>

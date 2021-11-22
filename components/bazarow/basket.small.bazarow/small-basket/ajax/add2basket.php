@@ -7,9 +7,9 @@ if (CModule::IncludeModule("sale") && CModule::IncludeModule("catalog")) {
       $QUANTITY = intval($_POST['QUANTITY']);
       Add2BasketByProductID( $PRODUCT_ID, $QUANTITY ); 
    }
-   else { echo "Íåò ïàðàìåòðîâ";  } 
+   else { echo "ÐÐµÑ‚ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð²";  } 
  } 
-else { echo "Íå ïîäêëþ÷åíû ìîäóëè"; }
+else { echo "ÐÐµ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ñ‹ Ð¼Ð¾Ð´ÑƒÐ»Ð¸"; }
 
 $APPLICATION->IncludeComponent(
     "bazarow:basket.small.bazarow",

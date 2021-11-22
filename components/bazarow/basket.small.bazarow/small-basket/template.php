@@ -14,7 +14,7 @@ $APPLICATION->AddHeadScript($templateFolder."/js/jquery.jgrowl.min.js" );
          target: '#basket-container',
          success:
             function(responseText) {
-               $.jGrowl("Товар добавлен в заказ");
+               $.jGrowl("РўРѕРІР°СЂ РґРѕР±Р°РІР»РµРЅ РІ Р·Р°РєР°Р·");
             }
          };
          $(".add_form").ajaxForm(options);
@@ -49,17 +49,17 @@ $defaultCurr = CSaleLang::GetLangCurrency(SITE_ID);
             }
         }
 if($quant==0){?>
-    <a href="/personal/cart/" title="Начать покупки" class="basket_top">
+    <a href="/personal/cart/" title="РќР°С‡Р°С‚СЊ РїРѕРєСѓРїРєРё" class="basket_top">
         <i class="far fa-shopping-cart"></i>
-        <span>В корзине</span>
+        <span>Р’ РєРѕСЂР·РёРЅРµ</span>
         <i id="cart-i">0</i>
     </a>
 <?}else{?>
-    <a href="/personal/cart/" title="В корзину" class="basket_top">
+    <a href="/personal/cart/" title="Р’ РєРѕСЂР·РёРЅСѓ" class="basket_top">
         <i class="far fa-shopping-cart"></i>
-        <span>В корзине</span>
+        <span>Р’ РєРѕСЂР·РёРЅРµ</span>
         <i id="cart-i"><?=$quant?>
-            <? echo getNumEnding($quant, array("товар", "товара", "товаров"));?>
-            на <? echo SaleFormatCurrency($price, $defaultCurr); ?></i>
+            <? echo getNumEnding($quant, array("С‚РѕРІР°СЂ", "С‚РѕРІР°СЂР°", "С‚РѕРІР°СЂРѕРІ"));?>
+            РЅР° <? echo SaleFormatCurrency($price, $defaultCurr); ?></i>
     </a>
 <?}?>

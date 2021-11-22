@@ -1,3 +1,3 @@
 <?
-$MESS["PIZZA_DELIVERY"] = "Äîñòàâêà ïèööû";
+$MESS["PIZZA_DELIVERY"] = "Ð”Ð¾ÑÑ‚Ð°Ð²ÐºÐ° Ð¿Ð¸Ñ†Ñ†Ñ‹";
 $MESS["LANG"] = "ru";

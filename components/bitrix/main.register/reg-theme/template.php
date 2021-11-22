@@ -29,17 +29,17 @@ if($arResult["SHOW_SMS_FIELD"] == true)
             <div class="login__label-row">
                 <noindex>
                     <div class="tab">
-                        <a href="../auth/">Вход</a>
+                        <a href="../auth/">Р’С…РѕРґ</a>
                     </div>
                 </noindex>
                 <noindex>
                     <div class="tab active">
-                        Регистрация
+                        Р РµРіРёСЃС‚СЂР°С†РёСЏ
                     </div>
                 </noindex>
                 <noindex>
                     <div class="tab">
-                        <a href="../backup/">Восстановить</a>
+                        <a href="../backup/">Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ</a>
                     </div>
                 </noindex>
             </div>
@@ -158,7 +158,7 @@ endif;
                         case "PASSWORD":
                             ?><input size="30" type="password" name="REGISTER[<?= $FIELD ?>]"
                                      value="<?= $arResult["VALUES"][$FIELD] ?>" autocomplete="off" class="bx-auth-input"
-                                     placeholder="Пароль"/>
+                                     placeholder="РџР°СЂРѕР»СЊ"/>
                         <? if ($arResult["SECURE_AUTH"]): ?>
                             <span class="bx-auth-secure" id="bx_auth_secure"
                                   title="<? echo GetMessage("AUTH_SECURE_NOTE") ?>" style="display:none">
@@ -178,7 +178,7 @@ endif;
                         case "CONFIRM_PASSWORD":
                             ?><input size="30" type="password" name="REGISTER[<?= $FIELD ?>]"
                                      value="<?= $arResult["VALUES"][$FIELD] ?>" autocomplete="off"
-                                     placeholder="Подтверждение пароля"/><?
+                                     placeholder="РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїР°СЂРѕР»СЏ"/><?
                             break;
 
                         case "PERSONAL_GENDER":
@@ -284,26 +284,26 @@ if ($arResult["USE_CAPTCHA"] == "Y")
     
     <div class="login__column">
         <div class="login__contacts">
-            <div class="login__title">Контакты</div>
+            <div class="login__title">РљРѕРЅС‚Р°РєС‚С‹</div>
             <div class="login__subtitle">
-                Центр
+                Р¦РµРЅС‚СЂ
             </div>
             <div class="login__address">
-                ул. Карла Маркса, 81/23
+                СѓР». РљР°СЂР»Р° РњР°СЂРєСЃР°, 81/23
             </div>
             <div class="login__phone">+7 (3435) 41-62-60</div>
             <div class="login__phone">+7 (3435) 41-37-47</div>
-            <div class="login__time">Доставка: <span>10:00 - 20:00</span></div>
-            <div class="login__time">Пиццерия: <span>10:00 - 21:00</span></div>
+            <div class="login__time">Р”РѕСЃС‚Р°РІРєР°: <span>10:00 - 20:00</span></div>
+            <div class="login__time">РџРёС†С†РµСЂРёСЏ: <span>10:00 - 21:00</span></div>
             <div class="login__subtitle">
-                Выя
+                Р’С‹СЏ
             </div>
             <div class="login__address">
-                ул. Космонавтов, 10
+                СѓР». РљРѕСЃРјРѕРЅР°РІС‚РѕРІ, 10
             </div>
             <div class="login__phone">+7 (3435) 34-30-10</div>
-            <div class="login__time">Доставка: <span>10:00 - 20:00</span></div>
-            <div class="login__time">Пиццерия: <span>10:00 - 21:00</span></div>
+            <div class="login__time">Р”РѕСЃС‚Р°РІРєР°: <span>10:00 - 20:00</span></div>
+            <div class="login__time">РџРёС†С†РµСЂРёСЏ: <span>10:00 - 21:00</span></div>
         </div>
     </div>
 </div>

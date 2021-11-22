@@ -14,7 +14,7 @@ $APPLICATION->AddHeadScript($templateFolder."/js/jquery.jgrowl.min.js" );
                 target: '#basket-container',
                 success:
                     function(responseText) {
-                        $.jGrowl("Òîâàð äîáàâëåí â çàêàç");
+                        $.jGrowl("Ð¢Ð¾Ð²Ð°Ñ€ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½ Ð² Ð·Ð°ÐºÐ°Ð·");
                     }
             };
             $(".add_form").ajaxForm(options);
@@ -49,7 +49,7 @@ $defaultCurr = CSaleLang::GetLangCurrency(SITE_ID);
             } 
         } 
 ?>
-    <a href="/personal/cart/" title="Ïåðåéòè â êîðçèíó">
+    <a href="/personal/cart/" title="ÐŸÐµÑ€ÐµÐ¹Ñ‚Ð¸ Ð² ÐºÐ¾Ñ€Ð·Ð¸Ð½Ñƒ">
         <div class="main_menu__back">
             <div class="main_menu__quantity"><?=$quant?></div>
         </div>

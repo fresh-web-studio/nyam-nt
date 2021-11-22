@@ -116,10 +116,10 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                         <?endif?>
                     }
 
-                        // Телефоны
+                        // РўРµР»РµС„РѕРЅС‹
                         $('#25').inputmask({"mask": "+7 (999) 999-9999"});
 
-                        // Электронная почта
+                        // Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°
                         $("#2").inputmask("email");
 
                     BX.closeWait();
@@ -199,11 +199,11 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                     <?// if ($_POST["is_ajax_post"] != "Y") { ?>
                     <div class="order_footer">
                         <div class="attention" style="color: red; font-size: 2vw">
-                            Оформление заказа временно не работает, просьба позвонить в магазин для оформления заказа! <br>
+                            РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р° РІСЂРµРјРµРЅРЅРѕ РЅРµ СЂР°Р±РѕС‚Р°РµС‚, РїСЂРѕСЃСЊР±Р° РїРѕР·РІРѕРЅРёС‚СЊ РІ РјР°РіР°Р·РёРЅ РґР»СЏ РѕС„РѕСЂРјР»РµРЅРёСЏ Р·Р°РєР°Р·Р°! <br>
                         <br>
                         </div>
                         <a class="order_footer_to_cart" href="/personal/cart/">
-                            Назад в корзину
+                            РќР°Р·Р°Рґ РІ РєРѕСЂР·РёРЅСѓ
                         </a>
                         <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
                         <input type="hidden" name="profile_change" id="profile_change" value="N">
@@ -255,10 +255,10 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
 <?endif?>
 <script>
 
-    // Телефоны
+    // РўРµР»РµС„РѕРЅС‹
     $('#25').inputmask({"mask": "+7 (999) 999-9999"});
 
-    // Электронная почта
+    // Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°
     $("#2").inputmask("email");
 
 </script>

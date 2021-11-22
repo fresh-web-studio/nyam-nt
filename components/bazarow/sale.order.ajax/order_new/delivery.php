@@ -20,7 +20,7 @@
 
         <?
         if ($arDelivery["ID"] == 3) {
-            if ($arDelivery["CHECKED"] == "Y") { // Åñëè ñàìîâûâîç - ïðÿ÷åì ñâîéñòâî ìåñòîïîëîæåíèÿ
+            if ($arDelivery["CHECKED"] == "Y") { // Ð•ÑÐ»Ð¸ ÑÐ°Ð¼Ð¾Ð²Ñ‹Ð²Ð¾Ð· - Ð¿Ñ€ÑÑ‡ÐµÐ¼ ÑÐ²Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¼ÐµÑÑ‚Ð¾Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ
                 ?>
                 <style type="text/css">
                     .set_delivery input:not(:checked) + label:nth-child(2) { display: block; }

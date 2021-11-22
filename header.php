@@ -15,7 +15,7 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.css');
 
     // JS
-    //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.4.1.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main_slider.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/owlcarousel/owl.carousel.min.js');
@@ -26,15 +26,15 @@
     //STRING
     Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>");
     Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");
-    Asset::getInstance()->addString("<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,500italic,700,700italic,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>");
+    Asset::getInstance()->addString("<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,500italic,700,700italic,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>");
     ?>
 	<title><?$APPLICATION->ShowTitle()?></title>
 
 	<script type='application/ld+json'>
-        {"@context":"http://schema.org","@type":"WebSite","@id":"#website","url":"http://SITE.ru/","name":"Название - Описание","potentialAction":{"@type":"SearchAction","target":"http://SITE.ru/search/index.php","query-input":"required name=search_term_string"}}
+        {"@context":"http://schema.org","@type":"WebSite","@id":"#website","url":"http://SITE.ru/","name":"РќР°Р·РІР°РЅРёРµ - РћРїРёСЃР°РЅРёРµ","potentialAction":{"@type":"SearchAction","target":"http://SITE.ru/search/index.php","query-input":"required name=search_term_string"}}
     </script>
     <script type='application/ld+json'>
-        {"@context":"http://schema.org","@type":"Organization","url":"http://SITE.ru/","sameAs":[],"@id":"#organization","name":"Домен - Описание","logo":"http://SITE.ru/полный_путь_к_логотипу.png"}
+        {"@context":"http://schema.org","@type":"Organization","url":"http://SITE.ru/","sameAs":[],"@id":"#organization","name":"Р”РѕРјРµРЅ - РћРїРёСЃР°РЅРёРµ","logo":"http://SITE.ru/РїРѕР»РЅС‹Р№_РїСѓС‚СЊ_Рє_Р»РѕРіРѕС‚РёРїСѓ.png"}
     </script>
     <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
     <link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH;?>/images/favicon.ico" />
@@ -44,11 +44,11 @@
 <header class="header__fix">
     <div class="container-base">
         <div class="header__top">
-            <a class="header__link-logo" href="/"><img class="header__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/header__logo.svg" alt="Логотип пиццерии Ням-ням"/></a>
+            <a class="header__link-logo" href="/"><img class="header__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/header__logo.svg" alt="Р›РѕРіРѕС‚РёРї РїРёС†С†РµСЂРёРё РќСЏРј-РЅСЏРј"/></a>
             <div class="header__town-time">
                 <div class="header__row-top">
-                    <div class="header__text time-icon">Часы работы:</div>
-                    <div class="header__text_red">Вс - Чт 10:00 - 21:00</div>
+                    <div class="header__text time-icon">Р§Р°СЃС‹ СЂР°Р±РѕС‚С‹:</div>
+                    <div class="header__text_red">Р’СЃ - Р§С‚ 10:00 - 21:00</div>
                 </div>
                 <div class="header__row-top">
                     <div class="header__text_red">
@@ -99,10 +99,10 @@
                 <div class="header__login">
                     <?if(CUser::IsAuthorized()):?>
                         <div class="header__text"><a href="/personal/" class="header__link reg"><?=(CUser::GetFirstName())?CUser::GetFirstName():CUser::GetLogin()?></a></div>
-                        <div class="header__text"><a href="/personal/auth/?logout=yes" class="header__link exit"><span class="login-greg-none">Выход</span></a></div>
+                        <div class="header__text"><a href="/personal/auth/?logout=yes" class="header__link exit"><span class="login-greg-none">Р’С‹С…РѕРґ</span></a></div>
                     <?else:?>
-                        <div class="header__text"><a href="/personal/auth/" class="header__link login"><span class="login-greg-none">Вход</span></a></div>
-                        <div class="header__text"><a href="/personal/reg/" class="header__link reg"><span class="login-greg-none">Регистрация</span></a></div>
+                        <div class="header__text"><a href="/personal/auth/" class="header__link login"><span class="login-greg-none">Р’С…РѕРґ</span></a></div>
+                        <div class="header__text"><a href="/personal/reg/" class="header__link reg"><span class="login-greg-none">Р РµРіРёСЃС‚СЂР°С†РёСЏ</span></a></div>
                     <?endif;?>
                 </div>
                 <!-- #End_Auth -->
@@ -117,20 +117,21 @@
                     <span></span>
                 </label>
                 <?$APPLICATION->IncludeComponent("bitrix:menu", "main_menu", Array(
-                    "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-                        "MAX_LEVEL" => "1",	// Уровень вложенности меню
-                        "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                    "ROOT_MENU_TYPE" => "top",	// РўРёРї РјРµРЅСЋ РґР»СЏ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ
+                        "MAX_LEVEL" => "1",	// РЈСЂРѕРІРµРЅСЊ РІР»РѕР¶РµРЅРЅРѕСЃС‚Рё РјРµРЅСЋ
+                        "USE_EXT" => "N",	// РџРѕРґРєР»СЋС‡Р°С‚СЊ С„Р°Р№Р»С‹ СЃ РёРјРµРЅР°РјРё РІРёРґР° .С‚РёРї_РјРµРЅСЋ.menu_ext.php
                         "COMPONENT_TEMPLATE" => "main_menu",
-                        "MENU_CACHE_TYPE" => "N",	// Тип кеширования
-                        "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-                        "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-                        "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-                        "CHILD_MENU_TYPE" => "",	// Тип меню для остальных уровней
-                        "DELAY" => "N",	// Откладывать выполнение шаблона меню
-                        "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                        "MENU_CACHE_TYPE" => "N",	// РўРёРї РєРµС€РёСЂРѕРІР°РЅРёСЏ
+                        "MENU_CACHE_TIME" => "3600",	// Р’СЂРµРјСЏ РєРµС€РёСЂРѕРІР°РЅРёСЏ (СЃРµРє.)
+                        "MENU_CACHE_USE_GROUPS" => "Y",	// РЈС‡РёС‚С‹РІР°С‚СЊ РїСЂР°РІР° РґРѕСЃС‚СѓРїР°
+                        "MENU_CACHE_GET_VARS" => "",	// Р—РЅР°С‡РёРјС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ Р·Р°РїСЂРѕСЃР°
+                        "CHILD_MENU_TYPE" => "",	// РўРёРї РјРµРЅСЋ РґР»СЏ РѕСЃС‚Р°Р»СЊРЅС‹С… СѓСЂРѕРІРЅРµР№
+                        "DELAY" => "N",	// РћС‚РєР»Р°РґС‹РІР°С‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ С€Р°Р±Р»РѕРЅР° РјРµРЅСЋ
+                        "ALLOW_MULTI_SELECT" => "N",	// Р Р°Р·СЂРµС€РёС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р°РєС‚РёРІРЅС‹С… РїСѓРЅРєС‚РѕРІ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ
                     ),
                     false
                 );?>
+
                 <div id="basket-container" class="main_menu__cart">
                     <?if($_GET['refresh-cart'] == 'Y'){$APPLICATION->RestartBuffer();}?>
                     <?$APPLICATION->IncludeComponent(
@@ -158,29 +159,29 @@
                     <div class="container-base slide-item__row">
                         <div class="slide-item__text">
                             <div class="slide-item__header">
-                                Приготовлено
-                                <span class="slide-item__span">с&nbsp;любовью</span>
-                                по&nbsp;домашним
-                                рецептам!
+                                РџСЂРёРіРѕС‚РѕРІР»РµРЅРѕ
+                                <span class="slide-item__span">СЃ&nbsp;Р»СЋР±РѕРІСЊСЋ</span>
+                                РїРѕ&nbsp;РґРѕРјР°С€РЅРёРј
+                                СЂРµС†РµРїС‚Р°Рј!
                             </div>
                             <div class="slide-item__info">
-                                Доставляем в течение часа!<br>
-                                Заказ от 2 порций одного наименования
+                                Р”РѕСЃС‚Р°РІР»СЏРµРј РІ С‚РµС‡РµРЅРёРµ С‡Р°СЃР°!<br>
+                                Р—Р°РєР°Р· РѕС‚ 2 РїРѕСЂС†РёР№ РѕРґРЅРѕРіРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ
                             </div>
                         </div>
                         <div class="slide-item__img">
                             <div class="slide-item__social">
                                 <a href="https://vk.com/njamnjam_nt" target="_blank" class="hover">
-                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk.svg" alt="Иконка ВК"/>
-                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="Иконка ВК"/>
+                                    <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk.svg" alt="РРєРѕРЅРєР° Р’Рљ"/>
+                                    <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="РРєРѕРЅРєР° Р’Рљ"/>
                                 </a>
                                 <!--<a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok.svg" alt="Иконка ОК"/>
-                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="Иконка ОК"/>
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok.svg" alt="РРєРѕРЅРєР° РћРљ"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="РРєРѕРЅРєР° РћРљ"/>
                                 </a>
                                 <a href="#" class="hover">
-                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst.svg" alt="Иконка Инстаграм"/>
-                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="Иконка Инстаграм"/>
+                                    <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst.svg" alt="РРєРѕРЅРєР° РРЅСЃС‚Р°РіСЂР°Рј"/>
+                                    <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="РРєРѕРЅРєР° РРЅСЃС‚Р°РіСЂР°Рј"/>
                                 </a>-->
                             </div>
                         </div>
@@ -190,9 +191,9 @@
                     <div class="container-base row-base">
                         <div class="slide-item__text">
                             <div class="slide-item__header">
-                                Скидка 7%
-                                <span class="slide-item__span">в день рожденье!</span>
-                                <span class="slide-item__span-add">*При предъявлении документа</span>
+                                РЎРєРёРґРєР° 7%
+                                <span class="slide-item__span">РІ РґРµРЅСЊ СЂРѕР¶РґРµРЅСЊРµ!</span>
+                                <span class="slide-item__span-add">*РџСЂРё РїСЂРµРґСЉСЏРІР»РµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р°</span>
                             </div>
                         </div>
                         <div class="slide-item__img">
@@ -228,13 +229,13 @@
                 else { ?>main__title<? } ?>
                     ">
                     <? if ($APPLICATION->GetCurDir() == '/about/')
-                    { echo "Пиццерия Ням-Ням";}
+                    { echo "РџРёС†С†РµСЂРёСЏ РќСЏРј-РќСЏРј";}
                     else { $APPLICATION->IncludeComponent("bitrix:breadcrumb", "breads", Array(
-                            "COMPOSITE_FRAME_MODE" => "A",    // Голосование шаблона компонента по умолчанию
-                            "COMPOSITE_FRAME_TYPE" => "AUTO",    // Содержимое компонента
-                            "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-                            "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-                            "START_FROM" => "2",    // Номер пункта, начиная с которого будет построена навигационная цепочка
+                            "COMPOSITE_FRAME_MODE" => "A",    // Р“РѕР»РѕСЃРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РєРѕРјРїРѕРЅРµРЅС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+                            "COMPOSITE_FRAME_TYPE" => "AUTO",    // РЎРѕРґРµСЂР¶РёРјРѕРµ РєРѕРјРїРѕРЅРµРЅС‚Р°
+                            "PATH" => "",    // РџСѓС‚СЊ, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РїРѕСЃС‚СЂРѕРµРЅР° РЅР°РІРёРіР°С†РёРѕРЅРЅР°СЏ С†РµРїРѕС‡РєР° (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, С‚РµРєСѓС‰РёР№ РїСѓС‚СЊ)
+                            "SITE_ID" => "s1",    // CР°Р№С‚ (СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РІ СЃР»СѓС‡Р°Рµ РјРЅРѕРіРѕСЃР°Р№С‚РѕРІРѕР№ РІРµСЂСЃРёРё, РєРѕРіРґР° DOCUMENT_ROOT Сѓ СЃР°Р№С‚РѕРІ СЂР°Р·РЅС‹Р№)
+                            "START_FROM" => "2",    // РќРѕРјРµСЂ РїСѓРЅРєС‚Р°, РЅР°С‡РёРЅР°СЏ СЃ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РїРѕСЃС‚СЂРѕРµРЅР° РЅР°РІРёРіР°С†РёРѕРЅРЅР°СЏ С†РµРїРѕС‡РєР°
                         ),
                             false
                         );

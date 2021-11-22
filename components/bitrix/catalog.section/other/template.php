@@ -12,7 +12,7 @@ $this->setFrameMode(true);
                         <img src="<?= $arElement["PREVIEW_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
                     <? } else { ?>
                         <div class="link-photo">
-                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>
+                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="РќРµС‚ РєР°СЂС‚РёРЅРєРё"/>
                         </div>
                     <? } ?>
 
@@ -37,11 +37,11 @@ $this->setFrameMode(true);
                             {
                                 $ar_price = GetCatalogProductPrice($arOffer["ID"], 1);
 
-                                echo "<div class=\"pricebl\"><strong>от "; echo CurrencyFormat($ar_price["PRICE"], "RUB"); echo "</strong></div>" ;
+                                echo "<div class=\"pricebl\"><strong>РѕС‚ "; echo CurrencyFormat($ar_price["PRICE"], "RUB"); echo "</strong></div>" ;
                                 */?>
 
                                 <div>
-                                  <a class="btn-default" href="<?/* echo $arElement["DETAIL_PAGE_URL"] */?>" title="<?/*= $arElement["NAME"] */?>">Подробнее</a>
+                                  <a class="btn-default" href="<?/* echo $arElement["DETAIL_PAGE_URL"] */?>" title="<?/*= $arElement["NAME"] */?>">РџРѕРґСЂРѕР±РЅРµРµ</a>
                                 </div>
                     <?/*
                                 break;
@@ -62,8 +62,8 @@ $this->setFrameMode(true);
                                 <input type="hidden" name="<? echo $arParams["ACTION_VARIABLE"] ?>" value="BUY">
                                 <input type="hidden" name="<? echo $arParams["PRODUCT_ID_VARIABLE"] ?>" value="<? echo $arElement["ID"] ?>">
                                 <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "BUY" ?>" value="<? echo GetMessage("CATALOG_BUY") ?>" style="display: none;">
-                                <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" ?>" value="+" class="goods__additionally-bay-btn">
-                            </form>
+<!--                                <input type="submit" name="<?/* echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" */?>" value="+" class="goods__additionally-bay-btn">
+-->                            </form>
                         <? endif; ?>
                     <? endforeach; ?>
                 </div>

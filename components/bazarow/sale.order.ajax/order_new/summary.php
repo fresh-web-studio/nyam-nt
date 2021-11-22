@@ -3,7 +3,7 @@
 
 <div class="order_goods">
     <div class="order_goods_title">
-        Состав заказа
+        РЎРѕСЃС‚Р°РІ Р·Р°РєР°Р·Р°
     </div>
     <? foreach ($arResult['BASKET_ITEMS'] as $BASKET_ITEM) { ?>
         <div class="order_goods_item">
@@ -17,13 +17,13 @@
             </div>
 
         </div>
-<!-- Вывод доставки
+<!-- Р’С‹РІРѕРґ РґРѕСЃС‚Р°РІРєРё
         <div class="order_goods_item">
             <div class="order_goods_item_price">
                 <?/*=GetMessage('SOA_TEMPL_SUM_DELIVERY')*/?>
             </div>
             <div class="order_goods_item_price">
-                250 р.
+                250 СЂ.
             </div>
         </div>-->
 
@@ -45,7 +45,7 @@
 
 
     <div class="order_goods_sum">
-        <span>Сумма к оплате:</span>
+        <span>РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ:</span>
         <span><?= $arResult["ORDER_TOTAL_PRICE_FORMATED"] ?></span>
     </div>
 </div>

@@ -2596,7 +2596,9 @@ footer {
       .tabs {
         width: 100%;
       }
-
+      .location-block-wrapper .dropdown-block {
+        border-radius: 3.6vw;
+      }
       input[type="password"], input[type="text"], .location-block-wrapper .dropdown-block {
         width: 100%;
         height: 11.4vw;

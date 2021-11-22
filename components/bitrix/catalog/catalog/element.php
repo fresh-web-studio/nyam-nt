@@ -50,7 +50,7 @@ $this->setFrameMode(true);
 	$component
 );?>
 <?if ($APPLICATION->GetCurDir() == "/catalog/pizza/") {?>
-	<div class="goods__additionally-title">Не забудьте купить к пицце:</div>
+	<div class="goods__additionally-title">РќРµ Р·Р°Р±СѓРґСЊС‚Рµ РєСѓРїРёС‚СЊ Рє РїРёС†С†Рµ:</div>
 	<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section", 
 	"other", 
@@ -96,11 +96,11 @@ $this->setFrameMode(true);
 		"LINE_ELEMENT_COUNT" => "1",
 		"LOAD_ON_SCROLL" => "N",
 		"MESSAGE_404" => "",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_DETAIL" => "Подробнее",
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"MESS_BTN_ADD_TO_BASKET" => "Р’ РєРѕСЂР·РёРЅСѓ",
+		"MESS_BTN_BUY" => "РљСѓРїРёС‚СЊ",
+		"MESS_BTN_DETAIL" => "РџРѕРґСЂРѕР±РЅРµРµ",
+		"MESS_BTN_SUBSCRIBE" => "РџРѕРґРїРёСЃР°С‚СЊСЃСЏ",
+		"MESS_NOT_AVAILABLE" => "РќРµС‚ РІ РЅР°Р»РёС‡РёРё",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"OFFERS_CART_PROPERTIES" => "",
@@ -123,7 +123,7 @@ $this->setFrameMode(true);
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Товары",
+		"PAGER_TITLE" => "РўРѕРІР°СЂС‹",
 		"PAGE_ELEMENT_COUNT" => "6",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
@@ -183,7 +183,7 @@ $this->setFrameMode(true);
 <?}?>
 
 
-<div class="goods__additionally-title">Популярные товары категории:</div>
+<div class="goods__additionally-title">РџРѕРїСѓР»СЏСЂРЅС‹Рµ С‚РѕРІР°СЂС‹ РєР°С‚РµРіРѕСЂРёРё:</div>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section", 
 	"section", 
@@ -229,11 +229,11 @@ $this->setFrameMode(true);
 		"LINE_ELEMENT_COUNT" => "1",
 		"LOAD_ON_SCROLL" => "N",
 		"MESSAGE_404" => "",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_DETAIL" => "Подробнее",
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"MESS_BTN_ADD_TO_BASKET" => "Р’ РєРѕСЂР·РёРЅСѓ",
+		"MESS_BTN_BUY" => "РљСѓРїРёС‚СЊ",
+		"MESS_BTN_DETAIL" => "РџРѕРґСЂРѕР±РЅРµРµ",
+		"MESS_BTN_SUBSCRIBE" => "РџРѕРґРїРёСЃР°С‚СЊСЃСЏ",
+		"MESS_NOT_AVAILABLE" => "РќРµС‚ РІ РЅР°Р»РёС‡РёРё",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"OFFERS_CART_PROPERTIES" => "",
@@ -256,7 +256,7 @@ $this->setFrameMode(true);
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Товары",
+		"PAGER_TITLE" => "РўРѕРІР°СЂС‹",
 		"PAGE_ELEMENT_COUNT" => "4",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
@@ -314,7 +314,7 @@ $this->setFrameMode(true);
 	false
 );?>
 
-<div class="goods__additionally-title">Самые покупаемые:</div>
+<div class="goods__additionally-title">РЎР°РјС‹Рµ РїРѕРєСѓРїР°РµРјС‹Рµ:</div>
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog.section",
     "section",
@@ -360,11 +360,11 @@ $this->setFrameMode(true);
         "LINE_ELEMENT_COUNT" => "1",
         "LOAD_ON_SCROLL" => "N",
         "MESSAGE_404" => "",
-        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
-        "MESS_BTN_BUY" => "Купить",
-        "MESS_BTN_DETAIL" => "Подробнее",
-        "MESS_BTN_SUBSCRIBE" => "Подписаться",
-        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+        "MESS_BTN_ADD_TO_BASKET" => "Р’ РєРѕСЂР·РёРЅСѓ",
+        "MESS_BTN_BUY" => "РљСѓРїРёС‚СЊ",
+        "MESS_BTN_DETAIL" => "РџРѕРґСЂРѕР±РЅРµРµ",
+        "MESS_BTN_SUBSCRIBE" => "РџРѕРґРїРёСЃР°С‚СЊСЃСЏ",
+        "MESS_NOT_AVAILABLE" => "РќРµС‚ РІ РЅР°Р»РёС‡РёРё",
         "META_DESCRIPTION" => "-",
         "META_KEYWORDS" => "-",
         "OFFERS_CART_PROPERTIES" => "",
@@ -387,7 +387,7 @@ $this->setFrameMode(true);
         "PAGER_SHOW_ALL" => "N",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => ".default",
-        "PAGER_TITLE" => "Товары",
+        "PAGER_TITLE" => "РўРѕРІР°СЂС‹",
         "PAGE_ELEMENT_COUNT" => "4",
         "PARTIAL_PRODUCT_PROPERTIES" => "N",
         "PRICE_CODE" => array(

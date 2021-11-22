@@ -2,6 +2,10 @@
 $this->setFrameMode(true);
 ?>
 
+<?if($arParams["DISPLAY_TOP_PAGER"]):?>
+	<p><?=$arResult["NAV_STRING"]?></p>
+<?endif?>
+
 <div class="main__item-list">
     <? foreach ($arResult["ITEMS"] as $cell => $arElement): ?>
 
@@ -12,7 +16,7 @@ $this->setFrameMode(true);
                         <img src="<?= $arElement["DETAIL_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
                     <? } else { ?>
                         <div>
-                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="Нет картинки"/>
+                            <img class="no_image" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/no_image.png" alt="РќРµС‚ РєР°СЂС‚РёРЅРєРё"/>
                         </div>
                     <? } ?>
                     <h3>
@@ -59,7 +63,7 @@ $this->setFrameMode(true);
                                 </div>
                                 <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                                     <div class="main__item-btn">
-                                        Выбрать
+                                        Р’С‹Р±СЂР°С‚СЊ
                                     </div>
                                 </a>
                                 <?
@@ -109,7 +113,7 @@ $this->setFrameMode(true);
                             </div>
                             <a class="btn-default" href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                                 <div class="main__item-btn">
-                                    Выбрать
+                                    Р’С‹Р±СЂР°С‚СЊ
                                 </div>
                             </a>
                         <? endif; ?>
@@ -119,3 +123,7 @@ $this->setFrameMode(true);
         </div>
     <? endforeach; ?>
 </div>
+
+<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+	<p><?=$arResult["NAV_STRING"]?></p>
+<?endif?>

@@ -7,7 +7,7 @@
         <div class="container-base">
             <div class="footer__top-row">
                 <div class="footer__column">
-                    <img class="footer__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__logo.svg" alt="Лого пиццерия ням ням">
+                    <img class="footer__logo" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__logo.svg" alt="Р›РѕРіРѕ РїРёС†С†РµСЂРёСЏ РЅСЏРј РЅСЏРј">
                     <div class="footer__text">
                         <?$APPLICATION->IncludeFile(
                             SITE_TEMPLATE_PATH."/include_areas/slogan_inc.php",
@@ -95,16 +95,16 @@
                 <div class="footer__column">
                     <div class="footer__social">
                         <a href="https://vk.com/njamnjam_nt" target="_blank" class="hover">
-                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg" alt="ВК"/>
-                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="ВК"/>
+                            <img class="first" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/footer__vk.svg" alt="Р’Рљ"/>
+                            <img class="second" src="/local/templates/<? echo SITE_TEMPLATE_ID;?>/images/vk-active.svg" alt="Р’Рљ"/>
                         </a>
                         <!--<a href="#" class="hover">
-                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__ok.svg" alt="ОК"/>
-                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="ОК"/>
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__ok.svg" alt="РћРљ"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/ok-active.svg" alt="РћРљ"/>
                         </a>
                         <a href="#" class="hover">
-                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__inst.svg" alt="Инстаграмм"/>
-                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="Инстаграмм"/>
+                            <img class="first" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/footer__inst.svg" alt="РРЅСЃС‚Р°РіСЂР°РјРј"/>
+                            <img class="second" src="/local/templates/<?/* echo SITE_TEMPLATE_ID;*/?>/images/inst-active.svg" alt="РРЅСЃС‚Р°РіСЂР°РјРј"/>
                         </a>-->
                     </div>
                 </div>
@@ -114,8 +114,8 @@
     <div class="footer__yellow">
         <div class="container-base">
             <div class="footer__footer-bottom">
-                <div class="footer__copyright">Все права защищены &copy; 2004 - <?php echo date('Y'); ?> Пиццерия Ням-Ням</div>
-                <a href="/pravovaya-informatsiya">Правовая информация</a>
+                <div class="footer__copyright">Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹ &copy; 2004 - <?php echo date('Y'); ?> РџРёС†С†РµСЂРёСЏ РќСЏРј-РќСЏРј</div>
+                <a href="/pravovaya-informatsiya">РџСЂР°РІРѕРІР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</a>
             </div>
         </div>
     </div>

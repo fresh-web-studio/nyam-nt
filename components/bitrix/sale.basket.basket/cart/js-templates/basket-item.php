@@ -292,7 +292,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 </div>
 
         <div class="cart__calc">
-            <!-- Öåíà -->
+            <!-- Ð¦ÐµÐ½Ð° -->
             <?
             if ($usePriceInAdditionalColumn) {
                 ?>
@@ -315,8 +315,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 <?
             }
             ?>
-            <!-- /Öåíà -->
-            <!-- Êîëè÷åñòâî -->
+            <!-- /Ð¦ÐµÐ½Ð° -->
+            <!-- ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ -->
             <div class="quantity__list basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
                  data-entity="basket-item-quantity-block">
                 <span class="quantity__btn-minus" data-entity="basket-item-quantity-minus"></span>
@@ -331,8 +331,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 <div class="basket-items-list-item-overlay"></div>
                 {{/SHOW_LOADING}}
             </div>
-            <!-- /Êîëè÷åñòâî -->
-            <!-- Ñóììà -->
+            <!-- /ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ -->
+            <!-- Ð¡ÑƒÐ¼Ð¼Ð° -->
             <?
             if ($useSumColumn) {
                 ?>
@@ -367,8 +367,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 <?
             }
             ?>
-            <!-- /Ñóììà -->
-            <!-- Óäàëåíèå -->
+            <!-- /Ð¡ÑƒÐ¼Ð¼Ð° -->
+            <!-- Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ -->
             <?
             if ($useActionColumn) {
                 ?>
@@ -381,7 +381,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 <?
             }
             ?>
-            <!-- /Óäàëåíèå -->
+            <!-- /Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ -->
         </div>
 
         {{/SHOW_RESTORE}}
