@@ -209,13 +209,12 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                         <input type="hidden" name="profile_change" id="profile_change" value="N">
                         <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
                         <input type="hidden" name="json" value="Y">
-                        <!--<a
+                        <a
                                 class="order_footer_checkut"
                                 href="javascript:void();"
                                 onclick="submitForm('Y'); return false;"
                                 id="ORDER_CONFIRM_BUTTON"
-                        >-->
-                        <a class="order_footer_to_cart" href="">
+                        >
                             <?= GetMessage("SOA_TEMPL_BUTTON") ?>
                         </a>
 
