@@ -177,6 +177,7 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                             include($_SERVER["DOCUMENT_ROOT"] . $templateFolder . "/delivery.php");
                             ?>
                             <div class="order_props">
+															<pre style="display:none"><?print_r($arResult["ORDER_PROP"]);?></pre>
                                 <?
                                 include($_SERVER["DOCUMENT_ROOT"] . $templateFolder . "/person_type.php");
                                 include($_SERVER["DOCUMENT_ROOT"] . $templateFolder . "/props.php");
@@ -210,11 +211,10 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                         <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
                         <input type="hidden" name="json" value="Y">
                         <a
-                                class="order_footer_checkut"
-                                href="javascript:void();"
+                                class="order_footer_checkut"> <!--href="javascript:void();"
                                 onclick="submitForm('Y'); return false;"
-                                id="ORDER_CONFIRM_BUTTON"
-                        >
+                                id="ORDER_CONFIRM_BUTTON">-->
+
                             <?= GetMessage("SOA_TEMPL_BUTTON") ?>
                         </a>
 
