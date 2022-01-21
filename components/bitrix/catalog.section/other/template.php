@@ -7,7 +7,6 @@ $this->setFrameMode(true);
 
         <div class="goods__frame">
             <div class="goods__additionally">
-                <a href="<? echo $arElement["DETAIL_PAGE_URL"] ?>" title="<?= $arElement["NAME"] ?>">
                     <? if (strlen($arElement["PREVIEW_PICTURE"]["SRC"]) !== 0) { ?>
                         <img src="<?= $arElement["PREVIEW_PICTURE"]['SRC'] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>"/>
                     <? } else { ?>
@@ -22,7 +21,7 @@ $this->setFrameMode(true);
                         echo TruncateText($strname, 55);
                         ?>
                     </div>
-                </a>
+
                 <!--<div class="price2">
                         <?/*
                         $intIBlockID = 4;
@@ -62,8 +61,8 @@ $this->setFrameMode(true);
                                 <input type="hidden" name="<? echo $arParams["ACTION_VARIABLE"] ?>" value="BUY">
                                 <input type="hidden" name="<? echo $arParams["PRODUCT_ID_VARIABLE"] ?>" value="<? echo $arElement["ID"] ?>">
                                 <input type="submit" name="<? echo $arParams["ACTION_VARIABLE"] . "BUY" ?>" value="<? echo GetMessage("CATALOG_BUY") ?>" style="display: none;">
-<!--                                <input type="submit" name="<?/* echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" */?>" value="+" class="goods__additionally-bay-btn">
--->                            </form>
+                                <input type="submit" name="<?/* echo $arParams["ACTION_VARIABLE"] . "ADD2BASKET" */?>" value="+" class="goods__additionally-bay-btn">
+                            </form>
                         <? endif; ?>
                     <? endforeach; ?>
                 </div>

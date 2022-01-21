@@ -337,7 +337,6 @@ header {
     height: 4.7vw;
     font-size: 3.0vw;
   }
-
   .main_menu__cart a:hover {
     color: $accent-color;
   }
@@ -1238,6 +1237,11 @@ main {
     .goods__bay-btn:hover {
       background: $secondary-color;
       color: #fff;
+    }
+
+
+    .goods__bay-btn:active {
+      background: $main-color;
     }
 
     .goods__additionally-title {
@@ -2266,6 +2270,20 @@ footer {
     width: 3.2vw;
     display: block;
   }
+}
+
+.modal__add-to-cart {
+  display: none;
+  position: fixed;
+  left: calc(50% - 140px);
+  top: 45%;
+  width: 280px;
+  background: #fff;
+  border: 2px solid $main-color;
+  border-radius: 1.6vw;
+  box-shadow: 0 3px 5px 2px rgba(0,0,0,0.255);
+  padding: 30px;
+  z-index: 999;
 }
 
 @media all and (max-width: 415px) {

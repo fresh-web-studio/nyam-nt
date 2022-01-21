@@ -93,6 +93,10 @@ use Bitrix\Main\Localization\Loc;
 		?>
 
 	</div>
+    <div class="attention">
+        В стоимость пиццы уже включена коробка!<br>
+        <br>
+    </div>
     <div class="cart__row-base-btn">
         <a href="/">
             <div class="cart__btn_gray">

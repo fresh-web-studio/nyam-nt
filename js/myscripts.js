@@ -54,6 +54,7 @@ $(document).ready(function(){
               + '&offerID=' + offerID,
             timeout: 10000,
             error: function(request, error) {
+                debugger;
                 if (error == "timeout") {
                     alert('timeout');
                 }

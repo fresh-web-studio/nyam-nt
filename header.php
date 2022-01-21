@@ -166,7 +166,6 @@
                             </div>
                             <div class="slide-item__info">
                                 Доставляем в течение часа!<br>
-                                Заказ от 2 порций одного наименования
                             </div>
                         </div>
                         <div class="slide-item__img">

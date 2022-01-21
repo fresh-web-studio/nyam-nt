@@ -120,5 +120,8 @@
         </div>
     </div>
 </footer>
+<div id="modal__add-to-cart" class="modal__add-to-cart" style="display: none;">
+    <div class="modal__add-to-cart-text">Товар добавлен в корзину</div>
+</div>
 </body>
 </html>

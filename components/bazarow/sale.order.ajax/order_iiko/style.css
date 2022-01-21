@@ -35,6 +35,12 @@
       padding: 0 !important; }
       .order_template_error_col p .errortext {
         color: #900 !important; }
+  .order_template .attention {
+    color: red;
+    font-size: 2vw; }
+    @media (max-width: 415px) {
+      .order_template .attention {
+        font-size: 4vw; } }
 
 .set_delivery {
   display: -webkit-box;
@@ -51,6 +57,10 @@
     font-size: 2vw;
     margin-bottom: 1vw;
     width: 100vw; }
+    @media (max-width: 415px) {
+      .set_delivery .set_delivery_title {
+        font-size: 4vw;
+        margin-bottom: 4vw; } }
   .set_delivery_item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -64,6 +74,11 @@
     color: #F90001;
     text-align: center;
     cursor: pointer; }
+    @media (max-width: 415px) {
+      .set_delivery_item {
+        font-size: 4.6vw;
+        padding: 2vw 2.4vw;
+        border-radius: 2.4vw; } }
     .set_delivery_item:hover {
       background: #AD1111;
       color: #ffffff; }
@@ -143,10 +158,12 @@
       @media (max-width: 768px) {
         .order_props_item_21, .order_props_item_22, .order_props_item_23, .order_props_item_24 {
           width: 100%; } }
+    .order_props_item_26 {
+      width: 66.5%; }
     .order_props_item_29 {
       display: none; }
     .order_props_item_30 {
-      width: 100%;
+      width: 50%;
       order: -1; }
       @media (max-width: 768px) {
         .order_props_item_30 {
@@ -173,6 +190,8 @@
         .order_props_item_27 label span {
           display: block;
           font-size: 1.6vw; }
+      .order_props_item_27 label[for="ORDER_PROP_27_2"] {
+        display: none; }
       .order_props_item_27 input {
         position: absolute;
         left: -9999999999px;
@@ -245,6 +264,9 @@
   .order_goods_title {
     width: 100%;
     font-size: 2.73vw; }
+    @media (max-width: 415px) {
+      .order_goods_title {
+        font-size: 4vw; } }
   .order_goods_item {
     display: -webkit-box;
     display: -ms-flexbox;

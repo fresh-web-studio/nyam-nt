@@ -62,6 +62,9 @@ $(document).delegate('a[data-role="buy_button"]', 'click', function(e){
 						data: "refresh-cart=Y",
 						success: function(HTML) {
 							$('#basket-container').html(HTML);
+							$("#modal__add-to-cart").show();
+							setTimeout(function(){$('#modal__add-to-cart').fadeOut('fast')},2000);
+							refreshHeaderCart();
 						}
 				});
 				$.jGrowl(arJson.SuccessMessage);

@@ -31,6 +31,7 @@
 	-webkit-box-flex: 2;
 	-ms-flex: 2;
 	flex: 2;
+	display: none;
 }
 
 .basket-coupon-block-field-description {
@@ -120,6 +121,15 @@
 }
 
 .basket-coupon-alert .close-link:hover { border-color: transparent; }
+
+.attention {
+	color: red;
+	font-size: 2vw;
+	padding: 15px 25px;
+	@media (max-width: 415px) {
+		font-size: 4vw;
+	}
+}
 
 @media (max-width: 991px) {
 	.basket-checkout-container {

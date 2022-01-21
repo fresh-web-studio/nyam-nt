@@ -198,27 +198,51 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y") {
                             ?>
                         </div>
                     <?// if ($_POST["is_ajax_post"] != "Y") { ?>
-                    <div class="order_footer">
-                        <div class="attention" style="color: red; font-size: 2vw">
-                            Оформление заказа временно не работает, просьба позвонить в магазин для оформления заказа! <br>
-                        <br>
-                        </div>
-                        <a class="order_footer_to_cart" href="/personal/cart/">
-                            Назад в корзину
-                        </a>
-                        <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
-                        <input type="hidden" name="profile_change" id="profile_change" value="N">
-                        <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
-                        <input type="hidden" name="json" value="Y">
-                        <a
-                                class="order_footer_checkut"> <!--href="javascript:void();"
+                    <? $intHour = date('H');
+                    if($intHour >= 10 && $intHour < 17){ ?>
+                        <div class="order_footer">
+                            <!--<div class="attention">
+                                Оформление заказа временно не работает, просьба позвонить в пиццерию для оформления заказа! <br>
+                                <br>
+                            </div>-->
+                            <a class="order_footer_to_cart" href="/personal/cart/">
+                                Назад в корзину
+                            </a>
+                            <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
+                            <input type="hidden" name="profile_change" id="profile_change" value="N">
+                            <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
+                            <input type="hidden" name="json" value="Y">
+                            <a
+                                    class="order_footer_checkut"
+                                href="javascript:void();"
                                 onclick="submitForm('Y'); return false;"
-                                id="ORDER_CONFIRM_BUTTON">-->
+                                id="ORDER_CONFIRM_BUTTON">
+                                <?= GetMessage("SOA_TEMPL_BUTTON") ?>
+                            </a>
+                        </div>
+                    <?}
+                    else{ ?>
+                        <div class="order_footer">
+                            <div class="attention">
+                                Время заявки на сайте с 10:00 до 17:00.
+                                Заказ по телефону с 10:00 до 20:00
+                                +7 (3435) 41-62-60, +7 (3435) 41-37-47<br>
+                                <br>
+                            </div>
+                            <a class="order_footer_to_cart" href="/personal/cart/">
+                                Назад в корзину
+                            </a>
+                            <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
+                            <input type="hidden" name="profile_change" id="profile_change" value="N">
+                            <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
+                            <input type="hidden" name="json" value="Y">
 
-                            <?= GetMessage("SOA_TEMPL_BUTTON") ?>
-                        </a>
+                        </div>
+                    <?}
+                    ?>
 
-                    </div>
+
+
                     <?// } ?>
                 </div>
             </form>
